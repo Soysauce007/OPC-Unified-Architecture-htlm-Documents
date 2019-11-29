@@ -1,0 +1,4092 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping table version: 28-February-2003 -->
+<HTML>
+<HEAD>
+<META
+ name="dc.creator"
+ content=""Stefan-Helmut Leitner, Paul Hunkar"" >
+<META
+ name="dc.description"
+ content="Industrial Communications" >
+<META
+ name="dc.title"
+ content="OPC Unified Architecture" >
+<META
+ name="dc.date"
+ content="2015-11-25T16:37:23-05:00" >
+<META
+ name="dc.date.modified"
+ content="2015-11-25T16:37:23-05:00" >
+<META
+ name="generator"
+ content="Adobe Acrobat Exchange-Pro 8.0" >
+</HEAD>
+<BODY bgcolor=white text=black link=blue vlink=purple alink=fushia >
+<HR>
+<UL>
+<LI>
+<A href="#LinkTarget_2047">1 Scope</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2061">2 Reference documents</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2236">3 Terms, definitions, and abbreviations</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2237">3.1 Terms and definitions</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2589">3.2 Abbreviations</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2610">3.3 Conventions for security model figures</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_2613">4 OPC UA security architecture</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2614">4.1 OPC UA security environment</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2628">4.2 Security objectives</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2629">4.2.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2641">4.2.2 Authentication</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2644">4.2.3 Authorization</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2648">4.2.4 Confidentiality</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2650">4.2.5 Integrity</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2652">4.2.6 Auditability</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2661">4.2.7 Availability</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_2663">4.3 Security threats to OPC UA systems</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2664">4.3.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2711">4.3.2 Message flooding</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2722">4.3.3 Eavesdropping</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2733">4.3.4 Message spoofing</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2743">4.3.5 Message alteration</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2752">4.3.6 Message replay</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2761">4.3.7 Malformed Messages</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2771">4.3.8 Server profiling</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2780">4.3.9 Session hijacking</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2791">4.3.10 Rogue Server</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2801">4.3.11 Compromising user credentials</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_2811">4.4 OPC UA relationship to site security</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2843">4.5 OPC UA security architecture</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2927">4.6 SecurityPolicies</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2969">4.7 Security Profiles</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2983">4.8 User Authorization</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2985">4.9 User Authentication</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2993">4.10 Application Authentication</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3003">4.11 OPC UA security related Services</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3036">4.12 Auditing</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3037">4.12.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3078">4.12.2 Single Client and Server</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3091">4.12.3 Aggregating Server</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3105">4.12.4 Aggregation through a non-auditing Server</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3118">4.12.5 Aggregating Server with service distribution</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3130">5 Security reconciliation</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3132">5.1 Reconciliation of threats with OPC UA security mechanisms</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3133">5.1.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3185">5.1.2 Message flooding</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3224">5.1.3 Eavesdropping</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3237">5.1.4 Message spoofing</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3254">5.1.5 Message alteration</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3268">5.1.6 Message replay</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3285">5.1.7 Malformed Messages</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3302">5.1.8 Server profiling</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3315">5.1.9 Session hijacking</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3328">5.1.10 Rogue Server</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3336">5.1.11 Compromising user credentials</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3350">5.2 Reconciliation of objectives with OPC UA security mechanisms</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3351">5.2.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3390">5.2.2 Application Authentication</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3402">5.2.3 User Authentication</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3419">5.2.4 Authorization</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3427">5.2.5 Confidentiality</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3435">5.2.6 Integrity</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3438">5.2.7 Auditability</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3445">5.2.8 Availability</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3459">6 Implementation and deployment considerations</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3460">6.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3477">6.2 Appropriate timeouts:</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3485">6.3 Strict Message processing</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3502">6.4 Random number generation</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3518">6.5 Special and reserved packets</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3520">6.6 Rate limiting and flow control</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3522">6.7 Administrative access</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3524">6.8 Cryptographic Keys</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3527">6.9 Alarm related guidance</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3534">6.10 Program access</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3536">6.11 Audit event management</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3546">7 Unsecured Services</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3547">7.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3550">7.2 Multi Cast Discovery</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3557">7.3 Global Discovery Server Security</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3558">7.3.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3582">7.3.2 Rogue GDS</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3597">7.3.3 Threats against a GDS</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3600">7.3.4 Certificate management threats</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3606">8 Certificate management</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3607">8.1.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3622">8.1.2 Self signed certificate management</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3634">8.1.3 CA Signed Certificate management</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3654">8.1.4 GDS Certificate Management</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3655">8.1.4.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3657">8.1.4.2 Developers Certificate management</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL>
+</HR>
+<DIV class="Part" 
+
+><P 
+
+><FONT size="+1" color="#000000"></B> </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>  F  O  U  N  D  A  T  I  O  N &reg; </DIV
+></P
+><P 
+
+><FONT size="+3"><B>OPC Unified Architecture </P
+><P 
+
+>Specification </P
+><P 
+
+>Part 2:  Security Model </P
+><P 
+
+>Release  1.03 </P
+><P 
+
+>November 25, 2015 </P
+><P 
+
+>  </P
+><P 
+
+> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1"></B>Specification Type: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Industry Standard Specification </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Comments: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Title: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Unified Architecture  Part 2 :Security Model </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Date: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>November 25, 2015 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Version: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release 1.03 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Software: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MS-Word </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Source: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Part 2 - Security Model 1.03 Specification.docx </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Author: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Foundation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Status: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+></TABLE
+><H1 
+
+> <FONT size="+1"> </H1
+><P 
+
+> </P
+><P 
+
+><B>CONTENTS </P
+><P 
+
+><FONT size="+1"></B>Page </P
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+>FOREWORD .......................................................................................................................... <A>
+vi</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">AGREEMENT OF USE ........................................................................................................... <A>
+vi</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Revision 1.03 Highlights ....................................................................................................... <A>
+viii</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">1<FONT size="+1"> <FONT size="+1">Scope .............................................................................................................................. <A>
+1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">2<FONT size="+1"> <FONT size="+1">Reference documents ...................................................................................................... <A>
+1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3<FONT size="+1"> <FONT size="+1">Terms, definitions, and abbreviations ............................................................................... <A>
+3</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.1<FONT size="+1"> <FONT size="+1">Terms and definitions ............................................................................................. <A>
+3</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.2<FONT size="+1"> <FONT size="+1">Abbreviations .......................................................................................................... <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.3<FONT size="+1"> <FONT size="+1">Conventions for security model figures ................................................................... <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4<FONT size="+1"> <FONT size="+1">OPC UA security architecture .......................................................................................... <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.1<FONT size="+1"> <FONT size="+1">OPC UA security environment ................................................................................. <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2<FONT size="+1"> <FONT size="+1">Security objectives .................................................................................................. <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.1<FONT size="+1"> <FONT size="+1">Overview ..................................................................................................... <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.2<FONT size="+1"> <FONT size="+1">Authentication ............................................................................................. <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.3<FONT size="+1"> <FONT size="+1">Authorization ............................................................................................... <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.4<FONT size="+1"> <FONT size="+1">Confidentiality ............................................................................................. <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.5<FONT size="+1"> <FONT size="+1">Integrity ...................................................................................................... <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.6<FONT size="+1"> <FONT size="+1">Auditability .................................................................................................. <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2.7<FONT size="+1"> <FONT size="+1">Availability .................................................................................................. <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3<FONT size="+1"> <FONT size="+1">Security threats to OPC UA systems ....................................................................... <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.1<FONT size="+1"> <FONT size="+1">Overview ..................................................................................................... <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.2<FONT size="+1"> <FONT size="+1">Message flooding ........................................................................................ <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.3<FONT size="+1"> <FONT size="+1">Eavesdropping ............................................................................................ <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.4<FONT size="+1"> <FONT size="+1">Message spoofing ..................................................................................... <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.5<FONT size="+1"> <FONT size="+1">Message alteration .................................................................................... <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.6<FONT size="+1"> <FONT size="+1">Message replay ......................................................................................... <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.7<FONT size="+1"> <FONT size="+1">Malformed Messages ................................................................................ <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.8<FONT size="+1"> <FONT size="+1">Server profiling ......................................................................................... <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.9<FONT size="+1"> <FONT size="+1">Session hijacking ...................................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.10<FONT size="+1"> <FONT size="+1">Rogue Server ............................................................................................ <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3.11<FONT size="+1"> <FONT size="+1">Compromising user credentials ................................................................. <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.4<FONT size="+1"> <FONT size="+1">OPC UA relationship to site security ..................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.5<FONT size="+1"> <FONT size="+1">OPC UA security architecture ............................................................................... <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.6<FONT size="+1"> <FONT size="+1">SecurityPolicies .................................................................................................... <A>
+13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.7<FONT size="+1"> <FONT size="+1">Security Profiles ................................................................................................... <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.8<FONT size="+1"> <FONT size="+1">User Authorization ................................................................................................ <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.9<FONT size="+1"> <FONT size="+1">User Authentication .............................................................................................. <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.10<FONT size="+1"> <FONT size="+1">Application Authentication ..................................................................................... <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.11<FONT size="+1"> <FONT size="+1">OPC UA security related Services ......................................................................... <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12<FONT size="+1"> <FONT size="+1">Auditing ................................................................................................................ <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12.1<FONT size="+1"> <FONT size="+1">General ..................................................................................................... <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12.2<FONT size="+1"> <FONT size="+1">Single Client and Server ........................................................................... <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12.3<FONT size="+1"> <FONT size="+1">Aggregating Server ................................................................................... <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12.4<FONT size="+1"> <FONT size="+1">Aggregation through a non-auditing Server ............................................... <A>
+18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.12.5<FONT size="+1"> <FONT size="+1">Aggregating Server with service distribution .............................................. <A>
+19</A>
+<FONT size="+1"> </DIV
+></DIV
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><FONT size="+1">5<FONT size="+1"> <FONT size="+1">Security reconciliation .................................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1<FONT size="+1"> <FONT size="+1">Reconciliation of threats with OPC UA security mechanisms ................................. <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.1<FONT size="+1"> <FONT size="+1">Overview ................................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.2<FONT size="+1"> <FONT size="+1">Message flooding ...................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.3<FONT size="+1"> <FONT size="+1">Eavesdropping .......................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.4<FONT size="+1"> <FONT size="+1">Message spoofing ..................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.5<FONT size="+1"> <FONT size="+1">Message alteration .................................................................................... <A>
+20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.6<FONT size="+1"> <FONT size="+1">Message replay ......................................................................................... <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.7<FONT size="+1"> <FONT size="+1">Malformed Messages ................................................................................ <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.8<FONT size="+1"> <FONT size="+1">Server profiling ......................................................................................... <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.9<FONT size="+1"> <FONT size="+1">Session hijacking ...................................................................................... <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.10<FONT size="+1"> <FONT size="+1">Rogue Server ............................................................................................ <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1.11<FONT size="+1"> <FONT size="+1">Compromising user credentials ................................................................. <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2<FONT size="+1"> <FONT size="+1">Reconciliation of objectives with OPC UA security mechanisms ............................ <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.1<FONT size="+1"> <FONT size="+1">Overview ................................................................................................... <A>
+21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.2<FONT size="+1"> <FONT size="+1">Application Authentication ......................................................................... <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.3<FONT size="+1"> <FONT size="+1">User Authentication ................................................................................... <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.4<FONT size="+1"> <FONT size="+1">Authorization ............................................................................................. <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.5<FONT size="+1"> <FONT size="+1">Confidentiality ........................................................................................... <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.6<FONT size="+1"> <FONT size="+1">Integrity .................................................................................................... <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.7<FONT size="+1"> <FONT size="+1">Auditability ................................................................................................ <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2.8<FONT size="+1"> <FONT size="+1">Availability ................................................................................................ <A>
+22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6<FONT size="+1"> <FONT size="+1">Implementation and deployment considerations ............................................................. <A>
+23</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.1<FONT size="+1"> <FONT size="+1">Overview .............................................................................................................. <A>
+23</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.2<FONT size="+1"> <FONT size="+1">Appropriate timeouts: ............................................................................................ <A>
+23</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3<FONT size="+1"> <FONT size="+1">Strict Message processing .................................................................................... <A>
+23</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.4<FONT size="+1"> <FONT size="+1">Random number generation .................................................................................. <A>
+23</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.5<FONT size="+1"> <FONT size="+1">Special and reserved packets ............................................................................... <A>
+24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.6<FONT size="+1"> <FONT size="+1">Rate limiting and flow control ................................................................................ <A>
+24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.7<FONT size="+1"> <FONT size="+1">Administrative access ........................................................................................... <A>
+24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.8<FONT size="+1"> <FONT size="+1">Cryptographic Keys............................................................................................... <A>
+24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.9<FONT size="+1"> <FONT size="+1">Alarm related guidance ......................................................................................... <A>
+24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.10<FONT size="+1"> <FONT size="+1">Program access .................................................................................................... <A>
+25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.11<FONT size="+1"> <FONT size="+1">Audit event management ...................................................................................... <A>
+25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7<FONT size="+1"> <FONT size="+1">Unsecured Services ....................................................................................................... <A>
+25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.1<FONT size="+1"> <FONT size="+1">Overview .............................................................................................................. <A>
+25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.2<FONT size="+1"> <FONT size="+1">Multi Cast Discovery ............................................................................................. <A>
+25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3<FONT size="+1"> <FONT size="+1">Global Discovery Server Security .......................................................................... <A>
+26</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3.1<FONT size="+1"> <FONT size="+1">Overview ................................................................................................... <A>
+26</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3.2<FONT size="+1"> <FONT size="+1">Rogue GDS ............................................................................................... <A>
+26</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3.3<FONT size="+1"> <FONT size="+1">Threats against a GDS .............................................................................. <A>
+27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3.4<FONT size="+1"> <FONT size="+1">Certificate management threats ................................................................ <A>
+27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">8<FONT size="+1"> <FONT size="+1">Certificate management ................................................................................................. <A>
+27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">8.1.1<FONT size="+1"> <FONT size="+1">Overview ................................................................................................... <A>
+27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">8.1.2<FONT size="+1"> <FONT size="+1">Self signed certificate management ........................................................... <A>
+28</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">8.1.3<FONT size="+1"> <FONT size="+1">CA Signed Certificate management ........................................................... <A>
+28</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">8.1.4<FONT size="+1"> <FONT size="+1">GDS Certificate Management .................................................................... <A>
+29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">  </DIV
+></DIV
+><P 
+
+><B>FIGURES </P
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+> </DIV
+><DIV class="TOCI" 
+
+></B>Figure 1 - OPC UA network model .......................................................................................... <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 2 &ndash; OPC UA security architecture .............................................................................. <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 3 &ndash; Simple Servers .................................................................................................... <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 4 &ndash; Aggregating Servers ............................................................................................ <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 5 &ndash; Aggregation with a non-auditing Server ............................................................... <A>
+18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 6 &ndash; Aggregate Server with service distribution ........................................................... <A>
+19</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 7 - Manual Certificate handling .................................................................................. <A>
+28</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 8 - CA Certificate handling ........................................................................................ <A>
+29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 9 &ndash; Certificate handling.............................................................................................. <A>
+30</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><B>TABLES </DIV
+><DIV class="TOCI" 
+
+></B>No table of figures entries found.<B> </DIV
+></DIV
+><P 
+
+></B>  </P
+><P 
+
+><FONT size="+1"><B>OPC FOUNDATION </P
+><P 
+
+><FONT size="+1"></B>____________ </P
+><P 
+
+><FONT size="+1"><B> </P
+><P 
+
+>UNIFIED ARCHITECTURE &ndash;  </P
+><P 
+
+><FONT size="+1">FOREWORD </P
+><P 
+
+><FONT size="+1"></B>This specification is the specification for developers of OPC UA applications. The specification is a result of an analysis and design process to develop a standard interface to facilitate the development of applications by multiple vendors that shall inter-operate seamlessly together.  </P
+><P 
+
+><B>Copyright &copy; 2006-2014, OPC Foundation, Inc. </P
+><P 
+
+><FONT size="+1">AGREEMENT OF USE </P
+><P 
+
+><FONT size="+1"></B>COPYRIGHT RESTRICTIONS </P
+><P 
+
+>Any unauthorized use of this specification may violate copyright laws, trademark laws, and communications regulations and statutes. This document contains information which is protected by copyright. All Rights Reserved. No part of this work covered by copyright herein may be reproduced or used in any form or by any means--graphic, electronic, or mechanical, including photocopying, recording, taping, or information storage and retrieval systems--without permission of the copyright owner. </P
+><P 
+
+>OPC Foundation members and non-members are prohibited from copying and redistributing this specification. All copies must be obtained on an individual basis, directly from the OPC Foundation Web site <FONT size="+1">H<A href="http://www.opcfoundation.org/">
+TU<FONT size="+1" color="#0000FF">http://www.opcfoundation.org<FONT size="+1">UT</A>
+<FONT color="#000000">H<FONT size="+1">. </P
+><P 
+
+>PATENTS </P
+><P 
+
+>The attention of adopters is directed to the possibility that compliance with or adoption of OPC specifications may require use of an invention covered by patent rights. OPC shall not be responsible for identifying patents for which a license may be required by any OPC specification, or for conducting legal inquiries into the legal validity or scope of those patents that are brought to its attention. OPC specifications are prospective and advisory only. Prospective users are responsible for protecting themselves against liability for infringement of patents. </P
+><P 
+
+>WARRANTY AND LIABILITY DISCLAIMERS </P
+><P 
+
+>WHILE THIS PUBLICATION IS BELIEVED TO BE ACCURATE, IT IS PROVIDED &quot;AS IS&quot; AND MAY CONTAIN ERRORS OR MISPRINTS. THE OPC FOUDATION MAKES NO WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, WITH REGARD TO THIS PUBLICATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF TITLE OR OWNERSHIP, IMPLIED WARRANTY OF MERCHANTABILITY OR WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR USE. IN NO EVENT SHALL THE OPC FOUNDATION BE LIABLE FOR ERRORS CONTAINED HEREIN OR FOR DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, RELIANCE OR COVER DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA OR USE, INCURRED BY ANY USER OR ANY THIRD PARTY IN CONNECTION WITH THE FURNISHING, PERFORMANCE, OR USE OF THIS MATERIAL, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. </P
+><P 
+
+>The entire risk as to the quality and performance of software developed using this specification is borne by you.  </P
+><P 
+
+>RESTRICTED RIGHTS LEGEND </P
+><P 
+
+>This Specification is provided with Restricted Rights. Use, duplication or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation,. 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830 </P
+><P 
+
+>COMPLIANCE </P
+><P 
+
+>The OPC Foundation shall at all times be the sole entity that may authorize developers, suppliers and sellers of hardware and software to use certification marks, trademarks or other special designations to indicate compliance with these materials. Products developed using this specification may claim compliance or conformance with this specification if and only if the software satisfactorily meets the certification requirements set by the OPC Foundation. Products that do not meet these requirements may claim only that the product was based on this specification and must not claim compliance or conformance with this specification.  </P
+><P 
+
+>TRADEMARKS </P
+><P 
+
+>Most computer and software brand names have trademarks or registered trademarks. The individual trademarks have not been listed here. </P
+><P 
+
+>GENERAL PROVISIONS </P
+><P 
+
+>Should any provision of this Agreement be held to be void, invalid, unenforceable or illegal by a court, the validity and enforceability of the other provisions shall not be affected thereby.  </P
+><P 
+
+>This Agreement shall be governed by and construed under the laws of the State of Minnesota, excluding its choice or law rules. </P
+><P 
+
+>This Agreement embodies the entire understanding between the parties with respect to, and supersedes any prior understanding or agreement (oral or written) relating to, this specification.  </P
+><P 
+
+>ISSUE REPORTING </P
+><P 
+
+>The OPC Foundation strives to maintain the highest quality standards for its published specifications, hence they undergo constant review and refinement. Readers are encouraged to report any issues and view any existing errata here: <FONT size="+1">H<A href="http://www.opcfoundation.org/errata">
+TU<FONT size="+1" color="#0000FF">http://www.opcfoundation.org/errata<FONT size="+1">UT</A>
+<FONT color="#000000">H </P
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><B>Revision 1.03 Highlights </P
+><P 
+
+></B>The following table includes the Mantis issues resolved with this revision.  </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+><B>Mantis ID </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Summary </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Resolution </P
+></TH
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2066">
+<FONT color="#0000FF"></B>2066</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Minor Text Updates requested </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text describing Audit handling </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2546">
+<FONT color="#0000FF">254</A>
+<FONT color="#000000">6 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Add comment about this DOS vulnerability </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text describing DOS case and general discussion </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2746">
+<FONT color="#0000FF">2746</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Certificate generation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text listing that both public and private certificate are regenerate </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2747">
+<FONT color="#0000FF">2747</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MultiCast DNS - security discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text explaining that Multicast is insecure  and that caution should be used if deploying it. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2748">
+<FONT color="#0000FF">2748</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Discovery - Security Discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text as listed in Mantis issue, advising client to be cautions with server information provided by a DiscoverServer. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2749">
+<FONT color="#0000FF">2749</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>FindserversOnNetwork - security discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text describing security consideration for FindserversOnNetwork </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2750">
+<FONT color="#0000FF">2750</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>General GDS - security discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added a section on GDS </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2751">
+<FONT color="#0000FF">2751</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Certificate generation - security discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added section on certificate management </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2958">
+<FONT color="#0000FF">2958</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Key usage and initialization security discussion </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added discussion on provisioning and certificate management </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2959">
+<FONT color="#0000FF">2959</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Include a discussion of keylength ranges </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added discussion on key lengths </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2960">
+<FONT color="#0000FF">2960</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PKCS # 1 v1.5 and known attackes discussion required </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text describing the issue and offering suggestions of possible solutions. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2963">
+<FONT color="#0000FF">2963</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Add information about the importance of good entropy </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Provided information listed in Mantis issue </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=3022">
+<FONT color="#0000FF">3022</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Add discussion on x509 hash strength/security profiles and the need to have multiple x509 per application  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added text to describe multiple security policies and multiple certificates, where each provides a different level of security </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1"><B>OPC Unified Architecture Specification </P
+><P 
+
+> </P
+><P 
+
+>Part 2: Security Model </P
+><P 
+
+><FONT size="+1"></B>  </P
+><H1 
+ ID="LinkTarget_2047"
+><FONT size="+1"><B>1 Scope </H1
+><P 
+
+><FONT size="+1"></B>This specification describes the OPC Unified Architecture (OPC UA) security model. It describes the security threats of the physical, hardware, and software environments in which OPC UA is expected to run. It describes how OPC UA relies upon other standards for security. It provides definition of common security terms that are used in this and other parts of the OPC UA specification. It gives an overview of the security features that are specified in other parts of the OPC UA specification. It references services, mappings, and <I>Profile</I>s that are specified normatively in other parts of this multi-part specification. It provides suggestions or best practice guidelines on implementing security. This part of the specification is informative rather than normative. Any seeming ambiguity between this part and one of the normative parts does not remove or reduce the requirement specified in the normative part. </P
+><P 
+
+>Note that there are many different aspects of security that have to be addressed when developing applications. However since OPC UA specifies a communication protocol, the focus is on securing the data exchanged between applications. This does not mean that an application developer can ignore the other aspects of security like protecting persistent data against tampering. It is important that the developers look into all aspects of security and decide how they can be addressed in the application. </P
+><P 
+
+>This part is directed to readers who will develop OPC UA <I>Client</I> or <I>Server</I> applications or implement the OPC UA services layer. It is also for end Users that wish to understand the various security features and functionality provided by OPC UA. It also offers some suggestions that can be applied when deploying systems. These suggestions are generic in nature since the details would depend on the actual implementation of the <I>OPC UA Application</I>s and the choices made for the site security. </P
+><P 
+
+>It is assumed that the reader is familiar with Web Services and XML/SOAP. Information on these technologies can be found in <A href="#LinkTarget_2101" href="#">
+SOAP Part 1</A>
+ and <A href="#LinkTarget_2108" href="#">
+SOAP Part 2</A>
+. </P
+><H1 
+ ID="LinkTarget_2061"
+><FONT size="+1"><B>2 Reference documents </H1
+><P 
+
+><FONT size="+1"></B>The following documents, in whole or in part, are normatively referenced in this document and are indispensable for its application. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies. </P
+><P 
+
+>Part 1: OPC UA Specification: Part 2 &ndash; Seurity Model<A href="http://www.opcfoundation.org/UA/Part1/">
+<FONT color="#0000FF"> </A>
+</P
+><P 
+
+><A>
+http://www.opcfoundation.org/UA/Part1/</A>
+<FONT color="#000000"> </P
+><P 
+
+>Part 4: OPC UA Specification: Part 4 &ndash; Services </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/Part4/">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/Part4/</A>
+<FONT color="#000000"> </P
+><P 
+
+>Part 5: OPC UA Specification: Part 5 &ndash; Information Model </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/Part5/">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/Part5/</A>
+<FONT color="#000000"> </P
+><P 
+
+>Part 6: OPC UA Specification: Part 6 &ndash; Mappings </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/Part6/">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/Part6/</A>
+<FONT color="#000000"> </P
+><P 
+
+>Part 7: OPC UA Specification: Part 7 &ndash; Profiles </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/Part7/">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/Part7/</A>
+<FONT color="#000000"> </P
+><P 
+
+>Part 12: OPC UA Specification: Part 12 &ndash; Discovery </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/Part12/">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/Part12/</A>
+<FONT color="#000000"> </P
+><P 
+
+>SOAP Part 1: SOAP Version 1.2 Part 1: Messaging Framework  </P
+><P 
+
+><A href="http://www.w3.org/TR/soap12-part1/">
+<FONT color="#0000FF">http://www.w3.org/TR/soap12-part1/</A>
+<FONT color="#000000"> </P
+><P 
+
+>SOAP Part 2: SOAP Version 1.2 Part 2: Adjuncts  </P
+><P 
+
+><A href="http://www.w3.org/TR/soap12-part2/">
+<FONT color="#0000FF">http://www.w3.org/TR/soap12-part2/</A>
+<FONT color="#000000"> </P
+><P 
+
+>XML Encryption: XML Encryption Syntax and Processing  </P
+><P 
+
+><A href="http://www.w3.org/TR/xmlenc-core/">
+<FONT color="#0000FF">http://www.w3.org/TR/xmlenc-core/</A>
+<FONT color="#000000"> </P
+><P 
+
+>XML Signature: XML-Signature Syntax and Processing  </P
+><P 
+
+><A href="http://www.w3.org/TR/xmldsig-core/">
+<FONT color="#0000FF">http://www.w3.org/TR/xmldsig-core/</A>
+<FONT color="#000000"> </P
+><P 
+
+>WS Security: SOAP Message Security 1.1 </P
+><P 
+
+><A href="http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf">
+<FONT color="#0000FF">http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf</A>
+<FONT color="#000000"> </P
+><P 
+
+>WS Addressing: Web Services Addressing (WS-Addressing) </P
+><P 
+
+><A href="http://www.w3.org/Submission/ws-addressing/">
+<FONT color="#0000FF">http://www.w3.org/Submission/ws-addressing/</A>
+<FONT color="#000000"> </P
+><P 
+
+>WS Trust: Web Services Trust Language (WS-Trust) </P
+><P 
+
+><A href="http://specs.xmlsoap.org/ws/2005/02/trust/WS-Trust.pdf">
+<FONT color="#0000FF">http://specs.xmlsoap.org/ws/2005/02/trust/WS-Trust.pdf</A>
+<FONT color="#000000"> </P
+><P 
+
+>WS Secure Conversation: Web Services Secure Conversation Language (WS-SecureConversation) </P
+><P 
+
+><A href="http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf">
+<FONT color="#0000FF">http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf</A>
+<FONT color="#000000"> </P
+><P 
+
+>SSL/TLS: RFC 2246: The TLS Protocol Version 1.0 </P
+><P 
+
+><A href="http://www.ietf.org/rfc/rfc2246.txt">
+<FONT color="#0000FF">http://www.ietf.org/rfc/rfc2246.txt</A>
+<FONT color="#000000"> </P
+><P 
+
+>X509: X.509 Public Key Certificate Infrastructure  </P
+><P 
+
+><A href="http://www.itu.int/rec/T-REC-X.509-200003-I/e">
+<FONT color="#0000FF">http://www.itu.int/rec/T-REC-X.509-200003-I/e</A>
+<FONT color="#000000"> </P
+><P 
+
+>HTTP: RFC 2616: Hypertext Transfer Protocol - HTTP/1.1 </P
+><P 
+
+><A href="http://www.ietf.org/rfc/rfc2616.txt">
+<FONT color="#0000FF">http://www.ietf.org/rfc/rfc2616.txt</A>
+<FONT color="#000000"> </P
+><P 
+
+>HTTPS: RFC 2818: HTTP Over TLS </P
+><P 
+
+><A href="http://www.ietf.org/rfc/rfc2818.txt">
+<FONT color="#0000FF">http://www.ietf.org/rfc/rfc2818.txt</A>
+<FONT color="#000000"> </P
+><P 
+
+>IS Glossary: Internet Security Glossary </P
+><P 
+
+><FONT color="#0000FF">http://www.ietf.org/rfc/rfc2828.txt </P
+><P 
+
+><FONT color="#000000">NIST 800-12: Introduction to Computer Security </P
+><P 
+
+><A href="http://csrc.nist.gov/publications/nistpubs/800-12/">
+<FONT color="#0000FF">http://csrc.nist.gov/publications/nistpubs/800-12/</A>
+ </P
+><P 
+
+><FONT color="#000000">NIST 800-57: Part 3: Application-Specific Key Management Guidance </P
+><P 
+
+><A href="http://csrc.nist.gov/publications/nistpubs/800-57/sp800-57_PART3_key-management_Dec2009.pdf">
+<FONT color="#0000FF">http://csrc.nist.gov/publications/nistpubs/800-57/sp800-57_PART3_key-management_Dec2009.pdf</A>
+ </P
+><P 
+
+><FONT color="#000000">NERC CIP: CIP 002-1 through CIP 009-1, by North-American Electric Reliability Council </P
+><P 
+
+><A href="http://www.nerc.com/page.php?cid=2|20">
+<FONT color="#0000FF">http://www.nerc.com/page.php?cid=2|20 </A>
+</P
+><P 
+
+><FONT color="#000000">IEC 62351: Data and Communications Security </P
+><P 
+
+><A href="http://www.iec.ch/heb/d_mdoc-e050507.htm">
+<FONT color="#0000FF">http://www.iec.ch/heb/d_mdoc-e050507.htm </A>
+</P
+><P 
+
+><FONT color="#000000">SPP-ICS: System Protection Profile &ndash; Industrial Control System, by Process Control Security Requirements Forum (PCSRF) </P
+><P 
+
+><A href="http://www.isd.mel.nist.gov/projects/processcontrol/SPP-ICSv1.0.pdf">
+<FONT color="#0000FF">http://www.isd.mel.nist.gov/projects/processcontrol/SPP-ICSv1.0.pdf</A>
+  </P
+><P 
+
+><FONT color="#000000">SHA-1: Secure Hash Algorithm RFC </P
+><P 
+
+><A href="http://tools.ietf.org/html/rfc3174">
+<FONT color="#0000FF">http://tools.ietf.org/html/rfc3174</A>
+ </P
+><P 
+
+><FONT color="#000000">PKI: Public Key Infrastructure article in Wikipedia </P
+><P 
+
+><A href="http://en.wikipedia.org/wiki/Public_key_infrastructure">
+<FONT color="#0000FF">http://en.wikipedia.org/wiki/Public_key_infrastructure</A>
+ </P
+><P 
+
+><FONT color="#000000">X509 PKI: Internet X.509 Public Key Infrastructure </P
+><P 
+
+><FONT color="#0000FF">http://www.ietf.org/rfc/rfc3280.txt </P
+><P 
+
+><FONT color="#000000">RFC 5958: Asymmetric Key Packages </P
+><P 
+
+><A href="http://tools.ietf.org/search/rfc5208">
+<FONT color="#0000FF">http://tools.ietf.org/search/rfc5208</A>
+<FONT color="#000000">  </P
+><P 
+
+>PKCS #10: Certification Request Syntax Specification </P
+><P 
+
+><A href="http://tools.ietf.org/html/rfc2986">
+<FONT color="#0000FF">http://tools.ietf.org/html/rfc2986</A>
+<FONT color="#000000"> </P
+><H1 
+ ID="LinkTarget_2236"
+><FONT size="+1"><B>3 Terms, definitions, and abbreviations </H1
+><H2 
+ ID="LinkTarget_2237"
+><FONT size="+1">3.1 Terms and definitions </H2
+><P 
+
+></B>For the purposes of this document, the terms and definitions given in <A href="#LinkTarget_2064" href="#">
+Part 1</A>
+ as well as the following apply. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.1  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Application Instance </P
+><P 
+
+></B>individual installation of a program running on one computer.  </P
+><P 
+
+><FONT size="+1">Note 1 to entry: There can be several Application Instances of the same application running at the same time on several computers or possibly the same computer. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.2  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Application Instance Certificate </P
+><P 
+
+></B><I>Digital Certificate</I> of an individual <I>Application Instance</I> that has been installed in an individual host.  </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Different installations of one software product would have different Application Instance Certificates. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.3  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Asymmetric Cryptography </P
+><P 
+
+></B><I>Cryptography</I> method that uses a pair of keys, one that is designated the <I>Private Key</I> and kept secret, the other called the <I>Public Key</I> that is generally made available.<I> </I></P
+><P 
+
+><FONT size="+1">Note 1 to entry:  &lsquo;Asymmetric Cryptography, also known as &quot;public-key cryptography&quot;. In an Asymmetric Encryption algorithm when an entity &ldquo;A&rdquo; requires <I>Confidentiality</I> for data sent to entity &ldquo;B&rdquo;, then entity &ldquo;A&rdquo; encrypts the data with a Public Key provided by entity &ldquo;B&rdquo;. Only entity &ldquo;B&rdquo; has the matching Private Key that is needed to decrypt the data. In an asymmetric Digital Signature algorithm when an entity &ldquo;A&rdquo; requires message Integrity or to provide <I>Authentication</I> for data sent to entity &ldquo;B&rdquo;, entity A uses its Private Key to sign the data. To verify the signature, entity B uses the matching Public Key that entity A has provided. In an asymmetric key agreement algorithm, entity A and entity B each send their own Public Key to the other entity. Then each uses their own Private Key and the other's Public Key to compute the new key value.&rsquo; according to <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.4  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Asymmetric Encryption </P
+><P 
+
+></B>the mechanism used by <I>Asymmetric Cryptography</I> for encrypting data with the <I>Public Key</I> of an entity and for decrypting data with the associated <I>Private Key</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.5  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Asymmetric Signature </P
+><P 
+
+></B>the mechanism used by <I>Asymmetric Cryptography</I> for signing data with the <I>Private Key</I> of an entity and for verifying the data&rsquo;s signature with the associated <I>Public Key</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.6  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Auditability </P
+><P 
+
+></B>security objective that assures that any actions or activities in a system can be recorded </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.7  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Auditing </P
+><P 
+
+></B>the tracking of actions and activities in the system, including security related activities where <I>Audit</I> records can be used to review and verify system operations </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.8  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Authentication </P
+><P 
+
+></B>security objective that assures that the identity of an entity such as a <I>Client</I>, <I>Server</I>, or user can be verified </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.9  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Authorization </P
+><P 
+
+></B>the ability to grant access to a system resource </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.10  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Availability </P
+><P 
+
+></B>security objective that assures that the system is running normally. That is, no services have been compromised in such a way to become unavailable or severely degraded </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.11  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Certificate Authority </P
+><P 
+
+></B>entity that can issue <I>Digital Certificate</I>s, also known as a CA </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The <I>Digital Certificate</I> certifies the ownership of a Public Key by the named subject of the <I>Certificate</I>. This allows others (relying parties) to rely upon signatures or assertions made by the Private Key that corresponds to the <I>Public Key</I> that is certified. In this model of trust relationships, a CA is a <A href="http://en.wikipedia.org/wiki/Trusted_third_party">
+trusted third </A>
+<A>
+party</A>
+ that is trusted by both the subject (owner) of the <I>Certificate</I> and the party relying upon the <I>Certificate</I>. CA s are characteristic of many <A href="http://en.wikipedia.org/wiki/Public_key_infrastructure">
+Public Key infrastructure</A>
+ (PKI) schemes  </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.12  </DD
+></DL
+></DL
+></DL
+><P 
+
+>CertificateStore </P
+><P 
+
+></B>persistent location where <I>Certificate</I>s and <I>Certificate</I> revocation lists (CRLs) are stored </P
+><P 
+
+><FONT size="+1">Note 1 to entry: It may be a disk resident file structure or on Windows platforms it may be a Windows registry location. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.13  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Confidentiality </P
+><P 
+
+></B>security objective that assures the protection of data from being read by unintended parties </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.14  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Cryptography </P
+><P 
+
+></B>transforming clear, meaningful information into an enciphered, unintelligible form using an algorithm and a key </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.15  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Cyber Security Management System  CSMS </P
+><P 
+
+></B>program designed by an organization to maintain the security of the entire organization&rsquo;s assets to an established level of <I>Confidentiality</I>, <I>Integrity</I>, and <I>Availability</I>, whether they are on the business side or the industrial automation and control systems side of the organization </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.16  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Digital Certificate </P
+><P 
+
+></B>structure that associates an identity with an entity such as a user, a product or an <I>Application Instance</I> where the <I>Certificate</I> has an associated asymmetric key pair which can be used to authenticate that the entity does, indeed, possess the <I>Private Key</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.17  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Digital Signature </P
+><P 
+
+></B>value computed with a cryptographic algorithm and appended to data in such a way that any recipient of the data can use the signature to verify the data&rsquo;s origin and <I>Integrity</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.18  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Hash Function </P
+><P 
+
+></B>algorithm such as SHA-1 for which it is computationally infeasible to find either a data object that maps to a given hash result (the &quot;one-way&quot; property) or two data objects that map to the same hash result (the &quot;collision-free&quot; property) , see <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+ </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.19  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Hashed Message Authentication Code HMAC </P
+><P 
+
+></B><I>MAC</I> that has been generated using an iterative <I>Hash Function</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.20  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Integrity </P
+><P 
+
+></B>security objective that assures that information has not been modified or destroyed in an unauthorized manner, see <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+ </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.21  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Key Exchange Algorithm </P
+><P 
+
+></B>protocol used for establishing a secure communication path between two entities in an unsecured environment whereby both entities apply a specific algorithm to securely exchange secret keys that are used for securing the communication between them </P
+><P 
+
+><FONT size="+1">Note 1 to entry: A typical example of a Key Exchange Algorithm is the SSL Handshake Protocol specified in <A href="#LinkTarget_2152" href="#">
+SSL/TLS</A>
+. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.22  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Message Authentication Code MAC </P
+><P 
+
+></B>short piece of data that results from an algorithm that uses a secret key (see <I>Symmetric Cryptography</I>) to hash a <I>Message</I> whereby the receiver of the <I>Message</I> can check against alteration of the <I>Message</I> by computing a <I>MAC</I> that should be identical using the same <I>Message</I> and secret key </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.23  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Message Signature </P
+><P 
+
+></B><I>Digital Signature</I> used to ensure the <I>Integrity</I> of <I>Message</I>s that are sent between two entities </P
+><P 
+
+><FONT size="+1">Note 1 to entry: There are several ways to generate and verify Message Signatures however they can be categorized as symmetric (See Clause <A href="#LinkTarget_2561" href="#">
+3.1.34</A>
+) and asymmetric (See Clause <A href="#LinkTarget_2284" href="#">
+3.1.5</A>
+) approaches. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.24  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Non-Repudiation </P
+><P 
+
+></B>strong and substantial evidence of the identity of the signer of a <I>Message</I> and of <I>Message</I> <I>Integrity</I>, sufficient to prevent a party from successfully denying the original submission or delivery of the <I>Message</I> and the <I>Integrity</I> of its contents </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.25  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Nonce </P
+><P 
+
+></B>random number that is used once typically by algorithms that generate security keys </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.26  </DD
+></DL
+></DL
+></DL
+><P 
+
+>OPC UA Application </P
+><P 
+
+></B>OPC UA <I>Client</I>, which calls OPC UA services,<I> </I>or an OPC UA <I>Server</I>, which performs those services </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.27  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Private Key </P
+><P 
+
+></B>the secret component of a pair of cryptographic keys used for <I>Asymmetric Cryptography </I></P
+><P 
+
+>note: <I>Public Key</I> and <I>Private Key</I> are always generated as a pair, if either is updated the other must also be updated </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.28  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Public Key </P
+><P 
+
+></B>the publicly-disclosed component of a pair of cryptographic keys used for <I>Asymmetric Cryptography</I>, see <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+ </P
+><P 
+
+>note: <I>Public Key</I> and <I>Private Key</I> are always generated as a pair, if either is updated the other must also be updated </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.29  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Public Key Infrastructure PKI </P
+><P 
+
+></B>the set of hardware, software, people, policies, and procedures needed to create, manage, store, distribute, and revoke <I>Digital Certificates</I> based on <I>Asymmetric Cryptography</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The core PKI functions are to register users and issue their public-key <I>Certificates</I>, to revoke <I>Certificates</I> when required, and to archive data needed to validate <I>Certificates</I> at a much later time. Key pairs for data <I>Confidentiality</I> may be generated by a <I>Certificate</I> authority (CA); it is a good idea to require a <I>Private Key</I> owner to generate their own key pair as it improves security because the <I>Private Key</I> would never be transmitted according to <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+. See <A href="#LinkTarget_2216" href="#">
+PKI</A>
+ and <A href="#LinkTarget_2222" href="#">
+X509 PKI</A>
+ for more details on <I>Public Key</I> Infrastructures. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.30  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Rivest-Shamir-Adleman RSA </P
+><P 
+
+></B>algorithm for <I>Asymmetric Cryptography</I>, invented in 1977 by Ron Rivest, Adi Shamir, and Leonard Adleman, see <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+ </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.31  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Secure Channel </P
+><P 
+
+></B>in OPC UA, a communication path established between an OPC UA <I>Client</I> and <I>Server</I> that have authenticated each other using certain OPC UA services and for which security parameters have been negotiated and applied </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.32  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Symmetric Cryptography </P
+><P 
+
+></B>branch of cryptography involving algorithms that use the same key for two different steps of the algorithm (such as encryption and decryption, or Signature creation and signature verification), see <A href="#LinkTarget_2176" href="#">
+IS Glossary</A>
+ </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.33  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Symmetric Encryption </P
+><P 
+
+></B>the mechanism used<I> </I>by <I>Symmetric Cryptography</I> for encrypting and decrypting data with a cryptographic key shared by two entities </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.34  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Symmetric Signature </P
+><P 
+
+></B>the mechanism used by <I>Symmetric Cryptography</I> for signing data with a <I>cryptographic key </I>shared by two entities </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The signature is then validated by generating the signature for the data again and comparing these two signatures. If they are the same then the signature is valid, otherwise either the key or the data is different from the two entities.  </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.1.35  </DD
+></DL
+></DL
+></DL
+><P 
+
+>TrustList </P
+><P 
+
+></B>list of <I>Certificate</I>s that an application has been configured to trust </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.36  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Transport Layer Security TLS </P
+><P 
+
+></B>standard protocol for creating <I>Secure Channel</I>s over IP based networks </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.1.37  </DD
+></DL
+></DL
+></DL
+><P 
+
+>X.509 Certificate </P
+><P 
+
+></B><I>Digital Certificate</I> in one of the formats defined by X.509 v1, 2, or 3 </P
+><P 
+
+><FONT size="+1">Note 1 to entry: An X.509 Certificate contains a sequence of data items and has a Digital Signature computed on that sequence. </P
+><P 
+
+><FONT size="+1"> </P
+><H2 
+ ID="LinkTarget_2589"
+><B>3.2 Abbreviations  </H2
+><P 
+
+></B>AES Advanced Encryption Standard </P
+><P 
+
+>CA  Certificate Authority </P
+><P 
+
+>CRL Certificate Revocation List </P
+><P 
+
+>CSMS Cyber Security Management System </P
+><P 
+
+>DNS Domain Name System </P
+><P 
+
+>DSA Digital Signature Algorithm </P
+><P 
+
+>ECDH Elliptic Curve Diffie-Hellman </P
+><P 
+
+>ECDSA Elliptic Curve Digital Signature Algorithm </P
+><P 
+
+>HMAC Hash-based Message Authentication Code </P
+><P 
+
+>NIST National Institute of Standard and Technology </P
+><P 
+
+>PKI Public Key Infrastructure </P
+><P 
+
+>RSA public key algorithm for signing or encryption, Rivest, Shamir, Adleman </P
+><P 
+
+>SHA Secure Hash Algorithm (Multiple versions exist SHA1, SHA256,&hellip;) </P
+><P 
+
+>SOAP Simple Object Access Protocol </P
+><P 
+
+>SSL Secure Sockets Layer </P
+><P 
+
+>TLS Transport Layer Security </P
+><P 
+
+>UA  Unified Architecture </P
+><P 
+
+>URI Uniform Resource Identifier  </P
+><P 
+
+>XML Extensible Mark-up Language </P
+><P 
+
+> </P
+><H2 
+ ID="LinkTarget_2610"
+><B>3.3 Conventions for security model figures  </H2
+><P 
+
+></B>The figures in this document do not use any special conventions. Any conventions used in a particular figure are explained for that figure. </P
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_2613"
+><FONT size="+1"><B>4 OPC UA security architecture </H1
+><H2 
+ ID="LinkTarget_2614"
+><FONT size="+1">4.1 OPC UA security environment </H2
+><P 
+
+></B>OPC UA is a protocol used between components in the operation of an industrial facility at multiple levels: from high-level enterprise management to low-level direct process control of a device. The use of OPC UA for enterprise management involves dealings with customers and suppliers. It may be an attractive target for industrial espionage or sabotage and may also be exposed to threats through untargeted malware, such as worms, circulating on public networks. Disruption of communications at the process control could result in financial losses, affect employee and public safety or cause environmental damage. </P
+><P 
+
+>OPC UA will be deployed in a diverse range of operational environments with varying assumptions about threats and accessibility, and with a variety of security policies and enforcement regimes. OPC UA, therefore, provides a flexible set of security mechanisms. <A href="#LinkTarget_2627" href="#">
+Figure 1</A>
+ is a composite that shows a combination of such environments. Some OPC UA <I>Client</I>s and <I>Servers</I> are on the same host and can be easily protected from external attack. Some <I>Client</I>s and <I>Servers</I> are on different </P
+><P 
+
+>hosts in the same operations network and might be protected by the security boundary protections that separate the operations network from external connections. Some OPC<I> </I>UA<I> Applications</I> run in relatively open environments where users and applications might be difficult to control. Other applications are embedded in control systems that have no direct electronic connection to external systems.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC Server   OPC Client  OPC Client Bob OPC Server Alice OPC Server OPC Server OPC Client OPC Server   OPC Client  Internet Attacker  OPC Client Attacker Eve Enterprise Network Plant Floor Network Operations Network S S S S = Security Boundary Protection S OPC Client CA Ted  CA Theresa  </DIV
+></P
+><P 
+
+><B>Figure 1 - OPC UA network model </P
+><H2 
+ ID="LinkTarget_2628"
+>4.2 Security objectives </H2
+><H3 
+ ID="LinkTarget_2629"
+>4.2.1 Overview </H3
+><P 
+
+></B>Fundamentally, information system security reduces the risk of damage from attacks. It does this by identifying the threats to the system, identifying the system&rsquo;s vulnerabilities to these threats, and providing countermeasures. The countermeasures reduce vulnerabilities directly, counteract threats, or recover from successful attacks. </P
+><P 
+
+>Industrial automation system security is achieved by meeting a set of objectives. These objectives have been refined through many years of experience in providing security for information systems in general and they remain quite constant despite the ever-changing set of threats to systems. They are described in the sub clause <A href="#LinkTarget_3132" href="#">
+5.1</A>
+ and sub clause <A href="#LinkTarget_3350" href="#">
+5.2</A>
+ reconciles these objectives against the OPC UA functions. Clause 6 offers additional best practice guidelines to <I>Client</I> and <I>Server</I> developers or those that deploy <I>OPC UA Application</I>s. </P
+><H3 
+ ID="LinkTarget_2641"
+><B>4.2.2 Authentication </H3
+><P 
+
+></B>Entities such as clients, <I>Servers</I>, and users should prove their identities. <I>Authentication</I> can be based on something the entity is, has, or knows. </P
+><H3 
+ ID="LinkTarget_2644"
+><B>4.2.3 Authorization </H3
+><P 
+
+></B>The access to read, write, or execute resources should be authorized for only those entities that have a need for that access within the requirements of the system. <I>Authorization</I> can be as coarse-</P
+><P 
+
+>grained as allowing or disallowing a <I>Client</I> to access a <I>Server</I> or it could be much finer grained such as allowing specific actions on specific information items by specific users. </P
+><H3 
+ ID="LinkTarget_2648"
+><B>4.2.4 Confidentiality </H3
+><P 
+
+></B>Data is protected from passive attacks such as eavesdropping, whether the data is being transmitted, in memory, or being stored. To provide <I>Confidentiality,</I> data encryption algorithms using special secrets for securing data are used along with <I>Authentication</I> and <I>Authorization</I> mechanisms for accessing that secret. </P
+><H3 
+ ID="LinkTarget_2650"
+><B>4.2.5 Integrity </H3
+><P 
+
+></B>Receivers receive the same information that the original sender sent, without the data being changed during transmission. </P
+><H3 
+ ID="LinkTarget_2652"
+><B>4.2.6 Auditability </H3
+><P 
+
+></B>Actions taken by a system must be recorded in order to provide evidence to stakeholders: </P
+><DL 
+
+><DD 
+
+>&#61623; that this system works as intended (successful actions are tracked). </DD
+><DD 
+
+>&#61623; that identify the initiator of certain actions (user activity is tracked). </DD
+><DD 
+
+>&#61623; that attempts to compromise the system were denied (unsuccessful actions are tracked). </DD
+></DL
+><H3 
+ ID="LinkTarget_2661"
+><B>4.2.7 Availability </H3
+><P 
+
+></B><I>Availability</I> is impaired when the execution of software that needs to run is turned off or when the software or communication system is overwhelmed by processing input. Impaired <I>Availability</I> in OPC UA can appear as slowing down of <I>Subscription</I> performance or the inability to add <I>Sessions </I>for example. </P
+><H2 
+ ID="LinkTarget_2663"
+><B>4.3 Security threats to OPC UA systems  </H2
+><H3 
+ ID="LinkTarget_2664"
+>4.3.1 Overview </H3
+><P 
+
+></B>OPC UA provides countermeasures to resist threats to the security of the information that is communicated. The sub clauses <A href="#LinkTarget_2711" href="#">
+4.3.2</A>
+, <A href="#LinkTarget_2722" href="#">
+4.3.3</A>
+, <A href="#LinkTarget_2733" href="#">
+4.3.4</A>
+, <A href="#LinkTarget_2743" href="#">
+4.3.5</A>
+, <A href="#LinkTarget_2752" href="#">
+4.3.6</A>
+, <A href="#LinkTarget_2761" href="#">
+4.3.7</A>
+, <A href="#LinkTarget_2771" href="#">
+4.3.8</A>
+, <A href="#LinkTarget_2780" href="#">
+4.3.9</A>
+, <A href="#LinkTarget_2791" href="#">
+4.3.10</A>
+, and <A href="#LinkTarget_2801" href="#">
+4.3.11</A>
+ list the currently known threats to environments in which OPC UA will be deployed, and Sub-clause <A href="#LinkTarget_3132" href="#">
+5.1</A>
+ reconciles these threats against the OPC UA functions. </P
+><H3 
+ ID="LinkTarget_2711"
+><B>4.3.2 Message flooding </H3
+><P 
+
+></B>An attacker can send a large volume of <I>Message</I>s, or a single <I>Message</I> that contains a large number of requests, with the goal of overwhelming the OPC UA <I>Server</I> or dependent components such as CPU, TCP/IP stack, Operating System, or the File System. Flooding attacks can be conducted at multiple layers including OPC UA, SOAP, [HTTP] or TCP. </P
+><P 
+
+><I>Message</I> flooding attacks can use both well-formed and malformed <I>Message</I>s. In the first scenario, the attacker could be a malicious person using a legitimate <I>Client</I> to flood the <I>Server</I> with requests. Two cases exist, one in which the <I>Client</I> does not have a <I>Session </I>with the <I>Server</I> and one in which it does. <I>Message</I> flooding may impair the ability to establish OPC UA <I>Sessions</I>, or terminate an existing <I>Session</I>. In the second scenario, an attacker could use a malicious <I>Client</I> that floods an OPC UA <I>Server</I> with malformed <I>Message</I>s in order to exhaust the <I>Server</I>&rsquo;s resources. </P
+><P 
+
+>In general, <I>Message</I> flooding may impair the ability to communicate with an OPC UA entity and result in denial of service. </P
+><P 
+
+><I>Message</I> flooding impacts <I>Availability</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3185" href="#">
+5.1.2</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2722"
+><B>4.3.3 Eavesdropping </H3
+><P 
+
+></B>Eavesdropping is the unauthorized disclosure of sensitive information that might result directly in a critical security breach or be used in follow-on attacks. </P
+><P 
+
+>If an attacker has compromised the underlying operating system or the network infrastructure, then the attacker might be able to record and capture <I>Message</I>s. It may be beyond the capability of a <I>Client</I> or <I>Server</I> to recover from a compromised operating system. </P
+><P 
+
+>Eavesdropping impacts <I>Confidentiality</I> directly and indirectly threatens all other security objectives. </P
+><P 
+
+>See <A href="#LinkTarget_3224" href="#">
+5.1.3</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2733"
+><B>4.3.4 Message spoofing </H3
+><P 
+
+></B>An attacker may forge <I>Message</I>s from a <I>Client</I> or a <I>Server</I>. Spoofing may occur at multiple layers in the protocol stack. </P
+><P 
+
+>By spoofing <I>Message</I>s from a <I>Client</I> or a <I>Server</I>, attackers may perform unauthorized operations and avoid detection of their activities. </P
+><P 
+
+><I>Message</I> spoofing impacts <I>Integrity</I> and <I>Authorization</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3237" href="#">
+5.1.4</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2743"
+><B>4.3.5 Message alteration </H3
+><P 
+
+></B>Network traffic and application layer <I>Message</I>s may be captured or modified and forwarded to OPC UA <I>Client</I>s and <I>Servers</I>. <I>Message</I> alteration may allow illegitimate access to a system. </P
+><P 
+
+><I>Message</I> alteration impacts <I>Integrity</I> and <I>Authorization</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3254" href="#">
+5.1.5</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2752"
+><B>4.3.6 Message replay </H3
+><P 
+
+></B>Network traffic and valid application layer <I>Message</I>s may be captured and resent to OPC UA <I>Client</I>s and <I>Servers</I> at a later stage without modification. An attacker could misinform the user or send a valid command such as opening a valve but at an improper time, so as to cause damage or property loss. </P
+><P 
+
+><I>Message</I> replay impacts <I>Authorization</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3268" href="#">
+5.1.6</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2761"
+><B>4.3.7 Malformed Messages </H3
+><P 
+
+></B>An attacker can craft a variety of <I>Message</I>s with invalid <I>Message</I> structure (malformed XML, SOAP, UA Binary, etc.) or data values, and send them to OPC UA <I>Client</I>s or <I>Servers</I>. </P
+><P 
+
+>The OPC UA <I>Client</I> or <I>Server</I> may incorrectly handle certain malformed <I>Message</I>s by performing unauthorized operations or processing unnecessary information. It might result in a denial or degradation of service including termination of the application or, in the case of embedded devices, a complete crash. In a worst-case scenario an attacker could use malformed <I>Message</I>s as a pre-step for a multi-level attack to gain access to the underlying system of an <I>OPC UA Application</I>. </P
+><P 
+
+>Malformed <I>Message</I>s impact <I>Integrity</I> and <I>Availability</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3285" href="#">
+5.1.7</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2771"
+><B>4.3.8 Server profiling </H3
+><P 
+
+></B>An attacker tries to deduce the identity, type, software version, or vendor of the <I>Server</I> or <I>Client</I> in order to apply knowledge about specific vulnerabilities of that product to mount a more intrusive or damaging attack. The attacker might profile the target by sending valid or invalid formatted <I>Message</I>s to the target and try to recognize the type of target by the pattern of its normal and error responses. </P
+><P 
+
+><I>Server</I> profiling impacts all of the security objectives indirectly. </P
+><P 
+
+>See <A href="#LinkTarget_3302" href="#">
+5.1.8</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2780"
+><B>4.3.9 Session hijacking </H3
+><P 
+
+></B>An attacker may use information (retrieved by sniffing the communication or by guessing) about a running <I>Session </I>established between two applications to inject manipulated <I>Message</I>s (with valid session information) that allow him or her to take over the <I>Session </I>from the authorized user. </P
+><P 
+
+>An attacker may gain unauthorized access to data or perform unauthorized operations. </P
+><P 
+
+><I>Session </I>hijacking impacts all of the security objectives. </P
+><P 
+
+>See <A href="#LinkTarget_3315" href="#">
+5.1.9</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2791"
+><B>4.3.10 Rogue Server </H3
+><P 
+
+></B>An attacker builds a malicious OPC UA <I>Server</I> or installs an unauthorized instance of a genuine OPC UA <I>Server</I>. </P
+><P 
+
+>The OPC <I>Client</I> may disclose necessary information. </P
+><P 
+
+>A rogue <I>Server</I> impacts all of the security objectives except <I>Integrity</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3328" href="#">
+5.1.10</A>
+ for the reconciliation of this threat. </P
+><H3 
+ ID="LinkTarget_2801"
+><B>4.3.11 Compromising user credentials </H3
+><P 
+
+></B>An attacker obtains user credentials such as usernames, passwords, <I>Certificate</I>s, or keys by observing them on papers, on screens, or in electronic communications, or by cracking them through guessing or the use of automated tools such as password crackers. </P
+><P 
+
+>An unauthorized user could launch and access the system to obtain all information and make control and data changes that harm plant operation or information. Once compromised credentials are used, subsequent activities may all appear legitimate. </P
+><P 
+
+>Compromised user credentials impact <I>Authorization </I>and<I> Confidentiality</I>. </P
+><P 
+
+>See <A href="#LinkTarget_3336" href="#">
+5.1.11</A>
+ for the reconciliation of this threat. </P
+><H2 
+ ID="LinkTarget_2811"
+><B>4.4 OPC UA relationship to site security </H2
+><P 
+
+></B>OPC UA security works within the overall <I>Cyber Security Management System</I> (<I>CSMS</I>) of a site. Sites often have a <I>CSMS</I> that addresses security policy and procedures, personnel, responsibilities, audits, and physical security. A <I>CSMS</I> typically addresses threats that include those that were described in <A href="#LinkTarget_2663" href="#">
+4.3</A>
+. They also analyse the security risks and determine what security controls the site needs. </P
+><P 
+
+>Resulting security controls commonly implement a &ldquo;defence-in-depth&rdquo; strategy that provides multiple layers of protection and recognizes that no single layer can protect against all attacks. Boundary protections, shown as abstract examples in <A href="#LinkTarget_2627" href="#">
+Figure 1</A>
+, may include firewalls, intrusion detection and prevention systems, controls on dial-in connections, and controls on media and computers that are brought into the system. Protections in components of the system may include hardened configuration of the operating systems, security patch management, anti-virus programs, and not allowing email in the control network. Standards that may be followed by a site include [NERC CIP] and [IEC 62351] which are referenced in Clause <A href="#LinkTarget_2061" href="#">
+2</A>
+. </P
+><P 
+
+>The security requirements of a site <I>CSMS</I> apply to its OPC UA interfaces. That is, the security requirements of the OPC UA interfaces that are deployed at a site are specified by the site, not by the OPC UA specification. OPC UA specifies features that are intended so that conformant <I>Client</I> and <I>Server</I> products can meet the security requirements that are expected to be made by sites where they will be deployed. Those who are responsible for the security at the site should determine how to meet the site requirements with OPC UA conformant products. </P
+><P 
+
+>The system owner that installs OPC UA <I>Client</I>s or <I>Servers</I> should analyse its security risks and provide appropriate mechanisms to mitigate those risks to achieve an acceptable level of security. OPC UA meets the wide variety of security needs that might result from such individual analyses. OPC UA <I>Client</I>s and <I>Servers</I> are required to be implemented with certain security features which are available for the system owner&rsquo;s optional use. Each system owner should be able to tailor a </P
+><P 
+
+>security solution that meets its security and economic requirements using a combination of mechanisms available within the OPC UA specification and external to OPC UA. </P
+><P 
+
+>The security requirements placed on the OPC UA <I>Client</I>s and <I>Servers</I> deployed at a site are specified by the site <I>CSMS</I>, not by the OPC UA specification. The OPC UA security specifications, however, are requirements placed upon OPC UA <I>Client</I> and <I>Server</I> products, and recommendations of how OPC UA should be deployed at a site in order to meet the security requirements that are anticipated to be specified at the site. </P
+><P 
+
+>OPC UA addresses some threats as described in <A href="#LinkTarget_2663" href="#">
+4.3</A>
+. The OPC Foundation recommends that <I>Client</I> and <I>Server</I> developers address the remaining threats, as detailed in Clause <A href="#LinkTarget_3459" href="#">
+6</A>
+. Threats to infrastructure components that might result in the compromise of <I>Client</I> and <I>Server</I> operating systems are not addressed by OPC UA.  </P
+><H2 
+ ID="LinkTarget_2843"
+><B>4.5 OPC UA security architecture </H2
+><P 
+
+></B>The OPC UA security architecture is a generic solution that allows implementation of the required security features at various places in the <I>OPC UA Application</I> architecture. Depending on the different mappings described in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+, the security objectives are addressed at different levels. The OPC UA Security Architecture is structured in an Application Layer and a Communication Layer atop the Transport Layer as shown in <A href="#LinkTarget_2855" href="#">
+Figure 2</A>
+.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC UA Client  OPC UA Server   Application Layer &#61623; User Authorization &#61623; User Authentication   Application Layer &#61623; User Authorization &#61623; User Authentication  Communication Layer &#61623; Confidentiality &#61623; Integrity &#61623; App Authentication  Communication Layer  &#61623; Confidentiality &#61623; Integrity &#61623; App Authentication  Transport Layer Session Secure Channel </DIV
+></P
+><P 
+
+><B>Figure 2 &ndash; OPC UA security architecture </P
+><P 
+
+></B>The routine work of a <I>Client</I> application and a <I>Server</I> application to transmit information, settings, and commands is done in a <I>Session </I>in the Application Layer. The Application Layer also manages the security objectives user <I>Authentication</I> and user <I>Authorization</I>. The security objectives that are managed by the Application Layer are addressed by the <I>Session Services</I> that are specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. A <I>Session </I>in the Application Layer communicates over a <I>Secure Channel</I> that is created in the Communication Layer and relies upon it for secure communication. All of the <I>Session </I>data is passed to the Communication Layer for further processing. </P
+><P 
+
+>Although a <I>Session </I>communicates over a <I>Secure Channel </I>and has to be activated before it can be used, the binding of users, <I>Sessions</I>, and <I>Secure Channels</I> is flexible.  </P
+><P 
+
+>Impersonation allows a user to take ownership of an existing <I>Session</I>. </P
+><P 
+
+>If a <I>Secure Channel</I> breaks, the <I>Session </I>will remain valid for a period of time allowing the <I>Client</I> to re-establish the connection to the <I>Session</I> via a new <I>Secure Channel.</I> Otherwise, the <I>Session </I>closes after its lifetime expires. </P
+><P 
+
+>The Communication Layer provides security mechanisms to meet <I>Confidentiality</I>, <I>Integrity</I> and application <I>Authentication</I> as security objectives. </P
+><P 
+
+>One essential mechanism to meet the above mentioned security objectives is to establish a <I>Secure Channel</I> (see <A href="#LinkTarget_3003" href="#">
+4.11</A>
+) that is used to secure the communication between a <I>Client</I> and a <I>Server</I>. The </P
+><P 
+
+><I>Secure Channel</I> provides encryption to maintain <I>Confidentiality</I>, <I>Message Signature</I>s to maintain <I>Integrity</I> and <I>Digital Certificates</I> to provide application <I>Authentication</I> for data that comes from the Application Layer and passes the &ldquo;secured&rdquo; data to the Transport Layer. The security mechanisms that are managed by the Communication Layer are provided by the <I>Secure Channel</I> Services that are specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+.  </P
+><P 
+
+>The security mechanisms provided by the <I>Secure Channel</I> services are implemented by a protocol stack that is chosen for the implementation. Mappings of the services to some of the protocol stack options are specified in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+ which define how functions in the protocol stack are used to meet the OPC UA security objectives. </P
+><P 
+
+>The Communication Layer can represent an OPC UA protocol stack. OPC UA specifies alternative stack mappings that can be used as the Communication Layer. These mappings are described in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. </P
+><P 
+
+>If the OPC UA native mapping is used, then functionality for <I>Confidentiality</I>, <I>Integrity</I>, application <I>Authentication</I>, and the <I>Secure Channel</I> are similar to the <A href="#LinkTarget_2152" href="#">
+SSL/TLS</A>
+ specifications, as described in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. </P
+><P 
+
+>If the Web Services mapping is used then <A href="#LinkTarget_2126" href="#">
+WS Security</A>
+, <A href="#LinkTarget_2146" href="#">
+WS Secure Conversation</A>
+ and <A href="#LinkTarget_2114" href="#">
+XML Encryption</A>
+ as well as <A href="#LinkTarget_2120" href="#">
+XML Signature</A>
+ are used to implement the mechanisms for<I> Confidentiality</I>, <I>Integrity</I>, application <I>Authentication</I> as well as for implementing a <I>Secure Channel</I>. For more specific information, see <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. </P
+><P 
+
+>The Transport Layer handles the transmission, reception, and the transport of data that is provided by the Communication Layer.  </P
+><P 
+
+>To survive the loss of the Transport Layer connections (e.g. TCP connections) and resume with a new connection, the Communication Layer is responsible for re-establishing the Transport Layer connection without interrupting the logical <I>Secure Channel</I>. </P
+><H2 
+ ID="LinkTarget_2927"
+><B>4.6 SecurityPolicies </H2
+><P 
+
+></B>A <I>SecurityPolicy</I> specifies which security mechanisms are to be used and are derived from a Security <I>Profile</I> (see <A href="#LinkTarget_2969" href="#">
+4.7</A>
+ for details). Security policies are used by the <I>Server</I> to announce which mechanisms it supports and by the <I>Client</I> to select one to use with the <I>Secure Channel</I> it wishes to open. <I>SecurityPolicies</I> include the following information: </P
+><DL 
+
+><DD 
+
+>&#61623; algorithms for signing and encryption </DD
+><DD 
+
+>&#61623; algorithm for key derivation </DD
+></DL
+><P 
+
+>The choice of SecurityPolicy is normally made by the administrator typically when the <I>Client</I> and <I>Server</I> products are installed. The available security policies are specified in <A href="#LinkTarget_2089" href="#">
+Part 7</A>
+. The Administrator can at a later time also change or modify the selection of <I>SecurityPolicies</I> as circumstances dictate. </P
+><P 
+
+>The announcement of security policies is handled by special discovery services specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. More details about the discovery mechanisms and policy announcement strategies can be found in <A href="#LinkTarget_2095" href="#">
+Part 12</A>
+. </P
+><P 
+
+>If a <I>Server</I> serves multiple <I>Client</I>s then it maintains separate policy selections for each <I>Client</I>. This allows a new <I>Client</I> to select policies independent of the policy choices that other <I>Client</I>s have selected for their <I>Secure Channels</I>. </P
+><P 
+
+>Since computing power increases every year, specific algorithms that are considered as secure today can become insecure in the future, therefore, it makes sense to support different security policies in an <I>OPC UA Application</I> and to be able to adopt more as they become available. NIST or other agencies even make predictions about the expected lifetime of algorithms (see <A href="#LinkTarget_2184" href="#">
+NIST 800-57</A>
+). The list of supported security policies will be updated based on recommendation such as those published by NIST. From a deployment point of view it is important that the periodic site-review checks that the currently selected list of security profiles still fulfil the required security objectives and if they do not, then a newer selection of <I>Security Profiles</I> is selected  </P
+><P 
+
+>There is also the case that new security policies are composed to support new algorithms that improve the level of security of OPC UA products. The application architecture of OPC UA <I>Client</I>s and <I>Servers</I> should be designed in a way that it is possible to update or add additional cryptographic algorithms to the application with little or no coding changes. </P
+><P 
+
+><A href="#LinkTarget_2089" href="#">
+Part 7</A>
+ specifies several policies which are identified by a specific unique URI. To improve interoperability among vendors&rsquo; products, <I>Server</I> products implement these policies rather than define their own. <I>Clients</I> support the same policies. </P
+><H2 
+ ID="LinkTarget_2969"
+><B>4.7 Security Profiles </H2
+><P 
+
+></B>OPC UA <I>Client</I> and <I>Server</I> products are certified against <I>Profiles</I> that are defined in <A href="#LinkTarget_2089" href="#">
+Part 7</A>
+. Some of the <I>Profiles</I> specify security functions and others specify other functionality that is not related to security. The <I>Profiles</I> impose requirements on the certified products but they do not impose requirements on how the products are used. A consistent minimum level of security is required by the various <I>Profiles</I>. However, different <I>Profiles</I> specify different details such as which encryption algorithms are required for which OPC UA functions. If a problem is found in one encryption algorithm then the OPC Foundation can define a new <I>Profile</I> that is similar, but that specifies a different encryption algorithm that does not have a known problem. <A href="#LinkTarget_2089" href="#">
+Part 7</A>
+ is the normative specification of the <I>Profiles</I>.   </P
+><P 
+
+>Policies refer to many of the same security choices as <I>Profiles</I>; however the policy specifies which of those choices to use in the <I>Session</I>. The policy does not specify the range of choices that the product offers, they are described in the <I>Profiles </I>that it supports. </P
+><P 
+
+>These policies are included in Certification Testing associated with OPC UA <I>Client</I> and <I>Servers</I>. The Certification Testing ensures that the standard is followed and that the appropriate security algorithms are supported. </P
+><P 
+
+>Each security mechanism in OPC UA is provided in <I>Client</I> and <I>Server</I> products in accordance with the <I>Profiles</I> with which the <I>Client</I> or <I>Server</I> complies. At the site, however, the security mechanisms may be deployed optionally. In this way each individual site has all of the OPC UA security functions available and can choose which of them to use to meet its security objectives. </P
+><H2 
+ ID="LinkTarget_2983"
+><B>4.8 User Authorization </H2
+><P 
+
+></B>OPC UA provides a mechanism to exchange user credentials but does not specify how the applications use these credentials. <I>Client</I> and <I>Server</I> applications may determine in their own way what data is accessible and what operations are authorized. <I>Profile</I>s exist to indicate the support of user credentials to restrict or control access to data. </P
+><H2 
+ ID="LinkTarget_2985"
+><B>4.9 User Authentication </H2
+><P 
+
+></B>User <I>Authentication</I> is achieved when the <I>Client</I> passes user credentials to the <I>Server</I> as specified via <I>Session Services</I> (described in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+). The <I>Server</I> can authenticate the user with these credentials. </P
+><P 
+
+>The owner (user) of a <I>Session </I>can be changed using the <I>ActivateSession Service</I> in order to meet needs of the application.  </P
+><H2 
+ ID="LinkTarget_2993"
+><B>4.10 Application Authentication </H2
+><P 
+
+></B>OPC UA uses a concept conveying Application <I>Authentication</I> to allow applications that intend to communicate to identify each other. Each <I>OPC UA Application Instance</I> has a <I>Digital Certificate</I> (<I>Application Instance Certificate</I>) assigned that is exchanged during <I>Secure Channel</I> establishment. The receiver of the <I>Certificate</I> checks whether it trusts the <I>Certificate</I> and based on this check it accepts or rejects the request or response <I>Message</I> from the sender. This trust check is accomplished using the concept of <I>TrustLists</I>. <I>TrustLists</I> are a <I>CertificateStore</I> designated by an administrator. An administrator determines if the <I>Certificate</I> is signed, validated and trustworthy before placing it in a <I>TrustList</I>. <I>TrustLists</I> usually also include <I>Certificate</I> Revocation Lists (CRLs). OPC UA makes use of these industry standard concepts as defined by other organizations. </P
+><P 
+
+>In OPC UA HTTPS can be used to create <I>Secure Channels</I>, however, these channels do not provide <I>Application Authentication</I>. If <I>Authentication</I> is required, it is based on user credentials. </P
+><P 
+
+>More details on <I>Application Authentication</I> can be found in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. </P
+><H2 
+ ID="LinkTarget_3003"
+><B>4.11 OPC UA security related Services </H2
+><P 
+
+></B>The OPC UA Security Services are a group of abstract service definitions specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ that are used for applying various security mechanisms to communication between OPC UA <I>Client</I>s and <I>Server</I>s. </P
+><P 
+
+>The Discovery Service Set (specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+) defines services used by an OPC UA <I>Client</I> to obtain information about the security policies (see <A href="#LinkTarget_2927" href="#">
+4.6</A>
+) and the <I>Digital Certificate</I>s of specific OPC UA <I>Server</I>s. </P
+><P 
+
+>The services of the <I>Secure Channel</I> Service Set (specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+) are used to establish a <I>Secure Channel</I> which is responsible for securing <I>Message</I>s sent between a <I>Client</I> and a <I>Server</I>. The challenge of the <I>Secure Channel</I> establishment is that it requires the <I>Client</I> and the <I>Server</I> to securely exchange cryptographic keys and secret information in an insecure environment, therefore a specific <I>Key Exchange Algorithm</I> (similar to SSL Handshake protocol defined in <A href="#LinkTarget_2152" href="#">
+SSL/TLS</A>
+) is applied by the communication participants. </P
+><P 
+
+>The OPC UA <I>Client</I> retrieves the security policies and <I>Digital Certificate</I>s of the OPC UA <I>Server</I> by the above mentioned discovery services. These <I>Digital Certificates</I> contain the <I>Public Keys</I> of the OPC UA <I>Server</I>. </P
+><P 
+
+>The OPC UA <I>Client</I> sends its <I>Public Key</I> in a <I>Digital Certificate</I> and secret information with the OpenSecureChannel service <I>Message</I> to the <I>Server</I>. This <I>Message</I> is secured by applying <I>Asymmetric Encryption </I>with the<I> </I><I>Server&rsquo;s Public Key </I>and by<I> </I>generating<I> Asymmetric Signatures </I>with the <I>Client</I>&rsquo;s <I>Private Key. </I>However the<I> Digital Certificate </I>is sent unencrypted so that the receiver can use it to verify the <I>Asymmetric Signature</I>.<I> </I></P
+><P 
+
+>The <I>Server</I> decrypts the <I>Message</I> with its <I>Private Key</I> and verifies the <I>Asymmetric Signature</I> with the <I>Client</I>&rsquo;s <I>Public Key</I>. The secret information of the OPC UA <I>Client</I> together with the secret information of the OPC UA <I>Server</I> is used to derive a set of cryptographic keys that are used for securing all further <I>Message</I>s. Furthermore, all other service <I>Message</I>s are secured with <I>Symmetric Encryption</I> and <I>Symmetric Signature</I>s instead of the asymmetric equivalents. </P
+><P 
+
+>The <I>Server</I> sends its secret information in the service response to the <I>Client</I> so that the <I>Client</I> can derive the same set of cryptographic keys. </P
+><P 
+
+>Since <I>Clients</I> and <I>Servers</I> have the same set of cryptographic keys they can communicate securely with each other. </P
+><P 
+
+>These derived cryptographic keys are changed periodically so that attackers do not have unlimited time and unrestricted sequences of <I>Message</I>s to use to determine what the keys are. </P
+><H2 
+ ID="LinkTarget_3036"
+><B>4.12 Auditing </H2
+><H3 
+ ID="LinkTarget_3037"
+>4.12.1 General </H3
+><P 
+
+></B><I>Client</I>s and <I>Servers</I> generate audit records of successful and unsuccessful connection attempts, results of security option negotiations, configuration changes, system changes, user interactions and <I>Session </I>rejections. </P
+><P 
+
+>OPC UA provides support for security audit trails through two mechanisms. First, it provides for traceability between <I>Client</I> and <I>Server</I> audit logs. The <I>Client</I> generates an audit log entry for an operation that includes a request. When the <I>Client</I> issues a service request, it generates an audit log entry and includes the local identifier of the log entry in the request sent to the <I>Server</I>. The <I>Server</I> logs requests that it receives and includes the <I>Client</I>&rsquo;s entry id in its audit log entry. In this fashion, if a security-related problem is detected at the <I>Server</I>, the associated <I>Client</I> audit log entry can be located and examined. OPC UA does not require the audit entries to be written to disk, but it does require that they be available. OPC UA provides the capability for <I>Servers</I> to generate <I>Event</I> <I>Notifications</I> that report auditable <I>Events</I> to <I>Client</I>s capable of processing and logging them. See <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ for more details on how services in OPC UA are audited. </P
+><P 
+
+>Second, OPC UA defines audit parameters to be included in audit records. This promotes consistency across audit logs and in <I>Audit</I> <I>Events</I>. <A href="#LinkTarget_2077" href="#">
+Part 5</A>
+ defines the data types for these </P
+><P 
+
+>parameters. Other information models may extend the audit definitions. <A href="#LinkTarget_2089" href="#">
+Part 7</A>
+ defines <I>Profile</I>s which include the ability to generate <I>Audit</I> <I>Events</I> and use these parameters, including the <I>Client</I> audit record id. </P
+><P 
+
+>Because the audit logs are used to prove that the system is operating securely, the audit logs themselves are also secured from unauthorized tampering. If someone without authorization were able to alter or delete log records, this could hide an actual or attempted security breach. Because there are many different ways to generate and store audit logs (e.g. files or database), the mechanisms to secure audit logs are outside the scope of this specification. </P
+><P 
+
+>In addition, the information in an audit record may contain sensitive or private information, thus the ability to subscribe for <I>Audit</I> <I>Events</I> is restricted to appropriate users and/or applications. As an alternative, the fields with sensitive or private information can instead contain an error code indicating access denied for users that do not have appropriate rights. </P
+><P 
+
+>The clauses <A href="#LinkTarget_3078" href="#">
+4.12.2</A>
+, <A href="#LinkTarget_3091" href="#">
+4.12.3</A>
+, <A href="#LinkTarget_3105" href="#">
+4.12.4</A>
+ and <A href="#LinkTarget_3118" href="#">
+4.12.5</A>
+ illustrate the behaviour of OPC UA <I>Servers</I> and <I>Client</I>s that support <I>Auditing</I>. </P
+><H3 
+ ID="LinkTarget_3078"
+><B>4.12.2 Single Client and Server </H3
+><P 
+
+><A href="#LinkTarget_3085" href="#">
+</B>Figure 3</A>
+ illustrates the simple case of a <I>Client</I> communicating with a <I>Server</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC Client &ldquo;A&rdquo; OPC Server &ldquo;D&rdquo; Audit Entry ID: Y Client Name: A Client Audit Entry ID: Z Server D Audit Info Audit Entry ID: Z Client A Audit Info Client &ldquo;A&rdquo; creates an audit log entry for a given operation, and issues an OPC UA service request as part of that operation. The service request contains the client&rsquo;s audit entry id &ldquo;Z&rdquo;.   Server &ldquo;D&rdquo; creates an audit log entry for the service request, cross referencing it to the corresponding audit log entry of Client &ldquo;A&rdquo;. 1..N 0..N 0..N cc 0..N 1 0..N </DIV
+></P
+><P 
+
+><B>Figure 3 &ndash; Simple Servers </P
+><P 
+
+></B>In this case, OPC Client &ldquo;A&rdquo; executes some auditable operation that includes the invocation of an OPC UA service in <I>Server</I> &ldquo;D&rdquo;. It writes its own audit log entry, and includes the identifier of that entry in the service request that it submits to the <I>Server</I>. </P
+><P 
+
+>The <I>Server</I> receives the request and creates its own audit log entry for it. This entry is identified by its own audit id and contains its own <I>Auditing</I> information. It also includes the name of the <I>Client</I> that issued the service request and the <I>Client</I> audit entry id received in the request. </P
+><P 
+
+>Using this information, an auditor can inspect the collection of log entries of the <I>Server</I> and relate them back to their associated <I>Client</I> entries. </P
+><H3 
+ ID="LinkTarget_3091"
+><B>4.12.3 Aggregating Server </H3
+><P 
+
+><A href="#LinkTarget_3099" href="#">
+</B>Figure 4</A>
+ illustrates the case of a <I>Client</I> accessing services from an aggregating <I>Server</I>. An aggregating <I>Server</I> is a <I>Server</I> that provides its services by accessing services of other OPC UA <I>Servers</I>, referred to as lower layer-<I>Servers</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> Client &ldquo;A&rdquo; creates an audit log entry for a given operation, and issues an OPC UA service request as part of that operation. The service request contains the client&rsquo;s audit entry id &ldquo;Z&rdquo;.  Audit Entry ID: Y Client Name: A Client Audit Entry ID: Z Server B Audit Info OPC Client &ldquo;A&rdquo; OPC Server &ldquo;B&rdquo; -------------- OPC Client OPC Server &ldquo;C&rdquo; -------------- OPC Client OPC Server &ldquo;D&rdquo; Audit Entry ID: Z Client A Audit Info Audit Entry ID: X Client Name: B Client Audit Entry ID: Y Server C Audit Info Audit Entry ID: W Client Name: C Client Audit Entry ID: X Server D Audit Info Server &ldquo;B&rdquo; creates an audit log entry for the given operation, cross referencing it to the corresponding audit log entry of Client &ldquo;A&rdquo; and issues an OPC UA service request as part of that operation. The service request contains the server&rsquo;s audit entry id &ldquo;Y&rdquo;.   Server &ldquo;C&rdquo; creates an audit log entry for the given operation, cross referencing it to the corresponding audit log entry &ldquo;Y&rdquo; of Server &ldquo;B&rdquo;, which acts as the client to this server, and issues an OPC UA service request to Server &ldquo;D&rdquo; in support of this request. The service request contains the Server&rsquo;s audit entry id &ldquo;X&rdquo;.    Server &ldquo;D&rdquo; creates an audit log entry for the service request, cross referencing it to the corresponding audit log entry &ldquo;X&rdquo; of Client &ldquo;C&rdquo;, which acts as the client to this server. 1..N 0..N 0..N cc 0..N 1 0..N </DIV
+></P
+><P 
+
+><B>Figure 4 &ndash; Aggregating Servers </P
+><P 
+
+></B>In this case, each of the <I>Servers</I> receives requests and creates its own audit log entry for them. Each entry is identified by its own audit id and contains its own <I>Auditing</I> information. It also includes the name of the <I>Client</I> that issued the service request and the <I>Client</I> audit entry id received in the request. The <I>Server</I> then passes the audit id of the entry it just created to the next <I>Server</I> in the chain. </P
+><P 
+
+>Using this information, an auditor can inspect the <I>Server</I>&rsquo;s log entries and relate them back to their associated <I>Client</I> entries. </P
+><P 
+
+>In most cases, the <I>Servers</I> will only generate <I>Audit</I> <I>Events</I>, but these <I>Audit</I> <I>Events</I> will still contain the same information as the audit log records. In the case of aggregating <I>Servers</I>, a <I>Server</I> would also be required to subscribe for <I>Audit</I> <I>Events</I> from the <I>Servers</I> it is aggregating. In this manner, <I>Server</I> &ldquo;B&rdquo; would be able to provide all of the <I>Audit</I> <I>Events</I> to <I>Client</I> &ldquo;A&rdquo;, including the <I>Events</I> generated by <I>Server</I> &ldquo;C&rdquo; and <I>Server</I> &ldquo;D&rdquo;. </P
+><H3 
+ ID="LinkTarget_3105"
+><B>4.12.4 Aggregation through a non-auditing Server </H3
+><P 
+
+><A href="#LinkTarget_3113" href="#">
+</B>Figure 5</A>
+ illustrates the case of a <I>Client</I> accessing services from an aggregating <I>Server</I> that does not support <I>Auditing</I>.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> Client &ldquo;A&rdquo; creates an audit log entry for a given operation, and issues an OPC UA service request as part of that operation. The service request contains the client&rsquo;s audit entry id &ldquo;Z&rdquo;.   OPC Client &ldquo;A&rdquo; OPC Server &ldquo;B&rdquo; -------------- OPC Client OPC Server &ldquo;C&rdquo; -------------- OPC Client OPC Server &ldquo;D&rdquo; Audit Entry ID: Z Client A Audit Info Audit Entry ID: X Client Name: B Client Audit Entry ID: Z Server C Audit Info Audit Entry ID: W Client Name: C Client Audit Entry ID: X Server D Audit Info Server &ldquo;B&rdquo; does does NOT support auditing and, therefore, does NOT generate audit log entries.  It issues an OPC UA service request in support of the request it received. The service request contains the audit entry id &ldquo;Z&rdquo; that was received from the client. Server &ldquo;C&rdquo; creates an audit log entry for the given operation, cross referencing it to Server &ldquo;B&rdquo; and its corresponding audit log entry &ldquo;Z&rdquo;.  In this case, server &ldquo;B&rdquo; acts as the client to this server, and &ldquo;Z&rdquo; was actually written by Client &ldquo;A&rdquo;.  This server also issues an OPC UA service request in support of the request it received that contains its audit entry id &ldquo;X&rdquo;.    Server &ldquo;D&rdquo; creates an audit log entry for the service request, cross referencing it to the corresponding audit log entry &ldquo;X&rdquo; of Server &ldquo;C&rdquo;, which acts as the client to this server. 1..N 0..N 0..N cc 0..N 1 0..N </DIV
+></P
+><P 
+
+><B>Figure 5 &ndash; Aggregation with a non-auditing Server </P
+><P 
+
+></B>In this case, each of the <I>Servers</I> receives requests and creates their own audit log entry for them, with the exception of <I>Server</I> &ldquo;B&rdquo;, which does not support <I>Auditing</I>. In this case, <I>Server</I> &ldquo;B&rdquo; passes the audit id it receives from its <I>Client</I> &ldquo;A&rdquo; to the next <I>Server</I>. This creates the required audit chain. <I>Server</I> &ldquo;B&rdquo; is not listed as supporting <I>Auditing</I>. In a case where a <I>Server</I> does not support writing audit entries, the entire system may be considered as not supporting <I>Auditing</I>.  </P
+><P 
+
+>In the case of an aggregating <I>Server</I> that does not support <I>Auditing</I>, the <I>Server</I> would still be required to subscribe for <I>Audit</I> <I>Events</I> from the <I>Servers</I> it is aggregating. In this manner, <I>Server</I> &ldquo;B&rdquo; would be able to provide all of the <I>Audit</I> <I>Events</I> to <I>Client</I> &ldquo;A&rdquo;, including the event generated by <I>Server</I> &ldquo;C&rdquo; and <I>Server</I> &ldquo;D&rdquo;, even though it did not generate an <I>Audit</I> event.   </P
+><H3 
+ ID="LinkTarget_3118"
+><B>4.12.5 Aggregating Server with service distribution </H3
+><P 
+
+><A href="#LinkTarget_3126" href="#">
+</B>Figure 6</A>
+ illustrates the case of a <I>Client</I> that submits a service request to an aggregating <I>Server</I>, and the aggregating service supports that service by submitting multiple service requests to its underlying <I>Servers</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> Client &ldquo;A&rdquo; creates an audit log entry for a given operation, and issues an OPC UA service request as part of that operation. The service request contains the client&rsquo;s audit entry id &ldquo;Z&rdquo;.   Audit Entry ID: Y Client Name: A Client Audit Entry ID: Z Server B Audit Info OPC Client &ldquo;A&rdquo; OPC Server &ldquo;B&rdquo; -------------- OPC Client OPC Server &ldquo;C&rdquo; OPC Server &ldquo;D&rdquo; Audit Entry ID: Z Client A Audit Info Audit Entry ID: X Client Name: B Client Audit Entry ID: Y Server C Audit Info Audit Entry ID: W Client Name: B Client Audit Entry ID: Y Server D Audit Info Server &ldquo;B&rdquo; creates an audit log entry for the given operation, cross referencing it to the corresponding audit log entry of Client &ldquo;A&rdquo;, and issues two OPC UA service requests as part of that operation. The service requests contain the server&rsquo;s audit entry id &ldquo;Y&rdquo;.   Server &ldquo;C&rdquo; creates an audit log entry for the service request, cross referencing it to the corresponding audit log entry &ldquo;Y&rdquo; of Server &ldquo;B&rdquo;, which acts as the client of this server.  Server &ldquo;D&rdquo; creates an audit log entry for the service request, cross referencing it to the corresponding audit log entry &ldquo;Y&rdquo; of Server &ldquo;B&rdquo;, which acts as the client of this server. 1..N 0..N 0..N cc 0..N 1 0..N </DIV
+></P
+><P 
+
+><B>Figure 6 &ndash; Aggregate Server with service distribution </P
+><P 
+
+></B>In the case of aggregating <I>Servers</I>, a <I>Server</I> would be required to subscribe for <I>Audit</I> <I>Events</I> from the <I>Servers</I> it is aggregating. In this manner, <I>Server</I> &ldquo;B&rdquo; would be able to provide all of the <I>Audit</I> <I>Events</I> to <I>Client</I> &ldquo;A&rdquo;, including the event generated by <I>Server</I> &ldquo;C&rdquo; and <I>Server</I> &ldquo;D&rdquo;. </P
+><H1 
+ ID="LinkTarget_3130"
+><FONT size="+1"><B>5 Security reconciliation </H1
+><H2 
+ ID="LinkTarget_3132"
+><FONT size="+1">5.1 Reconciliation of threats with OPC UA security mechanisms </H2
+><H3 
+ ID="LinkTarget_3133"
+>5.1.1 Overview </H3
+><P 
+
+></B>The sub-clauses <A href="#LinkTarget_3185" href="#">
+5.1.2</A>
+, <A href="#LinkTarget_3224" href="#">
+5.1.3</A>
+, <A href="#LinkTarget_3237" href="#">
+5.1.4</A>
+, <A href="#LinkTarget_3254" href="#">
+5.1.5</A>
+, <A href="#LinkTarget_3268" href="#">
+5.1.6</A>
+, <A href="#LinkTarget_3285" href="#">
+5.1.7</A>
+, <A href="#LinkTarget_3302" href="#">
+5.1.8</A>
+, <A href="#LinkTarget_3315" href="#">
+5.1.9</A>
+, <A href="#LinkTarget_3328" href="#">
+5.1.10</A>
+, and <A href="#LinkTarget_3336" href="#">
+5.1.11</A>
+ reconcile the threats that were described in <A href="#LinkTarget_2663" href="#">
+4.3</A>
+ against the OPC UA functions. Compared to the reconciliation with the objectives that will be given in <A href="#LinkTarget_3350" href="#">
+5.2</A>
+, this is a more specific reconciliation that relates OPC UA security functions to specific threats. </P
+><H3 
+ ID="LinkTarget_3185"
+><B>5.1.2 Message flooding </H3
+><P 
+
+></B>See <A href="#LinkTarget_2711" href="#">
+4.3.2</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA minimizes the loss of <I>Availability</I> caused by <I>Message</I> flooding by minimizing the amount of processing done with a <I>Message</I> before the <I>Message</I> is authenticated. This prevents an attacker from leveraging a small amount of effort to cause the legitimate <I>OPC UA Application</I> to spend a large amount of time responding, thus taking away processing resources from legitimate activities. </P
+><P 
+
+>GetEndpoints (specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+) and OpenSecureChannel (specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+) are the only services that the <I>Server</I> handles before the <I>Client</I> is authenticated. The response to GetEndpoints is only a set of static information so the <I>Server</I> does not need to do much processing. The response to OpenSecureChannel consumes significant <I>Server</I> resources because of the signature and encryption processing. OPC UA has minimized this processing, but it cannot be eliminated. </P
+><P 
+
+>The <I>Server</I> implementation could protect itself from floods of OpenSecureChannel <I>Message</I>s in two ways. </P
+><P 
+
+>First, the <I>Server</I> could intentionally delay its processing of OpenSecureChannel requests once it receives more than some minimum number of bad OpenSecureChannel requests. It should also issue an alarm to alert plant personnel that an attack is underway that could be blocking new legitimate OpenSecureChannel calls. </P
+><P 
+
+>Second, when an OpenSecureChannel request attempts to exceed the <I>Server</I>&rsquo;s specified maximum number of concurrent channels the <I>Server</I> replies with an error response without performing the signature and encryption processing. Certified OPC UA <I>Servers</I> are required to specify their maximum number of concurrent channels in their product documentation as specified in <A href="#LinkTarget_2089" href="#">
+Part 7</A>
+. </P
+><P 
+
+>OPC UA user and <I>Client</I> <I>Authentication</I> reduce the risk of a legitimate <I>Client</I> being used to mount a flooding attack. See the reconciliation of <I>Authentication</I> in <A href="#LinkTarget_3402" href="#">
+5.2.3</A>
+. </P
+><P 
+
+>OPC UA <I>Auditing</I> functionality provides the site with evidence that can help the site discover that flooding attacks are being mounted and find ways to prevent similar future attacks (see <A href="#LinkTarget_3036" href="#">
+4.12</A>
+). As a best practice, <I>Audit</I> <I>Events </I>should be monitored for excessive connection requests. </P
+><P 
+
+>OPC UA relies upon the site <I>CSMS</I> to prevent attacks such as <I>Message</I> flooding at protocol layers and systems that support OPC UA. </P
+><H3 
+ ID="LinkTarget_3224"
+><B>5.1.3 Eavesdropping </H3
+><P 
+
+></B>See <A href="#LinkTarget_2722" href="#">
+4.3.3</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA provides encryption to protect against eavesdropping as described in <A href="#LinkTarget_3427" href="#">
+5.2.5</A>
+. </P
+><H3 
+ ID="LinkTarget_3237"
+><B>5.1.4 Message spoofing </H3
+><P 
+
+></B>See <A href="#LinkTarget_2733" href="#">
+4.3.4</A>
+ for a description of this threat. </P
+><P 
+
+>As specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ and <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+, OPC UA counters <I>Message</I> spoofing threats by providing the ability to sign <I>Message</I>s. Additionally <I>Message</I>s will always contain a valid Session ID, <I>Secure Channel</I> ID, Request ID, Timestamp as well as the correct sequence number. </P
+><H3 
+ ID="LinkTarget_3254"
+><B>5.1.5 Message alteration </H3
+><P 
+
+></B>See <A href="#LinkTarget_2743" href="#">
+4.3.5</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA counters <I>Message</I> alteration by the signing of <I>Message</I>s that are specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. If <I>Message</I>s are altered, checking the signature will reveal any changes and allow the recipient to discard the <I>Message</I>. This check can also prevent unintentional <I>Message</I> alteration due to communication transport errors. </P
+><H3 
+ ID="LinkTarget_3268"
+><B>5.1.6 Message replay </H3
+><P 
+
+></B>See <A href="#LinkTarget_2752" href="#">
+4.3.6</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA uses Session IDs, <I>Secure Channel</I> IDs, Timestamps, Sequence Numbers and Request IDs for every request and response <I>Message</I>. <I>Message</I>s are signed and cannot be changed without detection, therefore it would be very hard to replay a <I>Message</I>, such that the <I>Message</I> would have a valid Session ID, <I>Secure Channel</I> ID, Timestamp, Sequence Numbers and Request ID. (All of which are specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ and <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+). </P
+><H3 
+ ID="LinkTarget_3285"
+><B>5.1.7 Malformed Messages </H3
+><P 
+
+></B>See <A href="#LinkTarget_2761" href="#">
+4.3.7</A>
+ for a description of this threat. </P
+><P 
+
+>Implementations of OPC UA <I>Client</I> and <I>Server</I> products counter threats of malformed <I>Message</I>s by checking that <I>Message</I>s have the proper form and that parameters of <I>Message</I>s are within their legal range. Invalid <I>Message</I>s are discarded. This is specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ and <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. </P
+><H3 
+ ID="LinkTarget_3302"
+><B>5.1.8 Server profiling </H3
+><P 
+
+></B>See <A href="#LinkTarget_2771" href="#">
+4.3.8</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA limits the amount of information that <I>Servers</I> provide to <I>Client</I>s that have not yet been identified. This information is the response to the GetEndpoints service specified in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. </P
+><H3 
+ ID="LinkTarget_3315"
+><B>5.1.9 Session hijacking </H3
+><P 
+
+></B>See <A href="#LinkTarget_2780" href="#">
+4.3.9</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA counters <I>Session </I>hijacking by assigning a security context (i.e. <I>Secure Channel</I>) with each <I>Session </I>as specified in the CreateSession <I>Service</I> in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. Hijacking a <I>Session </I>would thus first require compromising the security context.  </P
+><H3 
+ ID="LinkTarget_3328"
+><B>5.1.10 Rogue Server </H3
+><P 
+
+></B>See <A href="#LinkTarget_2791" href="#">
+4.3.10</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA <I>Client</I> applications counter the use of rogue <I>Servers</I> by validating <I>Server</I> <I>Application Instance Certificates</I>. There would still be the possibility that a rogue <I>Server</I> provides a <I>Certificate</I> from a certified OPC UA <I>Server</I>, but since it does not possess the appropriate <I>Private Key</I> (because this will never be distributed) to decrypt and verify <I>Message</I>s secured with the correct <I>Public Key</I> the rogue <I>Server</I> would never be able to read and misuse secured data sent by a <I>Client</I>. </P
+><H3 
+ ID="LinkTarget_3336"
+><B>5.1.11 Compromising user credentials </H3
+><P 
+
+></B>See <A href="#LinkTarget_2801" href="#">
+4.3.11</A>
+ for a description of this threat. </P
+><P 
+
+>OPC UA protects user credentials sent over the network by encryption as described in <A href="#LinkTarget_3427" href="#">
+5.2.5</A>
+. </P
+><P 
+
+>OPC UA depends upon the site <I>CSMS</I> to protect against other attacks to gain user credentials, such as password guessing or social engineering. </P
+><H2 
+ ID="LinkTarget_3350"
+><B>5.2 Reconciliation of objectives with OPC UA security mechanisms </H2
+><H3 
+ ID="LinkTarget_3351"
+>5.2.1 Overview </H3
+><P 
+
+></B>The sub clauses <A href="#LinkTarget_3390" href="#">
+5.2.2</A>
+, <A href="#LinkTarget_3402" href="#">
+5.2.3</A>
+, <A href="#LinkTarget_3419" href="#">
+5.2.4</A>
+, <A href="#LinkTarget_3427" href="#">
+5.2.5</A>
+, <A href="#LinkTarget_3435" href="#">
+5.2.6</A>
+, <A href="#LinkTarget_3438" href="#">
+5.2.7</A>
+ and <A href="#LinkTarget_3445" href="#">
+5.2.8</A>
+ reconcile the objectives that were described in <A href="#LinkTarget_2628" href="#">
+4.2</A>
+ with the OPC UA functions. Compared to the reconciliation against the threats of <A href="#LinkTarget_3132" href="#">
+5.1</A>
+, this reconciliation justifies the completeness of the OPC UA security architecture. </P
+><H3 
+ ID="LinkTarget_3390"
+><B>5.2.2 Application Authentication </H3
+><P 
+
+></B><I>OPC UA Applications</I> support <I>Authentication</I> of the entities with which they are communicating. As specified in the GetEndpoints and OpenSecureChannel services in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+, OPC UA <I>Client</I> and <I>Server</I> applications identify and authenticate themselves with <I>X.509 Certificate</I>s (see [<A href="#LinkTarget_2158" href="#">
+X509</A>
+]). Some choices of the Communication Stack require these <I>Certificate</I>s to represent the machine or user instead of the application. </P
+><H3 
+ ID="LinkTarget_3402"
+><B>5.2.3 User Authentication </H3
+><P 
+
+></B><I>OPC UA Applications</I> support <I>Authentication</I> of users by providing the necessary <I>Authentication</I> credentials to the other entities. As described in the OpenSecureChannel service in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+, the OPC UA <I>Client</I> accepts a UserIdentityToken from the user and passes it to the OPC UA <I>Server</I>. The OPC UA <I>Server</I> authenticates the user token. <I>OPC UA Applications</I> accept tokens in any of the following three forms: username/password, an X.509v3 <I>Certificate</I> (see [<A href="#LinkTarget_2158" href="#">
+X509</A>
+]) or a WS-SecurityToken. </P
+><P 
+
+>As specified in the CreateSession and ActivateSession <I>Services</I> in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+, if the UserIdentityToken is a <I>Digital Certificate</I> then this token is validated with a challenge-response process. The <I>Server</I> provides a <I>Nonce</I> and signing algorithm as the challenge in its CreateSession response. The <I>Client</I> responds to the challenge by signing the <I>Server</I>&rsquo;s <I>Nonce</I> and providing it as an argument in its subsequent ActivateSession call. </P
+><H3 
+ ID="LinkTarget_3419"
+><B>5.2.4 Authorization </H3
+><P 
+
+></B>OPC UA does not specify how user or <I>Client</I> <I>Authorization</I> is to be provided. <I>OPC UA Applications</I> that are part of a larger industrial automation product may manage <I>Authorizations</I> consistent with the <I>Authorization</I> management of that product. Identification and <I>Authentication</I> of users is specified in OPC UA so that <I>Client</I> and <I>Server</I> applications can recognize the user in order to determine the <I>Authorization</I> level of the user. </P
+><P 
+
+>OPC UA <I>Servers</I> respond with the Bad_UserAccessDenied error code to indicate an <I>Authorization or Authentication</I> error as specified in the status codes defined in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+. </P
+><H3 
+ ID="LinkTarget_3427"
+><B>5.2.5 Confidentiality </H3
+><P 
+
+></B>OPC UA uses <I>Symmetric</I> and <I>Asymmetric Encryption</I> to protect <I>Confidentiality as a security objective</I>. Thereby <I>Asymmetric Encryption</I> is used for key agreement and <I>Symmetric Encryption</I> for securing all other <I>Message</I>s sent between <I>OPC UA Application</I>s. Encryption mechanisms are specified in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. </P
+><P 
+
+>OPC UA relies upon the site <I>CSMS</I> to protect <I>Confidentiality</I> on the network and system infrastructure. OPC UA relies upon the <I>PKI</I> to manage keys used for <I>Symmetric</I> and <I>Asymmetric Encryption</I>. </P
+><H3 
+ ID="LinkTarget_3435"
+><B>5.2.6 Integrity </H3
+><P 
+
+></B>OPC UA uses <I>Symmetric</I> and <I>Asymmetric Signatures</I> to address <I>Integrity</I> as a security objective. The <I>Asymmetric Signatures</I> are used in the key agreement phase during the <I>Secure Channel</I> establishment. The <I>Symmetric Signatures</I> are applied to all other <I>Message</I>s. </P
+><P 
+
+>OPC UA relies upon the site <I>CSMS</I> to protect <I>Integrity</I> on the network and system infrastructure. OPC UA relies upon the <I>PKI</I> to manage keys used for <I>Symmetric</I> and <I>Asymmetric Signatures</I>. </P
+><H3 
+ ID="LinkTarget_3438"
+><B>5.2.7 Auditability </H3
+><P 
+
+></B>As specified in the UA <I>Auditing</I> description in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+, OPC UA supports <I>Audit</I> logging by providing traceability of activities through the log entries of the multiple <I>Client</I>s and <I>Servers</I> that initiate, forward, and handle the activity. OPC UA depends upon <I>OPC UA Application</I> products to provide an effective <I>Audit</I> logging scheme or an efficient manner of collecting the <I>Audit</I> <I>Events</I> of all nodes. This scheme may be part of a larger industrial automation product of which the <I>OPC UA Applications</I> are a part. </P
+><H3 
+ ID="LinkTarget_3445"
+><B>5.2.8 Availability </H3
+><P 
+
+></B>OPC UA minimizes the impact of <I>Message</I> flooding as described in <A href="#LinkTarget_3185" href="#">
+5.1.2</A>
+. </P
+><P 
+
+>Some attacks on <I>Availability</I> involve opening more <I>Sessions </I>than a <I>Server</I> can handle thereby causing the <I>Server</I> to fail or operate poorly. <I>Servers</I> reject <I>Sessions </I>that exceed their specified maximum number. Other aspects of OPC UA such as OPC UA Secure Conversation or WS Secure Conversation can also affect availability and are discussed in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+  </P
+><H1 
+ ID="LinkTarget_3459"
+><FONT size="+1"><B>6 Implementation and deployment considerations </H1
+><H2 
+ ID="LinkTarget_3460"
+><FONT size="+1">6.1 Overview  </H2
+><P 
+
+></B>Clause <A href="#LinkTarget_3459" href="#">
+6</A>
+ provides guidance to vendors that implement <I>OPC UA Application</I>s. Since many of the countermeasures required to address the threats described above fall outside the scope of the OPC UA specification, the advice in Clause <A href="#LinkTarget_3459" href="#">
+6</A>
+ suggests how some of those countermeasures should be provided. </P
+><P 
+
+>For each of the following areas, Clause <A href="#LinkTarget_3459" href="#">
+6</A>
+ defines the problem space, identifies consequences if appropriate countermeasures are not implemented and recommends best practices. </P
+><H2 
+ ID="LinkTarget_3477"
+><B>6.2 Appropriate timeouts:  </H2
+><P 
+
+></B>Timeouts, the time that the implementation waits (usually for an event such as <I>Message</I> arrival), play a very significant role in influencing the security of an implementation. Potential consequences include  </P
+><DL 
+
+><DD 
+
+>&#61623; Denial of service: Denial of service conditions may exist when a <I>Client</I> does not reset a <I>Session</I>, if the timeouts are very large. </DD
+><DD 
+
+>&#61623; Resource consumption: When a <I>Client</I> is idle for long periods of time, the <I>Server</I> keeps the <I>Client</I>&rsquo;s buffered <I>Message</I> or information for that period, leading to resource exhaustion. </DD
+></DL
+><P 
+
+>The implementer should use reasonable timeouts for each connection stage. </P
+><H2 
+ ID="LinkTarget_3485"
+><B>6.3 Strict Message processing </H2
+><P 
+
+></B>The specifications often specify the format of the correct <I>Message</I>s and are silent on what the implementation should do for <I>Message</I>s that deviate from the specification. Typically, the implementations continue to parse such packets, leading to vulnerabilities. </P
+><DL 
+
+><DD 
+
+>&#61623; The implementer should do strict checking of the <I>Message</I> format and should either drop the packets or send an error <I>Message</I> as described below. </DD
+><DL 
+
+><DD 
+
+>o Error handling uses the error code, defined in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+, which most precisely fits the condition and only when returning an error code is appropriate. Error codes can be used as an attack vector, thus their uses should be limited as described in Part 4. Part 4 describes that a single generic error is returned before and during the establishment of a secure channel. Once the secure channel has been established then appropriate specific error codes are returned. </DD
+><DD 
+
+>o Another attack vector that can be used is timing variations; this is minimized by the description in Part 4 that requires the closing of the socket for any errors when establishing a secure channel. Vendors should be careful in their implementation to ensure that all paths that result in the closure of the socket do not provide a timing hint indicating which failure path was encountered. This can be accomplished by having a random delay before closing the socket or before returning a generic error code. </DD
+></DL
+><DD 
+
+>&#61623; All arrays lengths, string lengths and recursion depth should be strictly enforced and processed. </DD
+></DL
+><H2 
+ ID="LinkTarget_3502"
+><B>6.4 Random number generation </H2
+><P 
+
+></B>Random numbers that meet security needs can be generated by suitable functions that are provided by cryptography libraries. Common random functions such as using rand() provided by the &ldquo;C&rdquo; standard library do not generate enough entropy. As an alternative, implementers could use the random number generators provided by the Microsoft Windows Crypto library (WinCrypt library) or by OpenSSL. Even the random functions provided in cryptography libraries require a source of entropy to initialize and the required entropy is not always available on embedded devices. PCs can </P
+><P 
+
+>use several individual pieces of information (hardware ids like CPU, Mac, addresses, USB devices, screen resolution, installed software ...) to generate entropy, but embedded devices are built completely identically. Often only the time and maybe a MAC address is left for entropy. These sources of entropy can be guessed or discovered. This makes the embedded devices very vulnerable. </P
+><P 
+
+> </P
+><P 
+
+>A common mistake is to generate cryptographic keys during the first boot. Thus even the time information is predictable (creation time is stored e.g. in a certificate). Some alternate solutions a vendor might want to consider: </P
+><DL 
+
+><DD 
+
+>&#61623; Add specific entropy generator hardware when designing embedded devices. </DD
+><DD 
+
+>&#61623; Do not generate certificates on embedded devices. Use an external tool or the GDS to generate the certificate and load it onto the device. A problem could still remain for the symmetric keys, as these are normally not created directly during the boot phase; rather they are created when a client connects. </DD
+><DD 
+
+>&#61623; Wait long enough until enough entropy information is available. Some operating systems provide hints when they have reached this point. </DD
+><DD 
+
+>&#61623; For embedded systems without a good entropy source it may help to store the cryptographic pseudo-random number generator (CPRNG) state, so that it will not produce the same random numbers after every boot. </DD
+></DL
+><P 
+
+>Vendor should ensure that cryptographic functions they use are initialized with suitable entropy and that the generated certificates are not created in a predictable manner. </P
+><H2 
+ ID="LinkTarget_3518"
+><B>6.5 Special and reserved packets </H2
+><P 
+
+></B>The implementation understands and correctly interprets any <I>Message</I> types that are reserved as special (such as broadcast and multicast addresses in IP specification). Failing to understand and interpret those special packets may lead to vulnerabilities.  </P
+><H2 
+ ID="LinkTarget_3520"
+><B>6.6 Rate limiting and flow control </H2
+><P 
+
+></B>OPC UA does not provide rate control mechanisms, however an implementation can incorporate rate control. </P
+><H2 
+ ID="LinkTarget_3522"
+><B>6.7 Administrative access </H2
+><P 
+
+></B>OPC UA describes that certain functionality, such as the management of <I>CertificateStore</I>s, should be restricted to administrators. This Multi-part standard does not describe the details associated with administrative access. The nature of administrative access varies from platform to platform. Some platforms only have a single administrator. Other platforms provide multiple levels of administrative access such as backup administrator, network administrator, configuration administrator etc. The deployment site should make appropriate selections for administrator access and the implementer should allow for the configuration of appropriate administrator account access. </P
+><H2 
+ ID="LinkTarget_3524"
+><B>6.8 Cryptographic Keys </H2
+><P 
+
+></B>Security Profiles defined in Part 7 describe required algorithms and required key lengths. Key length requirements may be specified as a range, i.e. 1024-2048. It is important that an application supports the entire range for its <I>Application</I> <I>Instance</I> <I>Certificate</I>. This allows an end user to generate a key (<I>Application</I> <I>Instance</I> <I>Certificate</I>) that meets their security requirements. This may extend the period of time for which the given Security profile can be used. For example key lengths less than 2048 are already considered insecure, but if an end user generates certificates for the high end of the range (2048), the application might still be considered secure (depending on the other algorithms). </P
+><P 
+
+> </P
+><H2 
+ ID="LinkTarget_3527"
+><B>6.9 Alarm related guidance </H2
+><P 
+
+></B>OPC UA supports a robust <I>Alarm</I> and <I>Condition</I> information model which includes the ability to disable alarms, shelve alarms, and to generally manage alarms. Alarm processing and management is an important part of maintaining efficient control of a plant. From a security point of view it is important that this avenue be adequately protected, to ensure that a rogue agent does not create a dangerous or financial situation. OPC UA provides the tools required for this protection, but the implementer needs to ensure that they are exercised correctly. All functions that allow changes to </P
+><P 
+
+>the running environment are able to generate <I>Audit</I> <I>Events</I> and are to be restricted to appropriate users.  </P
+><P 
+
+>The disabling of Alarms is one such function that should be restricted to personnel with appropriate access rights. Furthermore, any action that disables an alarm, whether it be initiated by personnel or some automated system, should generate an <I>Audit</I> Event indicating the action. </P
+><P 
+
+>The shelving of alarms should follow similar guideline as the disabling of alarms with regard to access and <I>Auditing</I>, although it may be available to a wider range of users (operators, engineers). Also the implementer should ensure that appropriate timeouts are configured for Alarm Shelving. These timeouts should ensure that an Alarm cannot be shelved for a period of time that could cause safety concerns. </P
+><P 
+
+>Dialog <I>Events</I> could also be used to overload a <I>Client</I>. It would be a best practice for <I>Servers</I> that support dialogs to restrict the number of concurrent dialogs that could be active. Also Dialogs should include some timeout period to ensure that they are not used to create a DOS. <I>Client</I> implementers should also ensure that any dialog processing cannot be used to overwhelm an operator. The maximum number of open dialogs should be restricted and dialogs should be able to be ignored (i.e. other processing should still be available). </P
+><H2 
+ ID="LinkTarget_3534"
+><B>6.10 Program access </H2
+><P 
+
+></B>OPC UA describes functionality that allows for programs to be executed as part of the OPC UA <I>Server</I>. These programs can be used to perform advanced control algorithms or other actions. The use of these actions should be restricted to personnel with appropriate access rights. Furthermore, the definition of Programs should be carefully monitored. It is recommended that statistics be maintained regarding the number of defined programs in addition to their execution frequency. This information is available to administrative personnel. In no case should an unlimited number of program executions be allowed. </P
+><H2 
+ ID="LinkTarget_3536"
+><B>6.11 Audit event management </H2
+><P 
+
+></B>The OPC UA specification describes <I>Audit</I> <I>Events</I> that are to be generated and the information that these <I>Audit</I> <I>Events</I> include as a minimum, however, the specification does not describe how these <I>Audit</I> <I>Events</I> are handled once they are generated. <I>Audit</I> <I>Events</I> can be subscribed to by multiple <I>Audit</I> tracking systems or logging systems. The OPC UA specification does not describe these systems. It is assumed that any number of vendor provided systems could provide this functionality. As a best practice whatever system is used to store and manage, <I>Audit</I> <I>Events</I> should ensure the following: </P
+><DL 
+
+><DD 
+
+>&#61623; That <I>Audit</I> <I>Events</I> are not tampered with once they are received. </DD
+><DD 
+
+>&#61623; The <I>Subscription</I> for <I>Audit</I> <I>Events</I> should be via a <I>Secure Channel</I> to ensure they are not tampered with while in transition. </DD
+><DD 
+
+>&#61623; For<I> Clients</I> that log audit events; it is recommended that the logged audit events be persisted in such a manner that the audit events can be authenticated and linked to the original transaction. </DD
+></DL
+><P 
+
+>An <I>Audit</I> event management system could have additional requirements based on the site <I>CSMS.</I>  </P
+><H1 
+ ID="LinkTarget_3546"
+><FONT size="+1"><B>7 Unsecured Services </H1
+><H2 
+ ID="LinkTarget_3547"
+><FONT size="+1">7.1 Overview </H2
+><P 
+
+></B>OPC UA provides a number of services that do not require security to access. These services require special consideration from a security point of view. These services provide capabilities that allow clients to discover servers and connect to them. The Discovery services are available as local services or global services and can be multicast. </P
+><P 
+
+> </P
+><H2 
+ ID="LinkTarget_3550"
+><B>7.2 Multi Cast Discovery </H2
+><P 
+
+></B>OPC UA can be configured to support discovery in multiple manners. One of the options is a multi-cast discovery. In this type of Discovery, <I>Servers</I> announce themselves on a subnet when they </P
+><P 
+
+>start. Application machines or an actual application can listen and build a list of the available servers. </P
+><P 
+
+>Multicast DNS operations are insecure because of their very nature; they allow rogue servers to broadcast their presence or impersonate another host or server. Risks from Rogue <I>Servers</I> can be minimized if OPC UA security is enabled and all applications use certificate trust lists to control access. Also <I>Clients</I> should cache connection information, minimizing the lookup of <I>Server</I> information. However, even if you use UA security, multicast DNS should be disabled in environments where an attacker can easily access the network. </P
+><P 
+
+> </P
+><P 
+
+>Applications (or discovery servers) are built to ensure that they cannot be overloaded or brought down by high broadcast rates on the multi-cast discovery channel or by too large a list of server applications. </P
+><H2 
+ ID="LinkTarget_3557"
+><B>7.3 Global Discovery Server Security </H2
+><H3 
+ ID="LinkTarget_3558"
+>7.3.1 Overview </H3
+><P 
+
+></B>The Global Discovery Server (GDS) is a special OPC UA <I>Server</I> that provides Discovery services for a plant or entire system. In addition it can provide certificate management functionality (See Part 12) </P
+><P 
+
+>There are multiple methods of accessing a GDS: </P
+><DL 
+
+><DD 
+
+>1) <I>Servers</I> can register with the <I>Discovery</I> <I>Server</I> </DD
+><DD 
+
+>2) <I>Clients</I> can query the GDS for available <I>Servers</I> </DD
+><DD 
+
+>3) <I>Clients</I> can pull certificates from the GDS </DD
+><DD 
+
+>4) <I>Servers</I> can pull certificates from the GDS </DD
+><DD 
+
+>5) The GDS can push certificates to a <I>Server</I> </DD
+><DD 
+
+>6) The GDS can access other discovery <I>Servers</I> to build a list of available <I>Servers</I>. </DD
+></DL
+><P 
+
+>Several types of threats need to be discussed with regard to the available access methods: </P
+><DL 
+
+><DD 
+
+>&#61623; Threats where a rogue GDS is in a system. </DD
+><DD 
+
+>&#61623; Threats against the GDS, including the presence of rogue <I>Clients</I> or <I>Servers</I> </DD
+><DD 
+
+>&#61623; Threats against the certificate management functionality provided by a GDS. </DD
+></DL
+><H3 
+ ID="LinkTarget_3582"
+><B>7.3.2 Rogue GDS </H3
+><P 
+
+></B>The following guidelines are important to remember when dealing with a GDS: </P
+><DL 
+
+><DD 
+
+>&#61623; It is important that <I>Servers</I> register with the <I>Discovery</I> <I>Server</I> they are configured to register with and that <I>Servers</I> do not blindly register with a GDS that it has not been configured to register with. <I>Servers</I> have to be aware that a <I>Discovery</I> <I>Server</I> might be a rogue <I>Server</I>. </DD
+><DD 
+
+>&#61623; A <I>Server</I> registers all endpoints that it provides, ensuring that the list provided by the <I>Discovery</I> <I>Server</I> and the <I>Server</I> match. This ensures that <I>Clients</I> can determine if the <I>Discovery</I> <I>Server</I> provided valid information. </DD
+><DD 
+
+>&#61623; <I>Clients</I> should be aware of rogue <I>Discovery</I> <I>Servers</I> that might direct them to rogue <I>Servers</I>. <I>Clients</I> can use the SSL/TLS server certificate (if available) to verify that the <I>Discovery Server</I> is a <I>Server</I> that they trust and/or ensure that they trust any <I>Server</I> provided by the <I>Discovery Server</I>. </DD
+><DD 
+
+>&#61623; As described in Part 4<I>, Clients</I> always verify that they trusts the <I>Server</I> certificate and that the EndpointUrl matches the HostNames specified in the certificate before it creates a <I>Session</I> with a <I>Server</I>. After it creates a <I>Session</I> it looks at the <I>EndpointDescriptions</I> returned by the <I>Server</I> and verifies that it used the best security possible and that the <I>Server&rsquo;s</I> Certificate matches the one that the <I>Client</I> used to connect. The </DD
+></DL
+><DL 
+
+><DD 
+
+><I>EndpointDescription</I> provided by the <I>Server</I> includes a relative <I>SecurityLevel</I> that is used to determine if the most secure endpoint was used. </DD
+></DL
+><H3 
+ ID="LinkTarget_3597"
+><B>7.3.3 Threats against a GDS </H3
+><P 
+
+></B>As described in Part 4, the <I>FindServersOnNetwork</I> <I>Service</I> can be used without security and is therefore vulnerable to denial of service (DOS) attacks. A <I>Discovery Server</I> should minimize the amount of processing required to send the response for this <I>Service</I>. This can be achieved by preparing the result in advance. </P
+><P 
+
+>The GDS only accept <I>Server</I> registrations from <I>Servers</I> that are trusted or have appropriate administrative access rights. This will help ensure that a rogue <I>Server</I> does not become registered with a GDS. </P
+><H3 
+ ID="LinkTarget_3600"
+><B>7.3.4 Certificate management threats </H3
+><P 
+
+></B>A GDS, that also provides certificate management, supports User Access security as described in Part 12. This includes restricting all certificate management functionality to administrators. Furthermore, the list of <I>Clients</I> that are allowed to access management functionality may be limited. </P
+><P 
+
+>Certificate management includes a provisioning phase and run time phase. The provisioning phase is when the GDS is providing initial certificate(s) to <I>Clients</I> or <I>Servers</I> that are just entering the system. The runtime phase is the day to day operation of system and includes providing updated CRLs, certificate renewals and updated trust lists. </P
+><P 
+
+>The provisioning of systems is inherently not secure, but can be very useful in providing a greatly simplified deployment of a complex system. Provisioning in a GDS is not enabled by default, but requires an administrative action to enable. It is also recommended that the provisioning feature, when enabled, will only stay enabled for a limited time. </P
+><P 
+
+>The runtime phase of GDS certificate operations can be performed in a very secure manner, since all <I>Servers</I> and <I>Clients</I> already have certificates to ensure a secure connection. For the push model of certificate management, the GDS establishes a secure channel using the highest security level available in the target <I>Server</I>. It does not provide updated CRLs, Certificates or TrustLists via an endpoint that has a lower security level than the security level of the updates. For example if a 4096 certificate is to be updated it cannot be updated using a 2048 channel, but a 2048 certificate can be updated using a 4096 channel. If a new higher level certificate needs to be deployed, it is handled in the same manner as the provisioning of a new server. </P
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_3606"
+><FONT size="+1"><B>8 Certificate management </H1
+><H3 
+ ID="LinkTarget_3607"
+><FONT size="+1">8.1.1 Overview </H3
+><P 
+
+></B>OPC UA applications typically have <I>Application Instance Certificates</I> to provide application level security. They are used for establishing a secure connection using <I>Asymmetric Cryptography.</I> These <I>Application Instance Certificates</I> are <I>Digital Certificates</I> which are <I>X.509 Certificates</I> and contain a list of data items that are defined in <A href="#LinkTarget_2071" href="#">
+Part 4</A>
+ and completely described in <A href="#LinkTarget_2083" href="#">
+Part 6</A>
+. These data items describe the <I>Application Instance</I> that the <I>Digital</I> <I>Certificate</I> is assigned to. </P
+><P 
+
+>The <I>Digital Certificates</I> include a <I>Digital Signature</I> by the generator of the <I>Certificate</I>. This <I>Digital Signature</I> can be self-signed (The signature is generated by the <I>Private Key</I> associated with <I>X.509 Certificate</I> that is the <I>Application Instance Certificate</I>) or can be signed by a <I>Certificate Authority </I>(The signature is generated by the <I>Private Key</I> associated the <I>X.509 Certificate</I> of the CA). Both types of <I>Certificates</I> provide the same level of security and can be used in <I>Asymmetric Cryptography. </I>The <I>Signatures</I> can be generated using a variety of algorithms, where the algorithms provide different levels of security (128 bit, 256 bit, 512 bit ...). The algorithm that is required for signing a certificate is specified as part of the <I>Security</I> <I>Policy</I>. <I>Servers</I> and <I>Clients</I> should be able to support more than one certificate since more than one certificate may be required depending on the <I>Security</I> <I>Profiles</I> that are being supported. </P
+><P 
+
+><I>Asymmetric Cryptography</I> makes use of two keys &ndash; a <I>Private Key</I> and a <I>Public Key</I>. An application will have a list of trusted <I>Public Keys</I> that represent the applications it trusts. This list of trusted <I>Public Keys</I> is stored either in the Windows Registry or a file folder. It will also have a <I>Private Key </I></P
+><P 
+
+>that corresponds to its<I> Application Instance Certificate</I>. The application can use a <I>Public Key</I>, from its list, to validate that the signature on a received connection request was generated by the corresponding <I>Private Key</I>. An application can also use the <I>Public Key</I> of the target application to encrypt data, which can only be decrypted using the <I>Private Key</I> of the target application. </P
+><H3 
+ ID="LinkTarget_3622"
+><B>8.1.2 Self signed certificate management </H3
+><P 
+
+></B>The major difference between CA signed and self-signed <I>Digital Certificate</I> is the effort required to deploy and maintain the <I>Digital Certificates. </I>The choice of when to use a CA issued <I>Digital Certificate</I> versus a self-signed <I>Digital Certificate</I> depends on the installation and site requirements. </P
+><P 
+
+><A href="#LinkTarget_3632" href="#">
+Figure 7</A>
+ illustrates the work that is required to maintain the trust list for self-signed <I>Digital Certificates</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>OPC UA ServerServerCertificate StoreClient.derServer.derWindows Certificate Store or OPENSSL Certificate StoreOPC UA ClientClientCertificate StoreClient.derServer.derWindows Certificate Store or OPENSSL Certificate StoreCertificatesExport, Copy and InstallExport, Copy and InstallManual Certificate HandlingAdministratorAdministrator</DIV
+></P
+><P 
+
+><B>Figure 7 - Manual Certificate handling </P
+><P 
+
+></B>An administrator would be required to copy the <I>Public Key</I> associated with all <I>Client</I> applications to all <I>Server</I> applications that they may need to communicate with. In addition, the administrator would be required to copy the <I>Public Key</I> associated with all <I>Server</I> applications to all <I>Client</I> applications that may need to communicate with them. As the number of <I>Servers</I> and <I>Clients</I> grows, the administration effort can become too burdensome. In addition, a <I>Digital Certificate</I> has a lifetime and will need to be replaced with an updated <I>Digital Certificate</I> at some point in time. This will require that new <I>Private</I> <I>Keys</I> and <I>Public</I> <I>Keys</I> be generated and all of the <I>Public Keys</I> to be copied again. In very small installations, explicitly listing what <I>Clients</I> a <I>Server</I> trusts by installing the <I>Public Key</I> of the <I>Client</I> <I>Application</I> <I>Instance</I> <I>Certificate</I> in the Trusted <I>Certificate</I> store of the <I>Server</I> may be acceptable. </P
+><H3 
+ ID="LinkTarget_3634"
+><B>8.1.3 CA Signed Certificate management </H3
+><P 
+
+></B>In systems with multiple <I>Servers</I> and <I>Clients</I> the installation of <I>Public Keys</I> in Trust Lists can very quickly become cumbersome. In these instances, the use of a company specific CA can greatly simplify the installation/configuration issues. The CA can also provide additional benefits such as management of <I>Digital Certificate</I> expiration and <I>Certificate</I> <I>Revocation</I> <I>Lists</I> (CRL).<FONT size="+1"> <A href="#LinkTarget_3645" href="#">
+<FONT size="+1">Figure 8</A>
+ provides an illustration of this activity. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>OPC UA ClientClientCertificate StoreClient.derCAWindows Certificate Store or OPENSSL Certificate StoreOPC UA ServerServerCertificate StoreCAServer.derWindows Certificate Store or OPENSSL Certificate StoreCA CertificateServer CertificatePrivate KeyCA CertificateClient CertificatePrivate KeyCA Certificate HandlingAdministratorCertificatesOPC UA ServerServerCertificate StoreCAServer.derWindows Certificate Store or OPENSSL Certificate StoreCA AuthorityOPC UA ClientClientCertificate StoreClient.derCAWindows Certificate Store or OPENSSL Certificate StoreCA CertificateClient CertificatePrivate KeyCertificates</DIV
+></P
+><P 
+
+><B>Figure 8 - CA Certificate handling </P
+><P 
+
+></B>The administrator will need to generate a CA signed <I>Application Instance Certificate</I> for all <I>Clients</I> and <I>Servers</I> that are installed in a system, but he will only need to install the CA <I>Public Key</I> on all machines. When a <I>Digital Certificate</I> expires and is replaced, the administrator will only need to replace the expired <I>Digital Certificate </I>(<I>Public Keys</I><FONT size="+1"> <FONT size="+1">and <I>Private Keys</I>)<I>,</I> there will be no need to copy a <I>Public Key</I> to any locations. </P
+><P 
+
+>The company specific CA allows the company to control the issuing of <I>Digital Certificates</I>. The use of a commercial CA (such as VeriSign) would not be recommended in most cases. An OPC UA Application typically is configured to trust only the other applications determined by the Company as trusted. If all <I>Digital Certificates</I> issued by a commercial CA were to be trusted then the commercial CA would be controlling which applications are to be trusted, not the company. </P
+><P 
+
+><I>Certificate</I> management needs to be addressed by all application developers. Some applications may make use of <I>Certificate</I> management that is provided as part of a system wide infrastructure, others will generate self-signed <I>Digital Certificates</I> as part of an installation. See <A href="#LinkTarget_2095" href="#">
+Part 12</A>
+ for additional details on system wide infrastructures for <I>Certificate</I> management. </P
+><H3 
+ ID="LinkTarget_3654"
+><B>8.1.4 GDS Certificate Management </H3
+><H4 
+ ID="LinkTarget_3655"
+>8.1.4.1 Overview </H4
+><P 
+
+></B>In some systems, a <I>GlobalDiscoveryServer</I> with Certificate Management may be deployed. The <I>GlobalDiscoverServer</I> will either push certificates to <I>Clients</I> and <I>Servers</I> or allow <I>Servers</I> and <I>Clients</I> to pull certificates. The <I>GlobalDiscoveryServer</I> certificate management can manage all certificate deployments; this includes TrustLists, CAs and CRLs. </P
+><H4 
+ ID="LinkTarget_3657"
+><B>8.1.4.2 Developers Certificate management </H4
+><P 
+
+></B>From a developer point of view, it is a best practice, if your application supports <I>Certificates</I>, that it automatically provides a self-signed <I>Application</I> <I>Instance</I> <I>Certificate</I> on installation. In addition, the application is able to easily replace the self-signed <I>Application</I> <I>Instance</I> <I>Certificate</I> with a CA issued <I>Application</I> <I>Instance</I> <I>Certificate </I>or have the self-signed certificate signed by a CA. The configuration of a Trust List should also be easily accomplished. Typically, Trust Lists for <I>Public Keys</I> of Application Instances are kept in a separate list than those of a CA. Also an application should be able to handle Certificate Revocation Lists (CRL). These are lists of <I>Public Keys</I> that are associated with a given CA that have been revoked. This allows a CA to remove a <I>Digital Certificate</I> that it had </P
+><P 
+
+>signed from circulation. CRLs are provided by a CA and usually distributed in some automatic manner; see <A href="#LinkTarget_2095" href="#">
+Part 12</A>
+ for additional details. </P
+><P 
+
+>From a security point of view, it is essential that the <I>Certificate</I> stores used to store <I>Private Keys</I> are protected and secured only allowing read/write access by an appropriate administrator and /or by the application. Trust lists, CRLs, and trusted CA lists are secured allowing only write access by an appropriate administrator and in the case of pull configuration by the application. Read access may be granted to other valid users, but the list of users allowed read access would be a site decision. </P
+><P 
+
+>From an Installation point of view, it is a best practice that a standard tool to generate an <I>Application</I> <I>Instance</I> <I>Certificate</I> is provided. This tool could be one provided by an OPC UA SDK vendor or by the OPC Foundation. The standard tool ensures that the <I>Application</I> <I>Instance</I> <I>Certificates</I> that are generated include all of the required fields and settings. A particular OPC UA application shall be able to accept and install any valid <I>Application</I> <I>Instance</I> <I>Certificates</I> generated by external tools. The choice of the actual tool is site specific. Figure 9 provides an overview of some of the key points of Certificate handling. </P
+><P 
+
+> </P
+><IMG Alt="" width="3116" height="1527"
+ src="images/OPC UA Part 2 - Security Model 1.03 Specification_img_0.jpg" ><P 
+
+><B>Figure 9 &ndash; Certificate handling </P
+><P 
+
+></B>The following is a summary of these key points when a CA based, security required system is deployed: </P
+><P 
+
+><B>Application Instance</B> &ndash; An OPC UA Application installed on a single machine is called an Application Instance. Each instance has its own <I>Application Instance Certificate</I> which it uses to identify itself when connecting to other applications (the <I>Public Key</I> and <I>Private Key</I>). Each Application Instance has a globally unique URI which identifies it. The application will also check trust lists and CRL&rsquo;s to determine if access should be granted. The application will communicate using a secure channel established using <I>Asymmetric Cryptography</I> with other applications.  </P
+><P 
+
+><B>Administrator </B>&ndash; The person or persons that administer the <I>Certificate</I> handling associated with a UA system and manage the security settings for Application Instances. This includes setting the contents of trust lists and managing any activities performed by a CA.  </P
+><P 
+
+><B>Operator &ndash;</B> An Operator is person who uses the Application Instance. More than one Operator may exist for any given application. An Operator may have User Credentials which are used to determine access rights and to track activities within the Application Instance. </P
+><P 
+
+><B>User Credential</B> &ndash; A User Credential is a generic term for an electronic ID which identifies an Operator/User. It may be passed to a Server after the <I>Application Instance Certificate</I> is used to create a secure channel. It can be used to determine access rights and to track activities (auditing).<B> </P
+><P 
+
+>Certificate Authority (CA)</B> &ndash; A <I>Certificate Authority</I> (CA) is an administrator or organization which is responsible for creating and managing <I>Certificates</I> (it is usually a partially automated software product). The <I>Certificate Authority</I> verifies that information placed in the <I>Application</I> <I>Instance</I> <I>Certificate</I> is correct and add a <I>Digital Signature</I> to the <I>Certificate</I> that is used to verify that the information has not been changed. Each CA has its own <I>Digital Certificate</I> which is used to create the <I>Digital Signatures</I>. A CA is also responsible for maintaining CRLs. In most cases it is a software package that an administrator periodically reviews or accesses, usually when the software package generates an alarm or notification that some review action is required. <B> </P
+><P 
+
+>Certificate</B> &ndash; A <I>Certificate</I> is an electronic ID that can be held by an application. The ID includes information that identifies the holder, the issuer, and a unique key that is used to create and verify <I>Digital Signatures</I>. The syntax of these <I>Certificates</I> conforms to the X509 specification, as a result, these <I>Certificates</I> are also called &ldquo;<I>X509 Certificates</I>&rdquo;. <I>Certificates</I> also have a <I>Private Key</I> associated with them. </P
+><P 
+
+><B>Self-Signed Certificate</B> &ndash; A self-signed <I>Certificate</I> is a <I>Digital Certificate</I> which has no <I>Certificate Authority</I>. These <I>Certificates</I> can be created by anyone and can be used in situations where the administrators of UA Applications are able to verify the claims by reviewing the contents themselves. A system that uses only self-signed <I>Certificates</I> would not have CA or CRL.<B> </P
+><P 
+
+>Private Key</B> &ndash; A <I>Private Key</I> is a secret number known only to the holder of a <I>Digital Certificate</I>. This secret allows the holder to create <I>Digital Signatures</I> and decrypt data. If this secret is revealed to unauthorized parties then the associated <I>Digital Certificate</I> can no longer be trusted or used. It is replaced or in the case of a CA generated <I>Certificate</I> it is revoked.<B> </P
+><P 
+
+>Trust List</B> &ndash; A Trust List is a list of <I>Certificates</I> which are trusted by an Application Instance. When security is enabled, UA Applications reject connections from peers whose <I>Certificates</I> are not in the trusted list or if the <I>Certificate</I> is issued by a CA that is not in the Trust List. </P
+><P 
+
+><B>Certificate Store</B> &ndash; A Certificate Store is a place where <I>Certificates</I> and <I>Private Keys</I> can be stored on a file system. All Windows systems provide a registry based store called the Windows Certificate Store. All UA systems can also support a directory containing the <I>Certificates</I> stored in a file which is also called an OpenSSL Certificate Store.<B> </P
+><P 
+
+>Revocation List</B> &ndash; A Revocation List is a list of <I>Certificates</I> which have been revoked by a CA and are not be accepted by an Application Instance. </P
+><P 
+
+>______________ </P
+></DIV
+></BODY>
+</HTML>

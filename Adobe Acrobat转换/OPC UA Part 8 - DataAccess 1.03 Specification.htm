@@ -1,0 +1,10469 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping table version: 28-February-2003 -->
+<HTML>
+<HEAD>
+<META
+ name="dc.creator"
+ content="Jim Luth" >
+<META
+ name="dc.description"
+ content="Industrial Communications" >
+<META
+ name="dc.title"
+ content="OPC Unified Architecture" >
+<META
+ name="dc.date"
+ content="2015-07-17T10:17:19-04:00" >
+<META
+ name="dc.date.modified"
+ content="2015-07-17T10:17:19-04:00" >
+<META
+ name="generator"
+ content="Adobe Acrobat Exchange-Pro 8.0" >
+</HEAD>
+<BODY bgcolor=white text=black link=blue vlink=purple alink=fushia >
+<HR>
+<UL>
+<LI>
+<A href="#LinkTarget_1272">FIGURES</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1379">TABLES</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1886">Revision 1.3 Highlights</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2125">1 Scope</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2137">2 Normative references</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2164">3 Terms, definitions and abbreviations</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2165">3.1 Terms and definitions</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2232">3.2 Abbreviations and symbols</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_2236">4 Concepts</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2251">5 Model</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2252">5.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2265">5.2 SemanticsChanged</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2269">5.3 Variable Types</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2270">5.3.1 DataItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2426">5.3.2 AnalogItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2593">5.3.3 DiscreteItemType</A>
+<UL>
+<LI>
+<A href="#LinkTarget_2594">5.3.3.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2706">5.3.3.2 TwoStateDiscreteType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2811">5.3.3.3 MultiStateDiscreteType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2911">5.3.3.4 MultiStateValueDiscreteType</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3020">5.3.4 ArrayItemType</A>
+<UL>
+<LI>
+<A href="#LinkTarget_3021">5.3.4.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3251">5.3.4.2 YArrayItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3513">5.3.4.3 XYArrayItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3618">5.3.4.4 ImageItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3732">5.3.4.5 CubeItemType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3863">5.3.4.6 NDimensionArrayItemType</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_3965">5.4 Address Space model</A>
+</LI>
+<LI>
+<A href="#LinkTarget_3986">5.5 Attributes of DataItems</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4013">5.6 DataTypes</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4014">5.6.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4026">5.6.2 Range</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4091">5.6.3 EUInformation</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4332">5.6.4 ComplexNumberType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4395">5.6.5 DoubleComplexNumberType</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4458">5.6.6 AxisInformation</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4535">5.6.7 AxisScaleEnumeration</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4591">5.6.8 XVType</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_4662">6 Data Access specific usage of Services</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4663">6.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4677">6.2 PercentDeadband</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4736">6.3 Data Access status codes</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4737">6.3.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4745">6.3.2 Operation level result codes</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4939">6.3.3 LimitBits</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_4942">Annex A (informative): OPC COM DA to UA Mapping</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4945">A.1 Introduction</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4950">A.2 Security Considerations</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4954">A.3 COM UA wrapper for OPC DA Server</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4956">A.3.1 Information Model mapping</A>
+<UL>
+<LI>
+<A href="#LinkTarget_4957">A.3.1.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4965">A.3.1.2 Branch</A>
+</LI>
+<LI>
+<A href="#LinkTarget_4982">A.3.1.3 Item</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5042">A.3.1.4 Property</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5160">A.3.1.5 BrowseName and DisplayName Mapping</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_5189">A.3.2 Data and error mapping</A>
+<UL>
+<LI>
+<A href="#LinkTarget_5190">A.3.2.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5206">A.3.2.2 Value</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5320">A.3.2.3 Quality</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5449">A.3.2.4 Timestamp</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_5452">A.3.3 Read data</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5533">A.3.4 Write Data</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5633">A.3.5 Subscriptions</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_5649">A.4 COM UA proxy for DA Client</A>
+<UL>
+<LI>
+<A href="#LinkTarget_5650">A.4.1 Guidelines</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5663">A.4.2 Information Model and Address Space mapping</A>
+<UL>
+<LI>
+<A href="#LinkTarget_5664">A.4.2.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5671">A.4.2.2 Object Nodes</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5697">A.4.2.3 Variable Nodes</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5785">A.4.2.4 Namespace Indices</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_5791">A.4.3 Data and error mapping</A>
+<UL>
+<LI>
+<A href="#LinkTarget_5792">A.4.3.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5809">A.4.3.2 Value</A>
+</LI>
+<LI>
+<A href="#LinkTarget_5970">A.4.3.3 Quality</A>
+</LI>
+<LI>
+<A href="#LinkTarget_6085">A.4.3.4 Timestamp</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_6087">A.4.4 Read data</A>
+</LI>
+<LI>
+<A href="#LinkTarget_6174">A.4.5 Write data</A>
+</LI>
+<LI>
+<A href="#LinkTarget_6254">A.4.6 Subscriptions</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL>
+</HR>
+<DIV class="Part" 
+
+><P 
+
+><FONT size="+1" color="#000000"></B> </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>  F  O  U  N  D  A  T  I  O  N &reg; </DIV
+></P
+><FONT size="+1"> <P 
+
+><FONT size="+3"><B>OPC Unified Architecture </P
+><P 
+
+> Specification   </P
+><P 
+
+>Part 8:  Data Access </P
+><P 
+
+>Release 1.03 </P
+><P 
+
+>July 17, 2015 </P
+><P 
+
+>  </P
+><P 
+
+> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1"></B>Specification Type: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Industry Standard Specification </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Comments: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Title: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Unified Architecture  Part 8 :Data Access </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Date: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>July 17, 2015 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Version: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release 1.03 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Software: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MS-Word </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Source: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Part 8 - DataAccess 1.03 Specification.docx </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Author: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Foundation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Status: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+></TABLE
+><H1 
+
+> <FONT size="+1"> </H1
+><P 
+
+><B>CONTENTS </P
+><DIV class="TOC" 
+
+><FONT size="+1"></B> <DIV class="TOCI" 
+
+><FONT size="+1"><B> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_1272" href="#">
+<FONT size="+1">FIGURES</B> ............................................................................................................................... v</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_1379" href="#">
+<FONT size="+1"><B>TABLES</B> ................................................................................................................................. vi</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_1886" href="#">
+<FONT size="+1"><B>Revision 1.3 Highlights</B> ........................................................................................................ ix</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2125" href="#">
+<FONT size="+1">1<FONT size="+1"> <FONT size="+1">Scope ............................................................................................................................. 1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2137" href="#">
+<FONT size="+1">2<FONT size="+1"> <FONT size="+1">Normative references ...................................................................................................... 1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2164" href="#">
+<FONT size="+1">3<FONT size="+1"> <FONT size="+1">Terms, definitions and abbreviations ............................................................................... 1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2165" href="#">
+<FONT size="+1">3.1<FONT size="+1"> <FONT size="+1">Terms and definitions ............................................................................................. 1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2232" href="#">
+<FONT size="+1">3.2<FONT size="+1"> <FONT size="+1">Abbreviations and symbols ..................................................................................... 2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2236" href="#">
+<FONT size="+1">4<FONT size="+1"> <FONT size="+1">Concepts ........................................................................................................................ 2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2251" href="#">
+<FONT size="+1">5<FONT size="+1"> <FONT size="+1">Model .............................................................................................................................. 3</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2252" href="#">
+<FONT size="+1">5.1<FONT size="+1"> <FONT size="+1">General .................................................................................................................. 3</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2265" href="#">
+<FONT size="+1">5.2<FONT size="+1"> <FONT size="+1">SemanticsChanged ................................................................................................ 4</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2269" href="#">
+<FONT size="+1">5.3<FONT size="+1"> <FONT size="+1">Variable Types ....................................................................................................... 4</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+> <FONT size="+1">DataItemType ................................................................................................. 4</DIV
+></DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">AnalogItemType .............................................................................................. 5</DIV
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+></DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">DiscreteItemType ............................................................................................ 6</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">ArrayItemType ................................................................................................ 8</DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3965" href="#">
+5.4<FONT size="+1"> <FONT size="+1">Address Space model .......................................................................................... 13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3986" href="#">
+<FONT size="+1">5.5<FONT size="+1"> <FONT size="+1">Attributes of DataItems ......................................................................................... 14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4013" href="#">
+<FONT size="+1">5.6<FONT size="+1"> <FONT size="+1">DataTypes ............................................................................................................ 14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+> <FONT size="+1">Overview ....................................................................................................... 14</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">Range ........................................................................................................... 14</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">EUInformation ............................................................................................... 14</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">ComplexNumberType .................................................................................... 16</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">DoubleComplexNumberType ......................................................................... 16</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">AxisInformation ............................................................................................. 16</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">AxisScaleEnumeration .................................................................................. 17</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">XVType ......................................................................................................... 17</DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4662" href="#">
+6<FONT size="+1"> <FONT size="+1">Data Access specific usage of Services ........................................................................ 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4663" href="#">
+<FONT size="+1">6.1<FONT size="+1"> <FONT size="+1">General ................................................................................................................ 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4677" href="#">
+<FONT size="+1">6.2<FONT size="+1"> <FONT size="+1">PercentDeadband................................................................................................. 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4736" href="#">
+<FONT size="+1">6.3<FONT size="+1"> <FONT size="+1">Data Access status codes .................................................................................... 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+> <FONT size="+1">Overview ....................................................................................................... 18</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">Operation level result codes .......................................................................... 19</DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1">LimitBits ........................................................................................................ 20</DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4942" href="#">
+Annex A (informative): OPC COM DA to UA Mapping ........................................................... 21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4945" href="#">
+<FONT size="+1">A.1<FONT size="+1"> <FONT size="+1">Introduction .......................................................................................................... 21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4950" href="#">
+<FONT size="+1">A.2<FONT size="+1"> <FONT size="+1">Security Considerations ....................................................................................... 21</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4954" href="#">
+<FONT size="+1">A.3<FONT size="+1"> <FONT size="+1">COM UA wrapper for OPC DA Server ................................................................... 22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4956" href="#">
+<FONT size="+1">A.3.1<FONT size="+1"> <FONT size="+1">Information Model mapping ........................................................................... 22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5189" href="#">
+<FONT size="+1">A.3.2<FONT size="+1"> <FONT size="+1">Data and error mapping ................................................................................ 25</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5452" href="#">
+<FONT size="+1">A.3.3<FONT size="+1"> <FONT size="+1">Read data ..................................................................................................... 28</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5533" href="#">
+<FONT size="+1">A.3.4<FONT size="+1"> <FONT size="+1">Write Data ..................................................................................................... 29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5633" href="#">
+<FONT size="+1">A.3.5<FONT size="+1"> <FONT size="+1">Subscriptions ................................................................................................ 29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5649" href="#">
+<FONT size="+1">A.4<FONT size="+1"> <FONT size="+1">COM UA proxy for DA Client ................................................................................ 30</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5650" href="#">
+<FONT size="+1">A.4.1<FONT size="+1"> <FONT size="+1">Guidelines ..................................................................................................... 30</A>
+<FONT size="+1"> </DIV
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5663" href="#">
+<FONT size="+1">A.4.2<FONT size="+1"> <FONT size="+1">Information Model and Address Space mapping ............................................ 30</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5791" href="#">
+<FONT size="+1">A.4.3<FONT size="+1"> <FONT size="+1">Data and error mapping ................................................................................ 34</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_6087" href="#">
+<FONT size="+1">A.4.4<FONT size="+1"> <FONT size="+1">Read data ..................................................................................................... 36</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_6174" href="#">
+<FONT size="+1">A.4.5<FONT size="+1"> <FONT size="+1">Write data ..................................................................................................... 37</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_6254" href="#">
+<FONT size="+1">A.4.6<FONT size="+1"> <FONT size="+1">Subscriptions ................................................................................................ 37</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">  </DIV
+></DIV
+><H1 
+ ID="LinkTarget_1272"
+><B>FIGURES </H1
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+></B> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2244" href="#">
+Figure 1 &ndash; OPC <I>DataItems</I> are linked to automation data ....................................................... 3</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2264" href="#">
+<FONT size="+1">Figure 2 &ndash; <I>DataItem</I> <I>VariableType</I> hierarchy ........................................................................... 4</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3365" href="#">
+<FONT size="+1">Figure 3 &ndash; Graphical view of a <I>YArrayItem</I> ........................................................................... 10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3972" href="#">
+<FONT size="+1">Figure 4 &ndash; Representation of DataItems in the AddressSpace .............................................. 13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4962" href="#">
+<FONT size="+1">Figure A.1- Sample OPC UA Information Model for OPC DA ................................................ 22</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5205" href="#">
+<FONT size="+1">Figure A.2 - OPC COM DA to OPC UA data &amp; error mapping ............................................... 26</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5333" href="#">
+<FONT size="+1">Figure A.3 - Status Code mapping ........................................................................................ 27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5670" href="#">
+<FONT size="+1">Figure A.4 - Sample OPC DA mapping of OPC UA Information Model and Address Space ... 31</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5808" href="#">
+<FONT size="+1">Figure A.5 - OPC UA to OPC DA data &amp; error mapping ........................................................ 34</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5977" href="#">
+<FONT size="+1">Figure A.6 &ndash; OPC UA Status Code to OPC DA quality mapping ............................................ 36</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> <FONT size="+1"> </DIV
+></DIV
+><H1 
+ ID="LinkTarget_1379"
+><FONT size="+1"><B>TABLES </H1
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+></B> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2286" href="#">
+Table 1 &ndash; DataItemType definition .......................................................................................... 4</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2434" href="#">
+<FONT size="+1">Table 2 &ndash; <I>AnalogItem</I><I>Type</I> definition ...................................................................................... 5</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2604" href="#">
+<FONT size="+1">Table 3 &ndash; DiscreteItemType definition .................................................................................... 6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2714" href="#">
+<FONT size="+1">Table 4 &ndash; TwoStateDiscreteType definition ............................................................................. 6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2819" href="#">
+<FONT size="+1">Table 5 &ndash; MultiStateDiscreteType definition ............................................................................ 7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_2920" href="#">
+<FONT size="+1">Table 6 &ndash; MultiStateValueDiscreteType definition ................................................................... 8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3029" href="#">
+<FONT size="+1">Table 7 &ndash; ArrayItemType definition ......................................................................................... 8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3258" href="#">
+<FONT size="+1">Table 8 &ndash; YArrayItemType definition ....................................................................................... 9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3375" href="#">
+<FONT size="+1">Table 9 &ndash; <I>YArrayItem</I> item description .................................................................................. 10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3520" href="#">
+<FONT size="+1">Table 10 &ndash; XYArrayItemType definition ................................................................................ 11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3626" href="#">
+<FONT size="+1">Table 11 &ndash; ImageItemType definition .................................................................................... 11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3739" href="#">
+<FONT size="+1">Table 12 &ndash; CubeItemType definition ..................................................................................... 12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_3873" href="#">
+<FONT size="+1">Table 13 &ndash; NDimensionArrayItemType definition .................................................................. 13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4034" href="#">
+<FONT size="+1">Table 14 &ndash; <I>Range</I> DataType structure .................................................................................. 14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4076" href="#">
+<FONT size="+1">Table 15 &ndash; <I>Range</I> definition .................................................................................................. 14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4098" href="#">
+<FONT size="+1">Table 16 &ndash; <I>EUInformation</I> DataType structure ...................................................................... 15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4158" href="#">
+<FONT size="+1">Table 17 &ndash; <I>EUInformation</I> definition ..................................................................................... 15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4212" href="#">
+<FONT size="+1">Table 18 &ndash; Examples from the UNECE Recommendation ..................................................... 15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4339" href="#">
+<FONT size="+1">Table 19 &ndash; ComplexNumberType DataType structure ........................................................... 16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4380" href="#">
+<FONT size="+1">Table 20 &ndash; ComplexNumberType definition .......................................................................... 16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4402" href="#">
+<FONT size="+1">Table 21 &ndash; DoubleComplexNumberType DataType structure ................................................ 16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4443" href="#">
+<FONT size="+1">Table 22 &ndash; DoubleComplexNumberType definition ............................................................... 16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4475" href="#">
+<FONT size="+1">Table 23 &ndash; AxisInformation DataType structure .................................................................... 17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4542" href="#">
+<FONT size="+1">Table 24 &ndash; AxisScaleEnumeration values ............................................................................. 17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4576" href="#">
+<FONT size="+1">Table 25 &ndash; AxisScaleEnumeration definition ......................................................................... 17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4605" href="#">
+<FONT size="+1">Table 26 &ndash; XVType DataType structure ................................................................................ 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4647" href="#">
+<FONT size="+1">Table 27 &ndash; XVType definition ............................................................................................... 18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4774" href="#">
+<FONT size="+1">Table 28 &ndash; Operation level result codes for BAD data quality ............................................... 20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4853" href="#">
+<FONT size="+1">Table 29 &ndash; Operation level result codes for UNCERTAIN data quality .................................. 20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_4915" href="#">
+<FONT size="+1">Table 30 &ndash; Operation level result codes for GOOD data quality ............................................ 20</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5066" href="#">
+<FONT size="+1">Table A.1 - OPC COM DA to OPC UA Properties mapping ................................................... 24</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5216" href="#">
+<FONT size="+1">Table A.2 &ndash; DataTypes and mapping .................................................................................... 27</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5343" href="#">
+<FONT size="+1">Table A.3 - Quality mapping ................................................................................................. 28</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5475" href="#">
+<FONT size="+1">Table A.4 - OPC DA Read error mapping ............................................................................. 29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5546" href="#">
+<FONT size="+1">Table A.5 - OPC DA Write error code mapping ..................................................................... 29</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5819" href="#">
+<FONT size="+1">Table A.6 &ndash; DataTypes and Mapping .................................................................................... 35</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_5986" href="#">
+<FONT size="+1">Table A.7 - Quality mapping ................................................................................................. 36</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_6104" href="#">
+<FONT size="+1">Table A.8 - OPC UA Read error mapping ............................................................................. 37</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><A href="#LinkTarget_6190" href="#">
+<FONT size="+1">Table A.9 - OPC UA Write error code mapping ..................................................................... 37</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+></DIV
+><P 
+
+><FONT size="+1"><B>OPC FOUNDATION </P
+><P 
+
+><FONT size="+1"></B>____________ </P
+><P 
+
+><FONT size="+1"><B> </P
+><P 
+
+>UNIFIED ARCHITECTURE &ndash;  </P
+><P 
+
+><FONT size="+1">FOREWORD </P
+><P 
+
+><FONT size="+1"></B>This specification is the specification for developers of OPC UA applications. The specification is a result of an analysis and design process to develop a standard interface to facilitate the development of applications by multiple vendors that shall inter-operate seamlessly together.  </P
+><P 
+
+><B>Copyright &copy; 2006-2015, OPC Foundation, Inc. </P
+><P 
+
+><FONT size="+1">AGREEMENT OF USE </P
+><P 
+
+><FONT size="+1"></B>COPYRIGHT RESTRICTIONS </P
+><P 
+
+>Any unauthorized use of this specification may violate copyright laws, trademark laws, and communications regulations and statutes. This document contains information which is protected by copyright. All Rights Reserved. No part of this work covered by copyright herein may be reproduced or used in any form or by any means--graphic, electronic, or mechanical, including photocopying, recording, taping, or information storage and retrieval systems--without permission of the copyright owner. </P
+><P 
+
+>OPC Foundation members and non-members are prohibited from copying and redistributing this specification. All copies must be obtained on an individual basis, directly from the OPC Foundation Web site <FONT size="+1">H<A href="http://www.opcfoundation.org/">
+TU<FONT size="+1" color="#0000FF">http://www.opcfoundation.org<FONT size="+1">UT</A>
+<FONT color="#000000">H<FONT size="+1">. </P
+><P 
+
+>PATENTS </P
+><P 
+
+>The attention of adopters is directed to the possibility that compliance with or adoption of OPC specifications may require use of an invention covered by patent rights. OPC shall not be responsible for identifying patents for which a license may be required by any OPC specification, or for conducting legal inquiries into the legal validity or scope of those patents that are brought to its attention. OPC specifications are prospective and advisory only. Prospective users are responsible for protecting themselves against liability for infringement of patents. </P
+><P 
+
+>WARRANTY AND LIABILITY DISCLAIMERS </P
+><P 
+
+>WHILE THIS PUBLICATION IS BELIEVED TO BE ACCURATE, IT IS PROVIDED &quot;AS IS&quot; AND MAY CONTAIN ERRORS OR MISPRINTS. THE OPC FOUDATION MAKES NO WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, WITH REGARD TO THIS PUBLICATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF TITLE OR OWNERSHIP, IMPLIED WARRANTY OF MERCHANTABILITY OR WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR USE. IN NO EVENT SHALL THE OPC FOUNDATION BE LIABLE FOR ERRORS CONTAINED HEREIN OR FOR DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, RELIANCE OR COVER DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA OR USE, INCURRED BY ANY USER OR ANY THIRD PARTY IN CONNECTION WITH THE FURNISHING, PERFORMANCE, OR USE OF THIS MATERIAL, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. </P
+><P 
+
+>The entire risk as to the quality and performance of software developed using this specification is borne by you.  </P
+><P 
+
+>RESTRICTED RIGHTS LEGEND </P
+><P 
+
+>This Specification is provided with Restricted Rights. Use, duplication or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation,. 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830 </P
+><P 
+
+>COMPLIANCE </P
+><P 
+
+>The OPC Foundation shall at all times be the sole entity that may authorize developers, suppliers and sellers of hardware and software to use certification marks, trademarks or other special designations to indicate compliance with these materials. Products developed using this specification may claim compliance or conformance with this specification if and only if the software satisfactorily meets the certification requirements set by the OPC Foundation. Products that do not meet these requirements may claim only that the product was based on this specification and must not claim compliance or conformance with this specification.  </P
+><P 
+
+>TRADEMARKS </P
+><P 
+
+>Most computer and software brand names have trademarks or registered trademarks. The individual trademarks have not been listed here. </P
+><P 
+
+>GENERAL PROVISIONS </P
+><P 
+
+>Should any provision of this Agreement be held to be void, invalid, unenforceable or illegal by a court, the validity and enforceability of the other provisions shall not be affected thereby.  </P
+><P 
+
+>This Agreement shall be governed by and construed under the laws of the State of Minnesota, excluding its choice or law rules. </P
+><P 
+
+>This Agreement embodies the entire understanding between the parties with respect to, and supersedes any prior understanding or agreement (oral or written) relating to, this specification.  </P
+><P 
+
+>ISSUE REPORTING </P
+><P 
+
+>The OPC Foundation strives to maintain the highest quality standards for its published specifications; hence they undergo constant review and refinement. Readers are encouraged to report any issues and view any existing errata here: <FONT size="+1">H<A href="http://www.opcfoundation.org/errata">
+TU<FONT size="+1" color="#0000FF">http://www.opcfoundation.org/errata<FONT size="+1">UT</A>
+<FONT color="#000000">H<FONT size="+1"> </P
+><H1 
+ ID="LinkTarget_1886"
+><FONT size="+1"><B>Revision 1.3 Highlights </H1
+><P 
+
+><FONT size="+1"></B>The following table includes the Mantis issues resolved with this revision. </P
+><P 
+
+> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+><FONT size="+1"><B>Mantis ID </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Summary </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Resolution </P
+></TH
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="http://www.opcfoundation.org/mantis/view.php?id=2650">
+</B>2650</A>
+ </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Specify mapping OPC DA Value Quality Timestamp information to OPC UA Data Value &amp; DiagnosticInfo </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Created a new (informative) Annex A that specifies this mapping. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="http://www.opcfoundation.org/mantis/view.php?id=2651">
+2651</A>
+ </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Specify Mapping OPC DA Error Code information of each function such as Read, Write to OPC UA Status Codes. </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Created a new (informative) Annex A that specifies this mapping. </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"><B> </P
+><P 
+
+><FONT size="+1"></B> </P
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><P 
+
+><FONT size="+1"><B>OPC UNIFIED ARCHITECTURE &ndash;  </P
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><DIV class="Sect" 
+
+><P 
+
+></P
+><P 
+
+></P
+></DIV
+><P 
+
+> </P
+><P 
+
+>Part 8: Data Access </P
+><P 
+
+> </P
+><P 
+
+> </P
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_2125"
+><FONT size="+1">1 Scope </H1
+><P 
+
+><FONT size="+1"></B>This specification is part of the overall OPC Unified Architecture (OPC UA) standard series and defines the information model associated with Data Access (DA). It particularly includes additional <I>VariableTypes</I> and complementary descriptions of the <I>NodeClass</I>es and <I>Attributes</I> needed for Data Access, additional <I>Properties,</I> and other information and behaviour. </P
+><P 
+
+>The complete address space model, including all <I>NodeClass</I>es and <I>Attributes</I> is specified in <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+. The services to detect and access data are specified in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. </P
+><H1 
+ ID="LinkTarget_2137"
+><FONT size="+1"><B>2 Normative references </H1
+><P 
+
+><FONT size="+1"></B>The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies. </P
+><P 
+
+>Part 1: OPC UA Specification: Part 1 &ndash; Overview and Concepts </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part1/ </P
+><P 
+
+>Part 3: OPC UA Specification: Part 3 &ndash; Address Space Model </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part3/ </P
+><P 
+
+>Part 4: OPC UA Specification: Part 4 &ndash; Services </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part4/ </P
+><P 
+
+>Part 5: OPC UA Specification: Part 5 &ndash; Information Model </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part5/ </P
+><P 
+
+>UN/CEFACT: <B>UNECE Recommendation N&deg; 20</B>, <I>Codes for Units of Measure Used in </I><I>International Trade</I>, available at <A href="http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html">
+<FONT color="#0000FF">http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html</A>
+<FONT color="#000000">  </P
+><H1 
+ ID="LinkTarget_2164"
+><FONT size="+1"><B>3 Terms, definitions and abbreviations </H1
+><H2 
+ ID="LinkTarget_2165"
+><FONT size="+1">3.1 Terms and definitions </H2
+><P 
+
+></B>For the purposes of this document, the terms and definitions given in <A href="#LinkTarget_2139" href="#">
+Part 1</A>
+, <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+, and <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+ as well as the following apply. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>  </DD
+></DL
+></DL
+></DL
+><P 
+
+>DataItem </P
+><P 
+
+></B>link to arbitrary, live automation data, that is, data that represents currently valid information </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Examples of such data are </P
+><DL 
+
+><DD 
+
+>&#61623; device data (such as temperature sensors), </DD
+><DD 
+
+>&#61623; calculated data, </DD
+><DD 
+
+>&#61623; status information (open/closed, moving), </DD
+><DD 
+
+>&#61623; dynamically-changing system data (such as stock quotes), </DD
+><DD 
+
+>&#61623; diagnostic data. </DD
+></DL
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>  </DD
+></DL
+></DL
+></DL
+><P 
+
+>AnalogItem </P
+><P 
+
+></B><I>DataItem</I>s that represent continuously-variable physical quantities (e.g., length, temperature), in contrast to the digital representation of data in discrete items </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Typical examples are the values provided by temperature sensors or pressure sensors. OPC UA defines a specific <I>VariableType</I> to identify an <I>AnalogItem</I>. <I>Properties</I> describe the possible ranges of <I>AnalogItem</I>s. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>  </DD
+></DL
+></DL
+></DL
+><P 
+
+>DiscreteItem </P
+><P 
+
+></B><I>DataItem</I>s that represent data that may take on only a certain number of possible values (e.g., OPENING, OPEN, CLOSING, CLOSED) </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Specific <I>VariableTypes</I> are used to identify <I>DiscreteItems</I> with two states or with multiple states. <I>Properties</I> specify the string values for these states. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>  </DD
+></DL
+></DL
+></DL
+><P 
+
+>ArrayItem </P
+><P 
+
+></B><I>DataItem</I>s that represent continuously-variable physical quantities and where each individual data point consists of multiple values represented by an array (e.g., the spectral response of a digital filter) </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Typical examples are the data provided by analyser devices. Specific <I>VariableTypes</I> are used to identify <I>ArrayItem </I>variants.  </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>  </DD
+></DL
+></DL
+></DL
+><P 
+
+>EngineeringUnits </P
+><P 
+
+></B>units of measurement for <I>AnalogItems</I> that represent continuously-variable physical quantities (e.g., length, mass, time, temperature) </P
+><P 
+
+><FONT size="+1">Note 1 to entry: This standard defines <I>Properties</I> to inform about the unit used for the <I>DataItem</I> value and about the highest and lowest value likely to be obtained in normal operation. </P
+><H2 
+ ID="LinkTarget_2232"
+><FONT size="+1"><B>3.2 Abbreviations and symbols </H2
+><P 
+
+></B>DA Data Access </P
+><P 
+
+>EU Engineering Unit </P
+><P 
+
+>UA  Unified Architecture </P
+><H1 
+ ID="LinkTarget_2236"
+><FONT size="+1"><B>4 Concepts </H1
+><P 
+
+><FONT size="+1"></B>Data Access deals with the representation and use of automation data in Servers. </P
+><P 
+
+>Automation data can be located inside the <I>Server</I> or on I/O cards directly connected to the <I>Server</I>. It can also be located in sub-servers or on other devices such as controllers and input/output modules, connected by serial links via field buses or other communication links. OPC UA Data Access <I>Servers</I> provide one or more OPC UA Data Access <I>Clients</I> with transparent access to their automation data. </P
+><P 
+
+>The links to automation data instances are called <I>DataItems</I>. Which categories of automation data are provided is completely vendor-specific. Figure 1 illustrates how the <I>AddressSpace</I> of a <I>Server</I> might consist of a broad range of different <I>DataItem</I>s. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+></DIV
+></P
+><P 
+
+><B>Figure 1 &ndash; OPC <I>DataItems</I> are linked to automation data </P
+><P 
+
+></B><I>Clients</I> may read or write <I>DataItem</I>s, or monitor them for value changes. The <I>Services</I> needed for these operations are specified in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. Changes are defined as a change in status (quality) or a change in value that exceeds a client-defined range called a <I>Deadband</I>. To detect the value change, the difference between the current value and the last reported value is compared to the <I>Deadband</I>. </P
+><H1 
+ ID="LinkTarget_2251"
+><FONT size="+1"><B>5 Model </H1
+><H2 
+ ID="LinkTarget_2252"
+><FONT size="+1">5.1 General </H2
+><P 
+
+></B>The DataAccess model extends the variable model by defining <I>VariableTypes</I>. The <I>DataItemType</I> is the base type. <I>ArrayItemType</I>, <I>AnalogItemType</I> and <I>DiscreteItemType</I> (and its <I>TwoState</I> and <I>MultiState</I> subtypes) are specializations. See <A href="#LinkTarget_2264" href="#">
+Figure 2</A>
+. Each of these <I>VariableTypes</I> can be further extended to form domain or server specific <I>DataItems</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>DataItemTypeAnalogItemTypeDiscreteItemTypeTwoStateDiscreteTypeMultiStateDiscreteTypeBaseDataVariableTypeDefined in [UA Part 5]MultiStateValueDiscreteType&lt;other&gt;TypeArrayItemType</DIV
+></P
+><P 
+
+><B>Figure 2 &ndash; <I>DataItem</I> <I>VariableType</I> hierarchy </P
+><H2 
+ ID="LinkTarget_2265"
+>5.2 SemanticsChanged </H2
+><P 
+
+></B>The <I>StatusCode</I> also contains an informational bit called <I>SemanticsChanged</I>. </P
+><P 
+
+><I>Servers</I> that implement Data Access shall set this Bit in notifications if certain <I>Properties</I> defined in this standard change. The corresponding <I>Properties</I> are specified individually for each <I>VariableType</I>. </P
+><P 
+
+><I>Clients</I> that use any of these <I>Properties</I> should re-read them before they process the data value.<I> </I></P
+><H2 
+ ID="LinkTarget_2269"
+><B>5.3 Variable Types </H2
+><H3 
+ ID="LinkTarget_2270"
+> DataItemType </H3
+><P 
+
+></B>This <I>VariableType</I> defines the general characteristics of a <I>DataItem</I>. All other <I>DataItem</I> Types derive from it. The <I>DataItemType</I> derives from the <I>BaseDataVariableType</I> and therefore shares the variable model as described in <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+ and <A href="#LinkTarget_2145" href="#">
+Part 5</A>
+. It is formally defined in <A href="#LinkTarget_2286" href="#">
+Table 1</A>
+. </P
+><P 
+
+><B>Table 1 &ndash; DataItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&minus;2  (&minus;2 = &lsquo;Any&rsquo;) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>BaseDataVariableType</I> defined in <A href="#LinkTarget_2145" href="#">
+Part 5</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AnalogItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in  <A href="#LinkTarget_2426" href="#">
+5.3.2</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DiscreteItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in  <A href="#LinkTarget_2593" href="#">
+5.3.3</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ArrayItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3020" href="#">
+5.3.4</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Definition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Optional </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ValuePrecision </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Optional </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><I>Definition </I>is a vendor-specific, human readable string that specifies how the value of this <I>DataItem</I> is calculated. <I>Definition</I> is non-localized and will often contain an equation that can be parsed by certain clients<I>. </I></P
+><P 
+
+> Example:  <I>Definition</I>::= &ldquo;(TempA &ndash; 25) + TempB&rdquo; </P
+><P 
+
+><I>ValuePrecision </I>specifies the maximum precision that the <I>Server</I> can maintain for the item based on restrictions in the target environment. </P
+><P 
+
+><I>ValuePrecision </I>can be used for the following <I>DataTypes</I>: </P
+><DL 
+
+><DD 
+
+>&#61623; For Float and Double values it specifies the number of digits after the decimal place. </DD
+><DD 
+
+>&#61623; For DateTime values it indicates the minimum time difference in nanoseconds. For example, a ValuePrecision of 20 000 000 defines a precision of 20 ms. </DD
+></DL
+><P 
+
+>The <I>ValuePrecision</I> <I>Property</I> is an approximation that is intended to provide guidance to a <I>Client</I>. A <I>Server</I> is expected to silently round any value with more precision that it supports. This implies that a <I>Client</I> may encounter cases where the value read back from a <I>Server</I> differs from the value that it wrote to the <I>Server</I>. This difference shall be no more than the difference suggested by this <I>Property</I>. </P
+><H3 
+ ID="LinkTarget_2426"
+><B> AnalogItemType </H3
+><P 
+
+></B>This <I>VariableType</I> defines the general characteristics of an <I>AnalogItem</I>. All other <I>AnalogItem</I> Types derive from it. The <I>AnalogItemType</I> derives from the <I>DataItemType</I>. It is formally defined in <A href="#LinkTarget_2434" href="#">
+Table 2</A>
+. </P
+><P 
+
+><B>Table 2 &ndash; <I>AnalogItem</I><I>Type</I> definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AnalogItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&minus;2  (&minus;2 = &lsquo;Any&rsquo;) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Number </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DataItemType</I> defined in <A href="#LinkTarget_2270" href="#">
+5.3.1</A>
+ i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Optional </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EURange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EUInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Optional </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">The following paragraphs describe the <I>Properties</I> of this <I>VariableType</I>. If the analog item&rsquo;s <I>Value</I> contains an array, the <I>Properties</I> shall apply to all elements in the array. </P
+><P 
+
+><I>InstrumentRange </I>defines the value range that can be returned by the instrument. </P
+><P 
+
+><I>  </I>Example:<I>  InstrumentRange:</I>:= {-9999.9, 9999.9}<I> </I></P
+><P 
+
+>Although defined as optional, it is strongly recommended for <I>Servers</I> to support this <I>Property</I>. Without an <I>InstrumentRange</I> being provided, <I>Clients</I> will commonly assume the full range according to the <I>DataType</I>. </P
+><P 
+
+>The <I>Range</I> <I>Data Type</I> is specified in <A href="#LinkTarget_4026" href="#">
+5.6.2</A>
+. </P
+><P 
+
+><I>EURange</I> defines the value range likely to be obtained in normal operation. It is intended for such use as automatically scaling a bar graph display. </P
+><P 
+
+>Sensor or instrument failure or deactivation can result in a returned item value which is actually outside of this range. <I>Client</I> software must be prepared to deal with this possibility. Similarly a <I>Client</I> may attempt to write a value that is outside of this range back to the server. The exact behaviour (accept, reject, clamp, etc.) in this case is <I>Server</I>-dependent. However, in general <I>Servers</I> shall be prepared to handle this. </P
+><P 
+
+>  Example:  <I>EURange</I>::= {-200.0,1400.0} </P
+><P 
+
+>See also <A href="#LinkTarget_4677" href="#">
+6.2</A>
+ for a special monitoring filter (<I>PercentDeadband</I>) which is based on the engineering unit range. </P
+><P 
+
+><I>EngineeringUnits </I>specifies the units for the<I> DataItem</I>&rsquo;s value (e.g., DEGC, hertz, seconds). The <I>EUInformation</I> type is specified in <A href="#LinkTarget_4091" href="#">
+5.6.3</A>
+. </P
+><P 
+
+><B>Important note:</B> Understanding the units of a measurement value is essential for a uniform system. In an open system in particular where servers from different cultures might be used, it </P
+><P 
+
+>is essential to know what the units of measurement are. Based on such knowledge, values can be converted if necessary before being used. Therefore, although defined as optional, support of the <I>EngineeringUnits Property </I>is strongly advised. </P
+><P 
+
+>OPC UA recommends using the &ldquo;<B>Codes for Units of Measurement&rdquo;<FONT size="+1"> <FONT size="+1"></B>(see <A href="#LinkTarget_2148" href="#">
+UN/CEFACT: <B>UNECE Recommendation N&deg; 20</A>
+</B>). The mapping to the <I>EngineeringUnits</I><I> </I><I>Property</I><I> </I>is specified in <A href="#LinkTarget_4091" href="#">
+5.6.3</A>
+. </P
+><P 
+
+><FONT color="#800000"><B><I>E</I><I>xample</I><I>s</I><I> </I><I>for unit mixup</I></B><I>: In 1999</I><I>, the Mars Climate Orbiter crashed into the surface of </I><I>Mars. The main reason was a discrepancy over the units used. The navigation software </I><I>expected data in newton second; the company who built the orbiter provided data in </I><I>pound</I><I>-</I><I>force seconds. Another, les</I><I>s expensive, disappointment occurs when people used to </I><I>British </I><I>pints</I><I> </I><I>order a </I><I>pint</I><I> </I><I>in the USA, only to be served what they consider a short measure.</I><I> </I></P
+><P 
+
+><FONT color="#000000">The <I>StatusCode SemanticsChanged</I> bit shall be set if any of the <I>EURange</I> (could change the behaviour of a <I>Subscription</I> if a <I>PercentDeadband</I> filter is used) or <I>EngineeringUnits</I> (could create problems if the client uses the value to perform calculations) <I>Properties</I> are changed (see section <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H3 
+ ID="LinkTarget_2593"
+><B> DiscreteItemType </H3
+><H4 
+ ID="LinkTarget_2594"
+>5.3.3.1 General </H4
+><P 
+
+></B>This VariableType is an abstract type. That is, no instances of this type can exist. However, it might be used in a filter when browsing or querying. The <I>DiscreteItemType</I> derives from the <I>DataItemType</I> and therefore shares all of its characteristics. It is formally defined in <A href="#LinkTarget_2604" href="#">
+Table 3</A>
+. </P
+><P 
+
+><B>Table 3 &ndash; DiscreteItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DiscreteItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>True </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&minus;2 (&minus;2 = &lsquo;Any&rsquo;) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DataItemType</I> defined in <A href="#LinkTarget_2265" href="#">
+5.2</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TwoStateDiscreteType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_2706" href="#">
+5.3.3.2</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MultiStateDiscreteType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_2811" href="#">
+5.3.3.3</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MultiStateValueDiscreteType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_2911" href="#">
+5.3.3.4</A>
+ </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_2706"
+><FONT size="+1"><B>5.3.3.2 TwoStateDiscreteType </H4
+><P 
+
+></B>This <I>VariableType</I> defines the general characteristics of a <I>DiscreteItem</I> that can have two states. The <I>TwoStateDiscreteType</I> derives from the <I>DiscreteItemType</I>. It is formally defined in <A href="#LinkTarget_2714" href="#">
+Table 4</A>
+. </P
+><P 
+
+><B>Table 4 &ndash; TwoStateDiscreteType definition </P
+><P 
+
+><FONT size="+1"></B> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1"><B>Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TwoStateDiscreteType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&minus;2  (&minus;2 = &lsquo;Any&rsquo;) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Boolean </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DiscreteItemType</I> defined in <A href="#LinkTarget_2593" href="#">
+5.3.3</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TrueState </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>FalseState </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><I>TrueState</I> contains a string to be associated with this <I>DataItem</I> when it is TRUE. This is typically used for a contact when it is in the closed (non-zero) state. </P
+><P 
+
+> for example: &quot;RUN&quot;, &quot;CLOSE&quot;, &quot;ENABLE&quot;, &quot;SAFE&ldquo;, etc. </P
+><P 
+
+><I>FalseState</I> contains a string to be associated with this <I>DataItem</I> when it is FALSE. This is typically used for a contact when it is in the open (zero) state. </P
+><P 
+
+> for example: &quot;STOP&quot;, &quot;OPEN&quot;, &quot;DISABLE&quot;, &quot;UNSAFE&ldquo;, etc. </P
+><P 
+
+>If the item contains an array, then the <I>Properties</I> will apply to all elements in the array. </P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of the <I>FalseState or TrueState (</I>changes can cause misinterpretation by users or (scripting) programs<I>)</I> <I>Properties</I> are changed (see section <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H4 
+ ID="LinkTarget_2811"
+><B>5.3.3.3 MultiStateDiscreteType </H4
+><P 
+
+></B>This <I>VariableType</I> defines the general characteristics of a <I>DiscreteItem</I> that can have more than two states. The <I>MultiStateDiscreteType</I> derives from the <I>DiscreteItemType</I>. It is formally defined in <A href="#LinkTarget_2819" href="#">
+Table 5</A>
+. </P
+><P 
+
+><B>Table 5 &ndash; MultiStateDiscreteType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MultiStateDiscreteType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&minus;2 (&minus;2 = &lsquo;Any&rsquo;) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>UInteger </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DiscreteItemType</I> defined in <A href="#LinkTarget_2593" href="#">
+5.3.3</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EnumStrings </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText[] </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><I>EnumStrings</I> is a string lookup table corresponding to sequential numeric values (0, 1, 2, etc.) </P
+><P 
+
+>Example: </P
+><P 
+
+> &rdquo;OPEN&rdquo; </P
+><P 
+
+> &rdquo;CLOSE&rdquo; </P
+><P 
+
+> &rdquo;IN TRANSIT&rdquo; etc. </P
+><P 
+
+>Here the string &ldquo;OPEN&rdquo; corresponds to 0, &ldquo;CLOSE&rdquo; to 1 and &ldquo;IN TRANSIT&rdquo; to 2. </P
+><P 
+
+>Clients should be prepared to handle item values outside of the range of the list; and robust servers should be prepared to handle writes of illegal values. </P
+><P 
+
+>If the item contains an array then this lookup table shall apply to all elements in the array. </P
+><P 
+
+><FONT size="+1">NOTE The <I>EnumStrings</I> property is also used for Enumeration <I>DataType</I>s (for the specification of this <I>DataType</I>, see <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+). </P
+><P 
+
+><FONT size="+1">The <I>StatusCode SemanticsChanged</I> bit shall be set if the <I>EnumStrings (</I>changes can cause misinterpretation by users or (scripting) programs<I>)</I> <I>Property</I> is changed (see section <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H4 
+ ID="LinkTarget_2911"
+><B>5.3.3.4 MultiStateValueDiscreteType </H4
+><P 
+
+></B>This <I>VariableType</I> defines the general characteristics of a <I>DiscreteItem</I> that can have more than two states and where the state values (the enumeration) does not consist of consecutive numeric values (may have gaps) or where the enumeration is not zero-based. The <I>MultiStateValueDiscreteType</I> derives from the <I>DiscreteItemType</I>. It is formally defined in <A href="#LinkTarget_2920" href="#">
+Table 6</A>
+. </P
+><P 
+
+><B>Table 6 &ndash; MultiStateValueDiscreteType definition </P
+><P 
+
+><FONT size="+1"></B> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1"><B>Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MultiStateValueDiscreteType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Scalar </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Number </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DiscreteItemType</I> defined in <A href="#LinkTarget_2593" href="#">
+5.3.3</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EnumValues </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>See <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+ </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ValueAsText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>See <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+ </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><I>EnumValues</I> is an array of <I>EnumValueType</I>. Each entry of the array represents one enumeration value with its integer notation, a human-readable representation, and help information. This represents enumerations with integers that are not zero-based or have gaps (e.g. 1, 2, 4, 8, 16). See <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+ for the definition of this type. <I>MultiStateValueDiscrete Variables</I> expose the current integer notation in their <I>Value</I> <I>Attribute</I>. <I>Clients</I> will often read the <I>EnumValues</I> <I>Property</I> in advance and cache it to lookup a name or help whenever they receive the numeric representation. </P
+><P 
+
+><I>MultiStateValueDiscrete Variables</I> can have any numeric <I>Data Type</I>; this includes signed and unsigned integers from 8 to 64 Bit length. </P
+><P 
+
+>The numeric representation of the current enumeration value is provided via the <I>Value Attribute</I> of the <I>MultiStateValueDiscrete Variable</I>. The <I>ValueAsText Property</I> provides the localized text representation of the enumeration value. It can be used by <I>Clients</I> only interested in displaying the text to subscribe to the <I>Property</I> instead of the <I>Value</I> <I>Attribute</I>. </P
+><H3 
+ ID="LinkTarget_3020"
+><B> ArrayItemType </H3
+><H4 
+ ID="LinkTarget_3021"
+>5.3.4.1 General </H4
+><P 
+
+></B>This abstract <I>VariableType</I> defines the general characteristics of an <I>ArrayItem</I>. Values are exposed in an array but the content of the array represents a single entity like an image. Other <I>DataItems</I> might contain arrays that represent for example several values of several temperature sensors of a boiler. </P
+><P 
+
+><I>ArrayItemType</I> or its subtype shall only be used when the <I>Title</I> and <I>AxisScaleType</I> <I>Properties</I> can be filled with reasonable values. If this is not the case <I>DataItemType</I> and subtypes like <I>AnalogItemType,</I> which also support arrays, shall be used. The <I>ArrayItemType</I> is formally defined in <A href="#LinkTarget_3029" href="#">
+Table 7</A>
+. </P
+><P 
+
+><B>Table 7 &ndash; ArrayItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ArrayItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>True </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>0 (0 = OneOrMoreDimensions) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>DataItemType</I> defined in <A href="#LinkTarget_2270" href="#">
+5.3.1</A>
+; i.e the <I>Properties</I> of that type are inherited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>YArrayItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3251" href="#">
+5.3.4.2</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XYArrayItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3513" href="#">
+5.3.4.3</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ImageItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3618" href="#">
+5.3.4.4</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>CubeItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3732" href="#">
+5.3.4.5</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasSubtype </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>VariableType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NDimensionArrayItemType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Defined in <A href="#LinkTarget_3863" href="#">
+5.3.4.6</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Optional </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EURange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EUInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Title </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisScaleType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisScaleEnumeration </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><I>InstrumentRange </I>defines the range of the <I>Value</I> of the <I>ArrayItem. </I></P
+><P 
+
+><I>EURange</I> defines the value range of the ArrayItem likely to be obtained in normal operation. It is intended for such use as automatically scaling a bar graph display. </P
+><P 
+
+><I>EngineeringUnits</I> holds the information about the engineering units of the <I>Value</I> of the <I>ArrayItem</I>. </P
+><P 
+
+>For additional information about <I>InstrumentRange</I>, <I>EURange</I>, and <I>EngineeringUnits</I> see the description of <I>AnalogItemType</I> in <A href="#LinkTarget_2426" href="#">
+5.3.2</A>
+. </P
+><P 
+
+><I>Title </I>holds the user readable title of the <I>Value</I> of the <I>ArrayItem</I>. </P
+><P 
+
+><I>AxisScaleType </I>defines the scale to be used for the axis where the <I>Value</I> of the <I>ArrayItem</I> shall be displayed<I>. </I></P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of the <I>InstrumentRange</I>, <I>EURange</I>, <I>EngineeringUnits</I> or <I>Title</I> <I>Properties</I> are changed (see <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H4 
+ ID="LinkTarget_3251"
+><B>5.3.4.2 YArrayItemType </H4
+><P 
+
+></B><I>YArrayItemType</I> represents a single-dimensional array of numerical values used to represent spectra or distributions where the x axis intervals are constant. <I>YArrayItemType</I> is formally defined in <A href="#LinkTarget_3258" href="#">
+Table 8</A>
+. </P
+><P 
+
+><B>Table 8 &ndash; YArrayItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>YArrayItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>1 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ArrayDimensions </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>{0} (0 = UnknownSize) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>ArrayItemType </I>defined in <A href="#LinkTarget_3021" href="#">
+5.3.4.1</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">The <I>Value</I> of the <I>YArrayItem</I> contains the numerical values for the Y-Axis. <I>Engineering Units</I> and <I>Range</I> for the <I>Value</I> are defined by corresponding <I>Properties</I> inherited from the <I>ArrayItemType</I>. </P
+><P 
+
+>The <I>DataType</I> of this <I>VariableType</I> is restricted to SByte, Int16, Int32, Int64, Float, Double, <I>ComplexNumberType</I> and <I>DoubleComplexNumberType</I>. </P
+><P 
+
+>The <I>XAxisDefinition</I> <I>Property</I> holds the information about the <I>Engineering Units</I> and <I>Range</I> for the X-Axis. </P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of the following five <I>Properties</I> are changed: <I>InstrumentRange, EURange, EngineeringUnits, Title </I>or<I> XAxisDefinition</I> (see <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><P 
+
+><A href="#LinkTarget_3365" href="#">
+Figure 3</A>
+ shows an example of how <I>Attributes</I> and <I>Properties</I> may be used in a graphical interface.  </P
+><P 
+
+> </P
+><IMG Alt="FilterGraph" width="641" height="400"
+ src="images/OPC UA Part 8 - DataAccess 1.03 Specification_img_0.jpg" ><P 
+
+><B>Figure 3 &ndash; Graphical view of a <I>YArrayItem</I> </P
+><P 
+
+><A href="#LinkTarget_3375" href="#">
+</B>Table 9</A>
+ describes the values of each element presented in <A href="#LinkTarget_3365" href="#">
+Figure 3</A>
+. </P
+><P 
+
+><B>Table 9 &ndash; <I>YArrayItem</I> item description </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute / Property </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Item value </P
+></TH
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Description </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Magnitude Response (dB) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>axisScaleType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisScaleEnumeration.LINEAR_0 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange.low </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>-90 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange.high </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>5 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EURange.low </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>-90 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EURange.high </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>2 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits.namespaceUrl </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>http://www.opcfoundation.org/UA/units/un/cefact </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits.unitId </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>2N </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits.displayName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&ldquo;en-us&rdquo;, &ldquo;dB&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits.description </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&ldquo;en-us&rdquo;, &ldquo;decibel&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Title </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Magnitude </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.EngineeringUnits.namespaceUrl </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>http://www.opcfoundation.org/UA/units/un/cefact </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.EngineeringUnits.unitId </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>kHz </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.EngineeringUnits.displayName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&ldquo;en-us&rdquo;, &ldquo;kHz&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.EngineeringUnits.description </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&ldquo;en-us&rdquo;, kilohertz&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.Range.low </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>0 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.Range.high </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>25 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.title </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&ldquo;en-us&rdquo;, &ldquo;Frequency&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.axisScaleType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisScaleEnumeration.LINEAR_0 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition.axisSteps </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>null </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">Interpretation notes: </P
+><DL 
+
+><DD 
+
+>&#61623; Not all elements of this table are used in the graphic. </DD
+><DD 
+
+>&#61623; The X axis is displayed in reverse order, however, the <I>XAxisDefinition.Range.low</I> shall be lower than <I>XAxisDefinition.Range.high</I>. It is only a graphical representation that reverses the display order. </DD
+><DD 
+
+>&#61623; There is a constant X axis </DD
+></DL
+><H4 
+ ID="LinkTarget_3513"
+><B>5.3.4.3 XYArrayItemType </H4
+><P 
+
+></B><I>XYArrayItemType</I> represents a vector of XVType values like a list of peaks, where XVType.x is the position of the peak and XVType.value is its intensity. <I>XYArrayItemType</I> is formally defined in <A href="#LinkTarget_3520" href="#">
+Table 10</A>
+. </P
+><P 
+
+><B>Table 10 &ndash; XYArrayItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XYArrayItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>1 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XVType (defined in <A href="#LinkTarget_4591" href="#">
+5.6.8</A>
+) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>ArrayItemType </I>defined in <A href="#LinkTarget_3021" href="#">
+5.3.4.1</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">The <I>Value</I> of the X<I>YArrayItem</I> contains an array of structures (XVType) where each structure specifies the position for the X-Axis (XVType.x) and the value itself (XVType.value), used for the Y-Axis. Engineering units and range for the <I>Value</I> are defined by corresponding <I>Properties</I> inherited from the <I>ArrayItemType</I>. </P
+><P 
+
+><I>XAxisDefinition</I> <I>Property</I> holds the information about the <I>Engineering Units</I> and <I>Range</I> for the X-Axis. </P
+><P 
+
+>The <I>axisSteps </I>of <I>XAxisDefinition</I> shall be set to NULL because it is not used. </P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of the <I>InstrumentRange, EURange, EngineeringUnits, Title </I>or<I> XAxisDefinition</I> <I>Properties</I> are changed (see <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H4 
+ ID="LinkTarget_3618"
+><B>5.3.4.4 ImageItemType </H4
+><P 
+
+></B><I>ImageItemType</I> defines the general characteristics of an ImageItem which represents a matrix of values like an image, where the pixel position is given by X which is the column and Y the row. The value is the pixel intensity. </P
+><P 
+
+><I>ImageItemType</I> is formally defined in <A href="#LinkTarget_3626" href="#">
+Table 11</A>
+. </P
+><P 
+
+><B>Table 11 &ndash; ImageItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ImageItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>2 (2 = two dimensional array) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>ArrayItemType </I>defined in <A href="#LinkTarget_3021" href="#">
+5.3.4.1</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+><I>AxisInformation </I></P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>YAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+><I>AxisInformation </I></P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">Engineering units and range for the <I>Value</I> are defined by corresponding <I>Properties</I> inherited from the <I>ArrayItemType</I>. </P
+><P 
+
+>The <I>DataType</I> of this <I>VariableType</I> is restricted to SByte, Int16, Int32, Int64, Float, Double, ComplexNumberType and DoubleComplexNumberType. </P
+><P 
+
+>The <I>ArrayDimensions</I> <I>Attribute</I> for <I>Variables</I> of this type or subtypes shall use the first entry in the array ([0]) to define the number of columns and the second entry ([1]) to define the number of rows, assuming the size of the matrix is not dynamic. </P
+><P 
+
+><I>XAxisDefinition</I> <I>Property</I> holds the information about the engineering units and range for the X-Axis. </P
+><P 
+
+><I>YAxisDefinition</I> <I>Property</I> holds the information about the engineering units and range for the Y-Axis. </P
+><P 
+
+>The <I>StatusCode.SemanticsChanged</I> bit shall be set if any of the <I>InstrumentRange, EURange, EngineeringUnits, Title, XAxisDefinition</I> or <I>YAxisDefinition</I> <I>Properties</I> are changed. </P
+><H4 
+ ID="LinkTarget_3732"
+><B>5.3.4.5 CubeItemType </H4
+><P 
+
+></B><I>CubeItemType</I> represents a cube of values like a spatial particle distribution, where the particle position is given by X which is the column, Y the row and Z the depth. In the example of a spatial partical distribution, the value is the particle size. <I>CubeItemType</I> is formally defined in <A href="#LinkTarget_3739" href="#">
+Table 12</A>
+. </P
+><P 
+
+><B>Table 12 &ndash; CubeItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>CubeItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>3 (3 = three dimensional array) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>ArrayItemType </I>defined in <A href="#LinkTarget_3021" href="#">
+5.3.4.1</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+><I>AxisInformation </I></P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>YAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+><I>AxisInformation </I></P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ZAxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+><I>AxisInformation </I></P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1">Engineering units and range for the <I>Value</I> are defined by corresponding <I>Properties</I> inherited from the <I>ArrayItemType</I>. </P
+><P 
+
+>The <I>DataType</I> of this <I>VariableType</I> is restricted to SByte, Int16, Int32, Int64, Float, Double, <I>ComplexNumberType</I> and <I>DoubleComplexNumberType</I>. </P
+><P 
+
+>The <I>ArrayDimensions</I> <I>Attribute</I> for <I>Variables</I> of this type or subtypes should use the first entry in the array ([0]) to define the number of columns, the second entry ([1]) to define the number of rows, and the third entry ([2]) define the number of steps in the Z axis, assuming the size of the matrix is not dynamic. </P
+><P 
+
+><I>XAxisDefinition</I> <I>Property</I> holds the information about the engineering units and range for the X-Axis. </P
+><P 
+
+><I>YAxisDefinition</I> <I>Property</I> holds the information about the engineering units and range for the Y-Axis. </P
+><P 
+
+><I>ZAxisDefinition</I> <I>Property</I> holds the information about the engineering units and range for the Z-Axis. </P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of <I>the InstrumentRange, EURange, EngineeringUnits, Title, XAxisDefinition, YAxisDefinition</I> or <I>ZAxisDefinition</I> <I>Properties</I> are changed (see <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H4 
+ ID="LinkTarget_3863"
+><B>5.3.4.6 NDimensionArrayItemType </H4
+><P 
+
+></B>This <I>VariableType</I> defines a generic multi-dimensional <I>ArrayItem</I>. </P
+><P 
+
+>This approach minimizes the number of types however it may be proved more difficult to utilize for control system interactions. </P
+><P 
+
+><I>NDimensionArrayItemType</I> is formally defined in <A href="#LinkTarget_3873" href="#">
+Table 13</A>
+. </P
+><P 
+
+><B>Table 13 &ndash; NDimensionArrayItemType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NdimensionArrayItemType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>IsAbstract </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>False </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>ValueRank </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>0 (0 = OneOrMoreDimensions) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BaseDataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>References </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NodeClass </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BrowseName  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DataType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TypeDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ModellingRule </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Subtype of the <I>ArrayItemType </I>defined in <A href="#LinkTarget_3021" href="#">
+5.3.4.1</A>
+ </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HasProperty </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Variable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisDefinition </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisInformation [] </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Mandatory </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+>The <I>DataType</I> of this <I>VariableType</I> is restricted to SByte, Int16, Int32, Int64, Float, Double, ComplexNumberType and DoubleComplexNumberType. </P
+><P 
+
+><I>AxisDefinition</I> <I>Property</I> holds the information about the <I>Engineering Units</I> and <I>Range</I> for all axis. </P
+><P 
+
+>The <I>StatusCode SemanticsChanged</I> bit shall be set if any of <I>the InstrumentRange, EURange, EngineeringUnits, Title</I> or <I>AxisDefinition</I> <I>Properties</I> are changed (see <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ for additional information). </P
+><H2 
+ ID="LinkTarget_3965"
+><B>5.4 Address Space model </H2
+><P 
+
+></B><I>DataItem</I>s are always defined as data components of other <I>N</I><I>ode</I>s in the <I>AddressSpace</I>. They are never defined by themselves. A simple example of a container for <I>D</I><I>ata</I><I>I</I><I>tem</I>s would be a &ldquo;Folder Object&rdquo; but it can be an <I>O</I><I>bject</I> of any other type. </P
+><P 
+
+>Figure 4 illustrates the basic <I>AddressSpace</I> model of a <I>D</I><I>ata</I><I>I</I><I>tem</I>, in this case an <I>AnalogItem</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>DefinitionInstrumentRangeEURangeEngineeringUnitsDataItemTypeAnalogItemTypeDefinitionInstrumentRangeEURangeEngineeringUnitsPropertyTypePressure (Variable)AttributeValueDataTypeAccessLevelMinimumSamplingIntervalBoiler_01 (Object)</DIV
+></P
+><P 
+
+><B>Figure 4 &ndash; Representation of DataItems in the AddressSpace </P
+><P 
+
+></B>Each <I>DataItem</I> is represented by a <I>DataVariable</I> with a specific set of <I>Attribute</I>s. The <I>TypeDefinition</I> reference indicates the type of the <I>DataItem</I> (in this case the <I>AnalogItemType</I>). Additional characteristics of <I>DataItem</I>s are defined using <I>Properties</I>. The <I>VariableTypes</I> in <A href="#LinkTarget_2265" href="#">
+5.2</A>
+ specify which properties may exist. These <I>Properties</I> have been found to be useful for a wide range of Data Access clients. <I>Servers</I> that want to disclose similar information should use the OPC-defined <I>Property</I> rather than one that is vendor-specific. </P
+><P 
+
+>The above figure shows only a subset of <I>Attribute</I>s and <I>Properties</I>. Other <I>Attribute</I>s that are defined for <I>Variable</I>s in <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+ (e.g., <I>Description</I>) may also be available. </P
+><H2 
+ ID="LinkTarget_3986"
+><B>5.5 Attributes of DataItems </H2
+><P 
+
+></B>This subclause lists the <I>Attribute</I>s of <I>Variable</I>s that have particular importance for Data Access. They are specified in detail in <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+. The following <I>Attribute</I>s are particularly important for Data Access: </P
+><DL 
+
+><DD 
+
+>&#61623; Value </DD
+><DD 
+
+>&#61623; DataType </DD
+><DD 
+
+>&#61623; AccessLevel </DD
+><DD 
+
+>&#61623; MinimumSamplingInterval </DD
+></DL
+><P 
+
+><I>Value</I> is the most recent value of the <I>Variable</I> that the <I>Server</I> has. Its data type is defined by the <I>DataType</I> <I>Attribute</I>. The <I>AccessLevel</I> <I>Attribute</I> defines the <I>S</I><I>erver&rsquo;s</I> basic ability to access current data and <I>MinimumSamplingInterval</I> defines how current the data is. </P
+><P 
+
+>When a client requests the <I>Value</I> <I>Attribute</I> for reading or monitoring, the <I>Server</I> will always return a <I>StatusCode</I> (the quality and the <I>S</I><I>erver&rsquo;s</I> ability to access/provide the value) and, optionally, a <I>ServerTimestamp</I> and/or a <I>SourceTimestamp</I> &ndash; based on the <I>Client&rsquo;s</I> request. See <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+ for details on <I>StatusCode</I> and the meaning of the two timestamps. Specific status codes for Data Access are defined in <A href="#LinkTarget_4736" href="#">
+6.3</A>
+. </P
+><H2 
+ ID="LinkTarget_4013"
+><B>5.6 DataTypes </H2
+><H3 
+ ID="LinkTarget_4014"
+> Overview </H3
+><P 
+
+></B>Following is a description of the <I>D</I><I>ata</I><I>T</I><I>ypes</I> defined in this specification. </P
+><P 
+
+><I>DataTypes</I> like <I>String,</I> <I>Boolean</I>, <I>Double</I> or <I>LocalizedText</I> are defined in <A href="#LinkTarget_2141" href="#">
+Part 3</A>
+. Their representation is specified in <A href="#LinkTarget_2145" href="#">
+Part 5</A>
+. </P
+><H3 
+ ID="LinkTarget_4026"
+><B> Range </H3
+><P 
+
+></B>This structure defines the <I>Range</I> for a value. Its elements are defined in <A href="#LinkTarget_4034" href="#">
+Table 14</A>
+. </P
+><P 
+
+><B>Table 14 &ndash; <I>Range</I> DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> low </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Lowest value in the range. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> high </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Highest value in the range. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4076" href="#">
+Table 15</A>
+ </P
+><P 
+
+><B>Table 15 &ndash; <I>Range</I> definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Range </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H3 
+ ID="LinkTarget_4091"
+><B> EUInformation </H3
+><P 
+
+></B>This structure contains information about the <I>EngineeringUnits</I>. Its elements are defined in <A href="#LinkTarget_4098" href="#">
+Table 16</A>
+. </P
+><P 
+
+><B>Table 16 &ndash; <I>EUInformation</I> DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>EUInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> namespaceUri </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Identifies the organization (company, standards organization) that defines the <I>EUInformation</I>. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> unitId </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Int32 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Identifier for programmatic evaluation. </P
+><P 
+
+>&minus;1 is used if a <I>unitId</I> is not available. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> displayName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The <I>displayName</I> of the engineering unit is typically the abbreviation of the engineering unit, for example &rdquo;h&rdquo; for hour or &rdquo;m/s&rdquo; for meter per second. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> description </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Contains the full name of the engineering unit such as &rdquo;hour&rdquo; or &rdquo;meter per second&rdquo;. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4158" href="#">
+Table 17</A>
+ </P
+><P 
+
+><B>Table 17 &ndash; <I>EUInfo</I><I>rmation</I> definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EUInformation </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1">To facilitate interoperability, OPC UA specifies how to apply the widely accepted &ldquo;<B>Codes for Units of Measurement&rdquo; </B>published by the &ldquo;United Nations Centre for Trade Facilitation and Electronic Business&rdquo; (see <A href="#LinkTarget_2148" href="#">
+UN/CEFACT: UNECE Recommendation N&deg; 20</A>
+). It uses and is based on the International System of Units (SI Units) but in addition provides a fixed code that can be used for automated evaluation. This recommendation has been accepted by many industries on a global basis. </P
+><P 
+
+>The UNECE recommendation can be found here: </P
+><P 
+
+><FONT color="#0000FF">http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html </P
+><P 
+
+><FONT color="#000000">The latest UNECE version (Rev 11, published in 2015) is available here: </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/EngineeringUnits/UNECE/rec20_latest_08052015.zip">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/EngineeringUnits/UNECE/rec20_latest_08052015.zip</A>
+ </P
+><P 
+
+><FONT color="#000000">The mapping of the UNECE codes to OPC UA (EUInformation.unitId) is available here: </P
+><P 
+
+><A href="http://www.opcfoundation.org/UA/EngineeringUnits/UNECE/UNECE_to_OPCUA.csv">
+<FONT color="#0000FF">http://www.opcfoundation.org/UA/EngineeringUnits/UNECE/UNECE_to_OPCUA.csv</A>
+<FONT color="#000000"> </P
+><P 
+
+><A href="#LinkTarget_4212" href="#">
+Table 18</A>
+ contains a small excerpt of the published Annex with Code Lists: </P
+><P 
+
+><B>Table 18 &ndash; Examples from the UNECE Recommendation </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Excerpt from Recommendation N&deg;. 20, Annex 1 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Common Code </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Conversion Factor </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Symbol </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>C81 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>radian </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>rad </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>C25 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>milliradian </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>10<FONT size="+1">&ndash;3<FONT size="+1"> rad </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>mrad </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>MMT </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>millimetre </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>10<FONT size="+1">&ndash;3<FONT size="+1"> m </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>mm </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>HMT </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>hectometre </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>10<FONT size="+1">2<FONT size="+1"> m </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>hm </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>KTM </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>kilometre </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>10<FONT size="+1">3<FONT size="+1"> m </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>km </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>KMQ </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>kilogram per cubic metre </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>kg/m<FONT size="+1">3<FONT size="+1"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>kg/m<FONT size="+1">3<FONT size="+1"> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>FAH </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>degree Fahrenheit </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>5/9 &#61620; K </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&deg;F </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>J23 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>degree Fahrenheit per hour </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>1,543 210 &#61620; 10<FONT size="+1">&ndash;4<FONT size="+1"> K/s </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>&deg;F/h </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">Specific columns of this table shall be used to create the <I>EUInformation</I> structure as defined by the following rules: </P
+><DL 
+
+><DD 
+
+>&#61623; The <B>Common Code</B> is represented as an alphanumeric variable length of 3 characters. It shall be used for the <I>EUInformation.unitId</I>. The following pseudo code specifies the algorithm to convert the Common Code into an Int32 as needed for <I>EUInformation.unitId</I>: </DD
+></DL
+><P 
+
+> Int32 unitId = 0;   Int32 c;   for (i=0; i&lt;=3;i++)   { </P
+><P 
+
+> c = CommonCode[i];   if (c == 0) break;  // end of Common Code   unitId = unitId &lt;&lt; 8;   unitId = unitId | c;   } </P
+><DL 
+
+><DD 
+
+>&#61623; The <B>Symbol</B> field shall be copied to the <I>EUInformation.displayName</I>. The localeId field of <I>EUInformation.displayName</I> shall be empty. </DD
+><DD 
+
+>&#61623; The <B>Name</B> field shall be used for <I>EUInformation.description</I>. If the name is copied, then the localeId field of <I>EUInformation.description</I> shall be empty. If the name is localized then the localeId field shall specify the correct locale. </DD
+></DL
+><P 
+
+>The <I>EUInformation.namespaceUri</I> shall be http://<A href="http://www.opcfoundation.org/UA/units/un/cefact">
+<FONT color="#0000FF"><B>www.opcfoundation.org/UA/units/un/cefact</A>
+<FONT color="#000000"></B>. </P
+><P 
+
+><FONT size="+1">NOTE  It will be advantegous to  use Recommendation N&deg;. 20 as specified, because it can be programmatically interpreted by generic OPC UA <I>Clients</I>. However, the <I>EUInformation</I> structure has been defined such that other standards bodies can incorporate their engineering unit definitions into OPC UA. If <I>Servers</I> use such an approach then they shall identify this standards body by using a proper <I>namespaceUri</I> in <I>EUInformation.namespaceUri</I>. </P
+><H3 
+ ID="LinkTarget_4332"
+><FONT size="+1"><B> ComplexNumberType </H3
+><P 
+
+></B>This structure defines float IEEE 32 bits complex value. Its elements are defined in <A href="#LinkTarget_4339" href="#">
+Table 19</A>
+. </P
+><P 
+
+><B>Table 19 &ndash; ComplexNumberType DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>ComplexNumberType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   real </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Float </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value real part </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   imaginary </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Float </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value imaginary  part </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4380" href="#">
+Table 20</A>
+ </P
+><P 
+
+><B>Table 20 &ndash; ComplexNumberType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>ComplexNumberType </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><H3 
+ ID="LinkTarget_4395"
+><FONT size="+1"><B> DoubleComplexNumberType </H3
+><P 
+
+></B>This structure defines double IEEE 64 bits complex value. Its elements are defined in <A href="#LinkTarget_4402" href="#">
+Table 21</A>
+. </P
+><P 
+
+><B>Table 21 &ndash; DoubleComplexNumberType DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>DoubleComplexNumberType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   real </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value real part </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   imaginary </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value imaginary  part </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4443" href="#">
+Table 22</A>
+. </P
+><P 
+
+><B>Table 22 &ndash; DoubleComplexNumberType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DoubleComplexNumberType </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><H3 
+ ID="LinkTarget_4458"
+><FONT size="+1"><B> AxisInformation </H3
+><P 
+
+></B>This structure defines the information for auxiliary axis for <I>ArrayItemType</I> <I>Variable</I>s. </P
+><P 
+
+>There are three typical uses of this structure: </P
+><DL 
+
+><DD 
+
+>a) The step between points is constant and can be predicted using the range information and the number of points. In this case, <I>axisSteps</I> can be set to NULL. </DD
+><DD 
+
+>b) The step between points is not constant, but remains the same for a long period of time (from acquisition to acquisition for example). In this case, <I>axisSteps</I> contains the value of each step on the axis. </DD
+><DD 
+
+>c) The step between points is not constant and changes at every update. In this case, a type like <I>XYArrayType</I> shall be used and <I>axisSteps</I> is set to NULL. </DD
+></DL
+><P 
+
+>Its elements are defined in <A href="#LinkTarget_4475" href="#">
+Table 23</A>
+. </P
+><P 
+
+><B>Table 23 &ndash; AxisInformation DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>AxisInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   engineeringUnits </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   EUInformation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Holds the information about the engineering units for a given axis. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   eURange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Range </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Limits of the range of the axis </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   title </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Localizedtext </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>User readable axis title, useful when the units are %, the Title may be &ldquo;Particle size distribution&rdquo; </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   axisScaleType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   AxisScaleEnumeration </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LINEAR, LOG, LN, defined by AxisSteps </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   axisSteps </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>   Double[] </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Specific value of each axis steps, may be set to &ldquo;Null&rdquo; if not used </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1">When the steps in the axis are constant,<I> axisSteps</I> may be set to &ldquo;Null&rdquo; and in this case, the <I>Range</I> limits are used to compute the steps. The number of steps in the axis comes from the parent <I>ArrayItem.ArrayDimensions</I>. </P
+><H3 
+ ID="LinkTarget_4535"
+><B> AxisScaleEnumeration </H3
+><P 
+
+></B>This enumeration identifies on which type of axis the data shall be displayed. Its values are defined in <A href="#LinkTarget_4542" href="#">
+Table 24</A>
+. </P
+><P 
+
+><B>Table 24 &ndash; AxisScaleEnumeration values </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Value </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>LINEAR_0 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Linear scale </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>LOG_1 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Log base 10 scale </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>LN_2 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Log base e scale </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4576" href="#">
+Table 25</A>
+. </P
+><P 
+
+><B>Table 25 &ndash; AxisScaleEnumeration definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AxisScaleEnumeration </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><H3 
+ ID="LinkTarget_4591"
+><FONT size="+1"><B> XVType </H3
+><P 
+
+></B>This structure defines a physical value relative to a X axis and it is used as the <I>DataType</I> of the Value of <I>XYArrayItemType</I>. For details see <A href="#LinkTarget_3513" href="#">
+5.3.4.3</A>
+. </P
+><P 
+
+>Many devices can produce values that can perfectly be represented with a float IEEE 32 bits but, they can position them on the X axis with an accuracy that requires double IEEE 64 bits. For example, the peak value in an absorbance spectrum where the amplitude of the peak can be represented by a float IEEE 32 bits, but its frequency position required 10 digits which implies the use of a double IEEE 64 bits.  </P
+><P 
+
+>Its elements are defined in <A href="#LinkTarget_4605" href="#">
+Table 26</A>
+. </P
+><P 
+
+><B>Table 26 &ndash; XVType DataType structure </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Name </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Type </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>XVType </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>structure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   x </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>  Double </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Position on the X axis of this value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>   value </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>  Float </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value itself </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">Its representation in the <I>AddressSpace</I> is defined in <A href="#LinkTarget_4647" href="#">
+Table 27</A>
+. </P
+><P 
+
+><B>Table 27 &ndash; XVType definition </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Attributes </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Value </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>BrowseName </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>XVType </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_4662"
+><FONT size="+1"><B>6 Data Access specific usage of Services </H1
+><H2 
+ ID="LinkTarget_4663"
+><FONT size="+1">6.1 General </H2
+><P 
+
+><A href="#LinkTarget_2143" href="#">
+</B>Part 4</A>
+ specifies the complete set of services. The services needed for the purpose of DataAccess are: </P
+><DL 
+
+><DD 
+
+>&#61623; The <I>View</I> service set and <I>Query</I> service set to detect <I>DataItem</I>s, and their <I>Properties</I>. </DD
+><DD 
+
+>&#61623; The <I>Attribute</I> service set to read or write <I>Attribute</I>s and in particular the value <I>Attribute</I>. </DD
+><DD 
+
+>&#61623; The <I>MonitoredItem</I> and <I>Subscription</I> service set to set up monitoring of <I>DataItem</I>s and to receive data change notifications. </DD
+></DL
+><H2 
+ ID="LinkTarget_4677"
+><B>6.2 PercentDeadband </H2
+><P 
+
+></B>The <I>DataChangeFilter</I> in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+ defines the conditions under which a data change notification shall be reported. This filter contains a <I>deadbandValue</I> which can be of type <I>AbsoluteDeadband</I> or <I>PercentDeadband</I>. <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+ already specifies the behaviour of the <I>A</I><I>bsolute</I><I>D</I><I>eadband</I>. This sub-clause specifies the behaviour of the <I>PercentD</I><I>eadband</I> type. </P
+><P 
+
+><B><I>DeadbandType = PercentDeadband </I></P
+><P 
+
+></B>For this type of deadband the <I>deadbandValue</I> is defined as the percentage of the <I>EU</I><I>Range</I>. That is, it applies only to <I>A</I><I>nalog</I><I>Items</I> with an <I>EURange</I> <I>P</I><I>ropert</I><I>y</I> that defines the typical value range for the item. This range shall be multiplied with the <I>d</I><I>eadband</I><I>V</I><I>alue</I> and then compared to the actual value change to determine the need for a data change notification. The following pseudo code shows how the deadband is calculated: </P
+><P 
+
+><FONT size="+1">DataChange if (absolute value of (last cached value - current value) &gt;               (<I>deadbandValue</I>/100.0) * ((high&ndash;low) of <I>EURange</I>))) </P
+><P 
+
+><FONT size="+1">The range of the <I>d</I><I>eadband</I><I>V</I><I>alue</I> is from 0.0 to 100.0 Percent. Specifying a <I>d</I><I>eadband</I><I>V</I><I>alue</I> outside of this range will be rejected and reported with the <I>StatusCode</I> Bad_DeadbandFilterInvalid (see <A href="#LinkTarget_4774" href="#">
+Table 28</A>
+). </P
+><P 
+
+>If the Value of the <I>MonitoredItem</I> is an array, then the deadband calculation logic shall be applied to each element of the array. If an element that requires a DataChange is found, then no further deadband checking is necessary and the entire array shall be returned. </P
+><H2 
+ ID="LinkTarget_4736"
+><B>6.3 Data Access status codes </H2
+><H3 
+ ID="LinkTarget_4737"
+> Overview </H3
+><P 
+
+></B>This subclause defines additional codes and rules that apply to the <I>StatusCode</I> when used for Data Access values. </P
+><P 
+
+>The general structure of the <I>StatusCode</I> is specified in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+ and includes a set of common operational result codes that also apply to Data Access. </P
+><H3 
+ ID="LinkTarget_4745"
+><B> Operation level result codes </H3
+><P 
+
+></B>Certain conditions under which a <I>Variable</I> value was generated are only valid for automation data and in particular for device data; they are similar, but are slightly more generic than the description of data quality in the various fieldbus specifications. </P
+><P 
+
+>In the following, <A href="#LinkTarget_4774" href="#">
+Table 28</A>
+ contains codes with BAD severity which indicates a failure. </P
+><P 
+
+><A href="#LinkTarget_4853" href="#">
+Table 29</A>
+ contains codes with UNCERTAIN severity which indicates that the value has been generated under sub-normal conditions.<A href="#LinkTarget_4914" href="#">
+ </A>
+</P
+><P 
+
+><A>
+Table 30</A>
+ contains GOOD (success) codes. </P
+><P 
+
+>Note again, that these are the codes that are specific for Data Access and supplement the codes that apply to all types of data which are defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. </P
+><P 
+
+><B>Table 28 &ndash; Operation level result codes for BAD data quality </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Symbolic Id  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Note - <B>Bad</B> is defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. It shall be used when there is no special reason why the Value is bad. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_ConfigurationError </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>There is a problem with the configuration that affects the usefulness of the value. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotConnected </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The variable should receive its value from another variable, but has never been configured to do so. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_DeviceFailure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>There has been a failure in the device/data source that generates the value that has affected the value. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_SensorFailure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>There has been a failure in the sensor from which the value is derived by the device/data source. The limits bits are used to define if the limits of the value have been reached. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Note - <B>Bad_NoCommunication</B> is defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. It shall be used when communications to the data source is defined, but not established, and there is no last known value available. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfService </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The source of the data is not operational. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_LastKnown </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA requires that the <I>Server</I> shall return a Null value when the <I>Severity</I> is Bad. Therefore, the Fieldbus code &ldquo;Bad_LastKnown&rdquo; shall be mapped to Uncertain_NoCommunicationLastUsable. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_DeadbandFilterInvalid </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The specified <I>PercentDeadband</I> is not between 0.0 and 100.0 or a <I>PercentDeadband</I> is not supported, since an <I>EURange</I> is not configured. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Note - Bad_<B>WaitingForInitialData</B> is defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1"><B>Table 29 &ndash; Operation level result codes for UNCERTAIN data quality </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Symbolic Id  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Note - <B>Uncertain</B> is defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. It shall be used when there is no special reason why the Value is uncertain. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_ NoCommunicationLastUsable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Communication to the data source has failed. The variable value is the last value that had a good quality and it is uncertain whether this value is still current. </P
+><P 
+
+>The server timestamp in this case is the last time that the communication status was checked. The time at which the value was last verified to be true is no longer available. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_ LastUsableValue </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Whatever was updating this value has stopped doing so. This happens when an input variable is configured to receive its value from another variable and this configuration is cleared after one or more values have been received. </P
+><P 
+
+>This status/substatus is not used to indicate that a value is stale. Stale data can be detected by the client looking at the timestamps. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SubstituteValue </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value is an operational value that was manually overwritten. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_InitialValue </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value is an initial value for a variable that normally receives its value from another variable. This status/substatus is set only during configuration while the variable is not operational (while it is out-of-service). </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_ SensorNotAccurate </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value is at one of the sensor limits. The Limits bits define which limit has been reached. Also set if the device can determine that the sensor has reduced accuracy (e.g. degraded analyzer), in which case the Limits bits indicate that the value is not limited. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_ EngineeringUnitsExceeded </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value is outside of the range of values defined for this parameter. The Limits bits indicate which limit has been reached or exceeded. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SubNormal </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value is derived from multiple sources and has less than the required number of Good sources. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+><FONT size="+1"><B>Table 30 &ndash; Operation level result codes for GOOD data quality </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Symbolic Id </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Note - <B>Good</B> is defined in <A href="#LinkTarget_2143" href="#">
+Part 4</A>
+. It shall be used when there are no special conditions. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Good_LocalOverride </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>The value has been Overridden. Typically this is means the input has been disconnected and a manually-entered value has been &rdquo;forced&rdquo;. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><H3 
+ ID="LinkTarget_4939"
+><FONT size="+1"><B> LimitBits </H3
+><P 
+
+></B>The bottom 16 bits of the <I>StatusCode</I> are bit flags that contain additional information, but do not affect the meaning of the <I>StatusCode</I>. Of particular interest for <I>D</I><I>ata</I><I>I</I><I>tem</I>s is the <I>LimitBits</I> field. In some cases, such as sensor failure it can provide useful diagnostic information. </P
+><P 
+
+>Servers that do not support Limit have to set this field to 0. </P
+><H1 
+ ID="LinkTarget_4942"
+><FONT size="+1"><B>Annex A(informative): OPC COM DA to UA Mapping </H1
+><P 
+
+><FONT size="+1"></B> </P
+><H2 
+ ID="LinkTarget_4945"
+><FONT size="+1"><B>A.1 Introduction </H2
+><P 
+
+><FONT size="+1"></B>This Annex provides details on mapping OPC COM Data Access (DA) information to OPC UA to help vendors migrate to OPC UA based systems while still being able to access information from existing OPC COM DA systems. </P
+><P 
+
+>The OPC Foundation provides COM UA Wrapper and Proxy samples that act as a bridge between the OPC DA and the OPC UA systems. </P
+><P 
+
+>The COM UA Wrapper is an OPC UA Server that wraps an OPC DA Server and with that enables an OPC UA Client to access information from the DA Server. The COM UA Proxy enables an OPC DA Client to access information from an OPC UA Server. </P
+><P 
+
+>The mappings describe generic DA interoperability components. It is recommended that vendors use this mapping if they develop their own components, however, some applications may benefit from vendor specific mappings. </P
+><H2 
+ ID="LinkTarget_4950"
+><FONT size="+1"><B>A.2 Security Considerations </H2
+><P 
+
+><FONT size="+1"></B>COM DA relies on the Microsoft COM security infrastructure and does not specify any security parameters such as user identity. The developer of UA Wrapper and Proxy therefore has to consider the mapping of security aspects. </P
+><P 
+
+>The COM UA Wrapper for instance may accept any Username/password and then try to impersonate this user by calling proper Windows services before connecting to the COM DA Server. </P
+><P 
+
+> </P
+><H2 
+ ID="LinkTarget_4954"
+><FONT size="+1"><B>A.3 COM UA wrapper for OPC DA Server </H2
+><H3 
+ ID="LinkTarget_4956"
+><FONT size="+1">A.3.1 Information Model mapping </H3
+><H4 
+ ID="LinkTarget_4957"
+>A.3.1.1 General </H4
+><P 
+
+></B>OPC DA defines 3 elements in the address space: Branch, Item and Property. The COM UA Wrapper maps these types to the OPC UA types as described below. </P
+><P 
+
+><B> <DIV class="Sect" 
+ Alt=""
+>Branch1[Object]FolderTypeRoot(ServerName)AnalogItemType&#9679;&#9679;&#9679;Branch2[Object]Property1[Property]PropertyTypeHasProperty&#9679;&#9679;&#9679;EURange[Property]HasPropertyEngineeringUnits[Property]InstrumentRange[Property]&#9679;&#9679;&#9679;Item1[DataVariable]TrueState[Property]HasPropertyFalseState[Property]Property1[Property]&#9679;&#9679;&#9679;Item2[DataVariable]TwoStateDiscreteTypeOrganizesEnumStrings[Property]HasPropertyProperty1[Property]&#9679;&#9679;&#9679;Item3[DataVariable]MultiStateDiscreteTypeOrganizesProperty1[Property]HasProperty&#9679;&#9679;&#9679;Item4[DataVariable]DataItemTypeDefined by OPC UADefined by OPC COM DA serverProperty1[Property]</DIV
+></P
+><P 
+
+>Figure A.1- Sample OPC UA Information Model for OPC DA </P
+><P 
+
+></B> </P
+><H4 
+ ID="LinkTarget_4965"
+><B>A.3.1.2 Branch </H4
+><P 
+
+></B>DA Branches are represented in the COM UA Wrapper as <I>Objects</I> of <I>FolderType</I>. </P
+><P 
+
+>The top-level branch (the root) should be represented by an <I>Object</I> where the <I>BrowseName</I> is the Server ProgId. </P
+><P 
+
+>The OPC DA Address space hierarchy is discovered using the ChangeBrowsePosition from the Root and BrowseOPCItemIds to get the Branches, Items and Properties. </P
+><P 
+
+>The name returned from the BrowseOPCItemIds enumString is used as the BrowseName and the DisplayName for each Branch. See also clause <A href="#LinkTarget_5160" href="#">
+A.3.1.5</A>
+. </P
+><P 
+
+>The ItemId obtained using the GetItemID is used as a part of the NodeId for each Branch. See also clause <A href="#LinkTarget_5160" href="#">
+A.3.1.5</A>
+. </P
+><P 
+
+>An OPC UA <I>Folder</I> representing a DA Branch uses the <I>Organizes</I> <I>References</I> to reference child DA Branches and uses <I>HasComponent</I> <I>References</I> for DA Leafs (Items). It is acceptable for customized wrappers to use a sub-type of these ReferenceTypes. </P
+><H4 
+ ID="LinkTarget_4982"
+><B>A.3.1.3 Item </H4
+><P 
+
+></B>DA items (leafs) are represented in the COM UA Wrapper as <I>Variables</I>. The VariableType depends on the existance of special DA properties as follows:  </P
+><DL 
+
+><DD 
+
+>&#61623; <B>AnalogItemType</B>: An item in the DA server that has High EU and Low EU properties or its EU Type property is Analog is represented as <I>Variable</I> of <I>AnalogItemType</I> in the COM UA Wrapper. <I>The AnalogItemType </I>has the following<I> Properties: </I></DD
+><DD 
+
+>o <I>EURange</I>: The values of the High EU and Low EU properties of the DA Item are assigned to the <I>EURange Property</I> </DD
+><DD 
+
+>o <I>EngineeringUnits</I>: The value of the Engineering Unit property of the DA Item are assigned to the <I>EngineeringUnits Property</I>. </DD
+><DD 
+
+>o InstrumentRange: The values of the High IR and Low IR properties of the DA Item are assigned to the <I>InstrumentRange Property</I> </DD
+><DD 
+
+>&#61623; <B><I>TwoStateDiscreteType</I></B><I>: A</I>n<I> </I>item in DA<I> </I>server that has<I> </I>Open Label and Close Label<I> </I>properties is represented as <I>Variable</I> of<I> TwoStateDiscreteType </I>in the COM UA Wrapper<I>. </I><I>The TwoStateDiscreteType </I>has the following <I>Properties </I></DD
+><DD 
+
+>o <I>TrueState</I>: The value of the Close Label property of the DA item is assigned to the <I>TrueState Property</I>. </DD
+><DD 
+
+>o <I>FalseState</I>: The value of the Open Label property of the DA item is assigned to the <I>FalseState Property</I>. </DD
+><DD 
+
+>&#61623; <B><I>MultiStateDiscreteType</I>:</B> An item in the DA server that has its EU Type property as enumerated is represented as <I>Variable</I> of <I>MultiStateDiscreteType</I> in the COM UA Wrapper. The <I>MultiStateDiscreteType</I> has the following <I>Property</I>: </DD
+><DD 
+
+>o <I>EnumStrings</I>: The enumerated values of the EUInfo Property of the DA item are assigned to the <I>EnumStrings</I> <I>Property</I>. </DD
+><DD 
+
+>&#61623; <B><I>DataItemType: </I></B>An item in the<I> </I>DA Server that is not any of the above types is represented as <I>Variable</I> of<I> DataItemType </I>in the COM UA Wrapper<I>.</I><B> </DD
+></DL
+><P 
+
+></B>Below are mappings that are common for all item types </P
+><DL 
+
+><DD 
+
+>&#61623; The name of the item in the<I> </I>DA Server is used as the <I>BrowseName</I> and the <I>DisplayName</I> for the <I>Node</I> in the COM UA Wrapper. See also clause <A href="#LinkTarget_5160" href="#">
+A.3.1.5</A>
+. </DD
+><DD 
+
+>&#61623; The ItemId in the<I> </I>DA server<I> </I>is used as a part of the <I>NodeId</I> for the <I>Node</I>. See also clause <A href="#LinkTarget_5160" href="#">
+A.3.1.5</A>
+. </DD
+><DD 
+
+>&#61623; TimeZone property in the<I> </I>DA server is represented by a <I>TimeZone</I> <I>Property.</I> </DD
+><DD 
+
+>&#61623; The<I> </I>Description<I> </I>property value in the<I> </I>DA server<I> </I>is assigned to the <I>Description</I> <I>Attribute</I>.<I> </I></DD
+></DL
+><DL 
+
+><DD 
+
+>&#61623; <I>The </I>DataType<I> </I>property value in the<I> </I>DA server is assigned<I> to the DataType Attribute</I>.<I> </I></DD
+><DD 
+
+>&#61623; If the item in the<I> </I>DA server is an array, the <I>ValueRank Attribute</I> is set as <I>OneOrMoreDimensions. </I>If not, it is set to <I>Scalar.</I> </DD
+><DD 
+
+>&#61623; The <I>AccessLevel</I> <I>Attribute</I> is set with the AccessRights value in the<I> </I>DA server: </DD
+><DD 
+
+>o OPC_READABLE -&gt; Readable </DD
+><DD 
+
+>o OPC_WRITABLE -&gt; Writable </DD
+></DL
+><P 
+
+><FONT size="+1">Note that the same values are also set for the UserAccessLevel in the COM UA Wrapper. </P
+><DL 
+
+><DD 
+
+><FONT size="+1">&#61623; <I>The </I>ScanRate<I> </I>property value in the<I> </I>DA server is assigned<I> </I>to<I> </I>the<I> </I><I>MinimumSamplingInterval Attribute</I>.<I> </I></DD
+></DL
+><P 
+
+>Any <I>Properties</I> added to a Node in the COM UA Wrapper are referenced using the <I>HasProperty</I> <I>ReferenceType</I>. </P
+><H4 
+ ID="LinkTarget_5042"
+><B>A.3.1.4 Property </H4
+><P 
+
+></B>A  property in the DA server is represented in the COM UA Wrapper as a <I>Variable</I> with <I>TypeDefinition</I> as <I>PropertyType</I>. </P
+><P 
+
+>The properties for an item are retrieved using the QueryAvailableProperties call in the DA server.  </P
+><P 
+
+>Below are mappings of the property details to the OPC UA Property: </P
+><DL 
+
+><DD 
+
+>&#61623; The description of a property in the DA server is used as the <I>BrowseName</I> and the <I>DisplayName</I> of the Node in the COM UA Wrapper. </DD
+><DD 
+
+>&#61623; The PropertyID<I> </I>and<I> </I>ItemID<I> </I>(if they exist for the property) in the DA server are used as a part of the <I>NodeID</I> for the node in the COM UA Wrapper. </DD
+><DD 
+
+>&#61623; The DataType value in the DA server is used as value for the <I>DataType</I> <I>Attribute</I> of the <I>Property</I> in the COM UA Wrapper. </DD
+><DD 
+
+>&#61623; If the property value in the DA server is an array, the <I>ValueRank Attribute</I> of the <I>Property</I> is set to <I>OneOrMoreDimensions. </I>Otherwise it is set to <I>Scalar.</I> </DD
+><DD 
+
+>&#61623; If the property has an ItemID in the DA server<I>,</I> then the <I>AccessLevel</I> attribute for the Node is set to <I>ReadableOrWriteable</I>. If not, it is set to <I>Readable</I>. </DD
+></DL
+><P 
+
+><B> </P
+><P 
+
+><A href="#LinkTarget_5066" href="#">
+</B>Table A.1</A>
+ shows the mapping between the common OPC COM DA properties to the OPC UA Node attributes/properties.  </P
+><P 
+
+><B>Table A.1 - OPC COM DA to OPC UA Properties mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">Property Name (PropertyID) of OPC COM DA </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Information Model </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA DataType </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Access Rights (5) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>AccessLevel Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Int32 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EU Units (100) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EngineeringUnits Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Item Description (101) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Description Attribute </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>High EU (102) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EURange Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Low EU (103) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EURange Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>High Instrument Range (104) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Low Instrument Range (105) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>InstrumentRange Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Double </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Close Label (106) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>TrueState Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Open Label (107) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>FalseState Property </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>String </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Other Properties (include Vendor specific Properties) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>PropertyType  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Based on the DataType of the Property </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_5160"
+><B>A.3.1.5 BrowseName and DisplayName Mapping </H4
+><P 
+
+></B>As described above, both the OPC UA Browsename and Displayname for Nodes representing COM DA Branches and Leafs are derived from the name of the corresponding item in the COM DA Server. </P
+><P 
+
+>This name can only be acquired by using the COM DA Browse Services. In OPC UA, however, the BrowseName and DisplayName are Attributes that Clients can ask for at any time. There are several options to support this in a Wrapper but all of them have pros and cons. Here are some popular implementation options: </P
+><DL 
+
+><DD 
+
+>a. Allow browsing the complete COM DA Address Space and then build and persist an offline copy of it. Resolve the BrowseName by scanning this offline copy. </DD
+><DL 
+
+><DD 
+
+>o Pro: The ItemID can be used as is for the OPC UA NodeId. </DD
+><DD 
+
+>o Con: The initial browse can take a while and may have to be repeated for COM DA Servers with a dynamic Address Space. </DD
+></DL
+><DD 
+
+>b. Create OPC UA NodeId values that include both the COM DA ItemID and the Item name. When the OPC UA Client passes such a NodeId to read the BrowseName or DisplayName Attribute, the wrapper can easily extract the name from the NodeId value. </DD
+><DL 
+
+><DD 
+
+>o Pro: Efficient and reliable. </DD
+><DD 
+
+>o Con: The NodeId will not represent the ItemId. It becomes difficult for human users to match the two IDs. </DD
+></DL
+><DD 
+
+>c. A number of COM DA Servers use ItemIDs that consist of a path where the path elements are separated with a delimiter and the last element is the item name. Wrappers may provide ways to configure the delimiter so that they can easily extract the item name. </DD
+><DL 
+
+><DD 
+
+>o Pro: Efficient and reliable. The ItemID can be used as is for the OPC UA NodeId. </DD
+><DD 
+
+>o Con: Not a generic solution. Only works for specific COM-DA Servers.  </DD
+></DL
+></DL
+><P 
+
+><FONT color="#006FC0">For wrappers that are custom to a specific Server, knowledge of the COM DA server address space can result in other optimizations or short cuts (i.e. the server will always have a certain schema / naming sequence etc.).<FONT color="#000000"> </P
+><P 
+
+> </P
+><H3 
+ ID="LinkTarget_5189"
+><B>A.3.2 Data and error mapping  </H3
+><H4 
+ ID="LinkTarget_5190"
+>A.3.2.1 General </H4
+><P 
+
+></B>In DA server, Automation Data is represented by Value, Quality and Time Stamp for a Tag.  </P
+><P 
+
+>The COM UA Wrapper maps the VQT data to the Data Value and Diagnostic Info structures. </P
+><P 
+
+>The Error codes returned by the DA server are based on the HRESULT type. The COM UA Wrapper maps this error code to an OPC UA Status Code. <A href="#LinkTarget_5205" href="#">
+Figure A.2</A>
+ illustrates this mapping.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>DataValueValueStatusCodeSource Time StampServer Time StampDiagnostic InfoInnerStatusCodeLocalisedTextSymbolicIDInnerDiagnosticInfoSeveritySubcodeLimit BitsLocaleSymbolicIDLocalisedTextLocaleOPC UA InformationOPC DA InformationOPCDataValue(OPCITEMSTATE)ValueQualityQQSSSSLLTimeStampOPC UA Wrapper Vendor Specific InformationServer Time StampVendor QualityError Code (HRESULT)LocaleIDError String Server Error CodeServer LocaleServer Error String{}{}{}If any error occurs it is reflected in the StatusCodeAdditional detail maybe reflected in DiagnosticsInfo</DIV
+></P
+><P 
+
+><B>Figure A.2 - OPC COM DA to OPC UA data &amp; error mapping </P
+><H4 
+ ID="LinkTarget_5206"
+>A.3.2.2 Value </H4
+><P 
+
+></B>The data values in the DA server are represented as Variant Data type. The COM UA Wrapper converts them to the corresponding OPC UA data type. The mapping is shown in <A href="#LinkTarget_5216" href="#">
+Table A.2</A>
+: </P
+><P 
+
+> </P
+><P 
+
+><B>Table A.2 &ndash; DataTypes and mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+><FONT size="+1">Variant Data  </P
+><P 
+
+>Type (In DA server) </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>OPC UA  </P
+><P 
+
+>Data type Mapping in COM UA Server (DataValue structure) </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+></B>VT_I2 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Int16 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_I4 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Int32 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_R4  </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Float </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_R8 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Double </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>String </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_BOOL </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Boolean </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_UI1 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Byte </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_I1 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>SByte </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_UI2 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>UInt16 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_UI4 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>UInt32 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_I8 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Int64 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_UI8 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>UInt64 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_DATE </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Double </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_DECIMAL </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>String </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>VT_ARRAY </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Array of OPC UA types </P
+></TH
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">.  </P
+><H4 
+ ID="LinkTarget_5320"
+><B>A.3.2.3 Quality </H4
+><P 
+
+></B>The Quality of a Data Value in the DA server is represented as a 16 bit value where the lower 8 bits is of the form QQSSSSLL (Q : Main Quality, S: Sub Status, L: Limit) and higher  8 bits is vendor specific. </P
+><P 
+
+>The COM UA Wrapper maps the DA server to the OPC UA Status code as shown <A href="#LinkTarget_5333" href="#">
+Figure A.3</A>
+: </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>DataValueStatusCodeSeveritySubcodeLimit BitsOPCDataValue(OPCITEMSTATE)QualityQQSSSSLLVendor Quality{}</DIV
+></P
+><P 
+
+><B>Figure A.3 - Status Code mapping </P
+><P 
+
+></B>The primary quality is mapped to the Severity field of the Status code. The Sub Status is mapped to the SubCode and the Limit is mapped to the Limit Bits of the Status Code. </P
+><P 
+
+>Please note that the Vendor quality is currently discarded.  </P
+><P 
+
+><A href="#LinkTarget_5343" href="#">
+Table A.3</A>
+ shows a mapping of the OPC COM DA primary quality mapping to OPC UA status code </P
+><P 
+
+><B>Table A.3 - Quality mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC DA Primary Quality (Quality &amp; Sub status QQSSSS) </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Status Code  </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>GOOD    </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Good </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>LOCAL_OVERRIDE     </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Good_LocalOverride </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>UNCERTAIN </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Uncertain </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>SUB_NORMAL </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SubNormal </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>SENSOR_CAL </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SensorNotAccurate </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>EGU_EXCEEDED </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_EngineeringUnitsExceeded </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>LAST_USABLE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_LastUsableValue </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>BAD </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>CONFIG_ERROR </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_ConfigurationError </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>NOT_CONNECTED </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotConnected </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>COMM_FAILURE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NoCommunication </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DEVICE_FAILURE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_DeviceFailure </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>SENSOR_FAILURE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_SensorFailure </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>LAST_KNOWN </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfService </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>OUT_OF_SERVICE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfService </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>WAITING_FOR_INITIAL_DATA </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_WaitingForInitialData </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_5449"
+><B>A.3.2.4 Timestamp </H4
+><P 
+
+></B>The Timestamp provided for a value in the DA server is assigned to the SourceTimeStamp of the DataValue in the COM UA Wrapper. </P
+><P 
+
+>The ServerTimeStamp in the DataValue is set to the current time by the COM UA Wrapper at the start of the Read Operation.  </P
+><H3 
+ ID="LinkTarget_5452"
+><B>A.3.3 Read data </H3
+><P 
+
+></B>The COM UA Wrapper supports performing Read operations to DA servers of versions 2.05a and 3. </P
+><P 
+
+>For version 2.05a, the COM UA wrapper creates a Group using the IOPCServer::AddGroup method and adds the items whose data is to be read to the Group using IOPCItemMgmt::AddItems method. The Data is retrieved for the items using the IOPCSyncIO::Read method. The VQT for each item is mapped to the DataValue structure as shown in <A href="#LinkTarget_5205" href="#">
+Figure A.2</A>
+. Please note that only Read from Device is supported for this version. The &ldquo;maxAge&rdquo; parameter is ignored. </P
+><P 
+
+>For version 3, the COM UA Wrapper uses the IOPCItemIO::Read to retrieve the data. The VQT for each item is mapped to the DataValue structure as shown in  <A href="#LinkTarget_5205" href="#">
+Figure A.2</A>
+. The Read supports both the Read from Device and Cache and uses the &ldquo;maxAge&rdquo; parameter. </P
+><P 
+
+>If there are errors for the items in the Read from the DA server, then these are mapped to the StatusCode of the DataValue in the COM UA Wrapper. </P
+><P 
+
+>The mapping of the OPC COM DA Read Errors code to OPC UA Status code (in the COM UA Wrapper) is shown in <A href="#LinkTarget_5475" href="#">
+Table A.4</A>
+: </P
+><P 
+
+><B>Table A.4 - OPC DA Read error mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC DA Error ID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Status Code  </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>OPC_E_BADRIGHTS </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotReadable </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_OUTOFMEMORY </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfMemory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>OPC_E_INVALIDHANDLE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>OPC_E_UNKNOWNITEMID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDITEMID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdInvalid </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_INVALID_PID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_AttributeIdInvalid </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_ACCESSDENIED </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfService </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Others </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_UnexpectedError </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">  </P
+><H3 
+ ID="LinkTarget_5533"
+><B>A.3.4 Write Data </H3
+><P 
+
+></B>The COM UA Wrapper supports performing Write operations to DA servers of versions 2.05a and 3. </P
+><P 
+
+>For version 2.05a, the COM UA wrapper creates a Group using the IOPCServer::AddGroup method and adds the items whose data is to be written using IOPCItemMgmt::AddItems method. The value is written for the items using the IOPCSyncIO::Write method. Note that if the StatusCode or TimeStamps (Source or Server) is specified to be written for the item then the COM UA Wrapper returns a BadWriteNotSupported Status code for the item.   </P
+><P 
+
+>For version 3, the COM UA Wrapper uses the IOPCItemIO::WriteVQT data including StatusCode and TimeStamp.If a SourceTimeStamp is provided, this timestamp is used for the Write else the ServerTimeStamp is used. </P
+><P 
+
+>If there are errors for the items in the Write from the DA server, then these are mapped to the StatusCode for the corresponding item. </P
+><P 
+
+>The mapping of the OPC COM DA Write Errors code to OPC UA Status code (in the COM UA Wrapper) is shown in <A href="#LinkTarget_5546" href="#">
+Table A.5</A>
+: </P
+><P 
+
+><B>Table A.5 - OPC DA Write error code mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC DA Error ID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Status Code  </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>E_BADRIGHTS </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotWritable </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DISP_E_TYPEMISMATCH </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_TypeMismatch </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_BADTYPE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_TypeMismatch </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_RANGE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfRange </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>DISP_E_OVERFLOW </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfRange </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_OUTOFMEMORY </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfMemory </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDHANDLE </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_UNKNOWNITEMID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDITEMID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdInvalid </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_INVALID_PID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdInvalid </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>E_NOTSUPPORTED </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_WriteNotSupported </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>S_CLAMP </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Good_Clamped </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Others </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Bad_UnexpectedError </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H3 
+ ID="LinkTarget_5633"
+><B>A.3.5 Subscriptions </H3
+><P 
+
+></B>A subscription is created in the DA server when a MonitoredItem is created in the COM UA Wrapper. </P
+><P 
+
+>The SamplingInterval and the Deadband value are used for the subscription to setup a periodic data change call back on the COM UA Wrapper. Note that only the PercentDeadbandType is supported by the COM UA Wrapper. </P
+><P 
+
+>The VQT for each item is mapped to the DataValue structure as shown in <A href="#LinkTarget_5205" href="#">
+Figure A.2</A>
+<FONT size="+1"> <FONT size="+1">and published to the client by the COM UA Wrapper periodically. </P
+><P 
+
+>The mapping of the OPC COM DA Read Errors code to OPC UA Status code (in the COM UA Wrapper) is the same as the Read mapping in <A href="#LinkTarget_5205" href="#">
+Figure A.2</A>
+. </P
+><H2 
+ ID="LinkTarget_5649"
+><FONT size="+1"><B>A.4 COM UA proxy for DA Client </H2
+><H3 
+ ID="LinkTarget_5650"
+><FONT size="+1">A.4.1 Guidelines </H3
+><P 
+
+></B>The Data Access COM UA Proxy is a COM Server combined with a UA Client. It maps the Data Access address space of UA Data Access Server into the appropriate COM Data Access objects. </P
+><P 
+
+>Clauses <A href="#LinkTarget_5650" href="#">
+A.4.1</A>
+through <A href="#LinkTarget_6254" href="#">
+A.4.6</A>
+ identify the design guidelines and constraints used to develop the Data Access COM UA Proxy provided by the OPC Foundation. In order to maintain a high degree of consistency and interoperability, it is strongly recommended that vendors, who choose to implement their own version of the Data Access COM UA Proxy, follow these same guidelines and constraints. </P
+><P 
+
+>The Data Access COM Client simply needs to address how to connect to the UA Data Access Server. Connectivity approaches include the one where Data Access COM Clients connect to a UA Data Access Server with a CLSID just as if the target Server were a Data Access COM Server. However, the CLSID can be considered virtual since it is defined to connect to intermediary components that ultimately connect to the UA Data Access Server. Using this approach, the Data Access COM Client calls co-create instance with a virtual CLSID as described above. This connects to the Data Access COM UA Proxy components. The Data Access COM UA Proxy then establishes a secure channel and session with the UA Data Access Server. As a result, the Data Access COM Client gets a COM Data Access Server interface pointer. </P
+><H3 
+ ID="LinkTarget_5663"
+><B>A.4.2 Information Model and Address Space mapping </H3
+><H4 
+ ID="LinkTarget_5664"
+>A.4.2.1 General </H4
+><P 
+
+></B>OPC UA defines 8 Node Class types in the address space Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View. The COM UA Proxy maps only the nodes of Node Class types Object, Variable to the OPC DA types as shown in the figure below. Only the nodes under the Objects node are considered for the COM UA Proxy address space and others such as Types, Views are not mapped.  </P
+><P 
+
+><B> <DIV class="Sect" 
+ Alt=""
+>Objects[Object]RootServer[Object]ServerStatus[Variable]OrganizesOrganizesHasComponentServerCapabilities[Object]HasComponentServerArray[Variable]HasPropertyOrganizesOrganizes&hellip;&hellip;.&hellip;&hellip;.GetMonitoredItems[Method]Types[Object]Views[Object]RootServer[Branch]ServerStatus[Item]ServerCapabilities[Branch]ServerArray[Item]&hellip;&hellip;.OPC UA Address SpaceCOM UA Proxy Address Space (OPC DA)Data[Object]Boiler[Object]Data[Branch]Boiler[Branch]UA Browse Name (613)[Property]New PropertiesNot MappedNot MappedNot MappedItem Description(101)[Property]UA  Description (614)[Property]</DIV
+></P
+><P 
+
+>Figure A.4 - Sample OPC DA mapping of OPC UA Information Model and Address Space </P
+><H4 
+ ID="LinkTarget_5671"
+>A.4.2.2 Object Nodes </H4
+><P 
+
+></B>A node of Object Node class in the OPC UA server is represented in the Data Access COM UA Proxy as a Branch. </P
+><P 
+
+>The root of the Data Access COM UA Proxy is the Objects folder of the OPC UA Server. </P
+><P 
+
+>The OPC UA Address space hierarchy is discovered using the Browse Service for the Objects Node using the following filters: </P
+><DL 
+
+><DD 
+
+>&#61623; BrowseDirection as Forward </DD
+><DD 
+
+>&#61623; ReferenceTypeId as Organizes and HasChild. </DD
+><DD 
+
+>&#61623; IncludeSubtypes as True </DD
+><DD 
+
+>&#61623; NodeClassMask as Object and Variable </DD
+></DL
+><P 
+
+>The DisplayName of the OPC UA node is used as the Name for each Branch in the Data Access COM UA Proxy </P
+><P 
+
+>Each Branch in the Data Access COM UA Proxy is assigned 3 properties: </P
+><DL 
+
+><DD 
+
+>&#61623; <I>UA Browse Name</I> (Property ID: 613): The value of the <I>BrowseName</I> attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>UA Description</I> (Property ID: 614): The value of the <I>Description</I> attribute of the node in the OPC UA Server is assigned to this property, if a Description attribute is provided. </DD
+><DD 
+
+>&#61623; <I>Item Description</I> (Property ID: 101): The value of the <I>DisplayName </I>attribute of the node in the OPC UA Server is assigned to this property. </DD
+></DL
+><P 
+
+><FONT size="+1">Note COM DA Clients typically display the ItemID and the Item Description. Since the ItemID generated by the UA Proxy may be particularly difficult to read and understand, the DisplayName as value for the Item Description Property is recommended as it will be easier to understand by a human user. </P
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_5697"
+><B>A.4.2.3 Variable Nodes </H4
+><P 
+
+></B>A node of Variable Node class in the OPC UA server is represented in the Data Access COM UA Proxy as an Item. </P
+><P 
+
+>The DisplayName of the OPC UA node is used as the Name for each Item in the Data Access COM UA Proxy. </P
+><P 
+
+>The NodeId of the OPC UA node is used as the ItemId for each Item in the Data Access COM UA Proxy. But the &lsquo;=&rdquo; character is replaced with &lsquo;-&rsquo; in the string. E.g. NodeId: ns=4,i=10, ItemID = &ldquo;ns-4;i-10&rdquo; or  NodeId: ns=4,s=FL102, ItemID = &ldquo;ns-4,s-FL102&rdquo; </P
+><P 
+
+>Each Item in the Data Access COM UA Proxy is assigned the following properties based on the node attributes or its references: </P
+><P 
+
+>Standard Properties:   </P
+><DL 
+
+><DD 
+
+>&#61623; <I>Item Canonical Data Type </I>(Property ID: 1): The combined value of the <I>DataType</I> attribute and the <I>ValueRank </I>attribute of the node in the OPC UA Server is assigned to this property (see <A href="#LinkTarget_5809" href="#">
+A.4.3.2</A>
+). </DD
+><DD 
+
+>&#61623; <I>Item Value </I>(Property ID: 2): The value of the <I>Value</I> attribute of the node in the OPC UA Server is assigned to this property. Details on Value mapping are in <A href="#LinkTarget_5809" href="#">
+A.4.3.2</A>
+ </DD
+><DD 
+
+>&#61623; <I>Item Quality</I> (Property ID: 3): The <I>StatusCode</I> of the <I>Value</I> obtained for the node in the OPC UA Server is assigned to this property. Details on Quality mapping are in <A href="#LinkTarget_5970" href="#">
+A.4.3.3</A>
+ </DD
+><DD 
+
+>&#61623; <I>Item Timestamp</I> (Property ID: 4): The <I>SourceTimestamp or ServerTimestamp </I>of the <I>Value</I> obtained for the node in the OPC UA Server is assigned to this property. Details on Timestamp mapping are in <A href="#LinkTarget_6085" href="#">
+A.4.3.4</A>
+ </DD
+><DD 
+
+>&#61623; <I>Item Access Rights </I>(Property ID: 5): The value of the <I>AccessLevel</I> attribute of the node in the OPC UA Server is assigned to this property based on the following mapping: </DD
+><DD 
+
+>o CurrentRead -&gt; OPC_READABLE  </DD
+><DD 
+
+>o CurrentWrite -&gt; OPC_WRITABLE </DD
+></DL
+><P 
+
+>The other AccessLevel provided by OPC are ignored </P
+><DL 
+
+><DD 
+
+>&#61623; <I>Server Scan Rate </I>(Property ID: 6): The value of the <I>MinimumSamplingInterval</I> attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>Item EU Type </I>(Property ID: 7): The EU Type value is assigned based on the references of the node in the OPC UA Server: </DD
+></DL
+><DL 
+
+><DD 
+
+>&#61623; <I>Analog(1)</I> : if the node in the OPC UA Server references a <I>EURange</I> <I>property</I> node, then it is assigned the <I>Analog EU Type.</I> </DD
+><DD 
+
+>&#61623; <I>Enumerated(2)</I>: if the node in the OPC UA Server references a <I>EnumStrings</I> <I>property</I> node, then it is assigned the <I>Enumerated EU Type.</I> </DD
+><DD 
+
+>&#61623; <I>Empty(0)</I>: For a node in the OPC UA Server that does not meet above criteria, the type is set as 0 (Empty) </DD
+><DD 
+
+>&#61623; <I>EU Info (</I>Property ID: <I>8): </I>if the node in the OPC UA Server references an <I>EnumStrings</I> <I>property</I> node, then the enumerated values of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>EU Units (</I>(Property ID: 100)<I>: </I>if the node in the OPC UA Server references a <I>EngineeringUnits</I> <I>property</I> node, then the value of the <I>EngineeringUnits </I>property node is assigned the <I>EU Units</I> property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Item Description</I> (Property ID: 101): The value of the <I>DisplayName </I>attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>High EU (</I>(Property ID: 102)<I>: </I>if the node in the OPC UA Server references a <I>EURange</I> <I>property</I> node, then the <I>&lsquo;High&rsquo;</I> value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Low EU(</I>(Property ID: 103)<I>: </I>if the node in the OPC UA Server references a <I>EURange</I> <I>property</I> node, then the <I>&lsquo;</I><I>Low</I><I>&rsquo;</I> value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>High Instrument Range (</I>Property ID: <I>104): </I>if the node in the OPC UA Server references an <I>InstrumentRange</I> <I>property</I> node, then the <I>&lsquo;</I><I>High</I><I>&rsquo;</I> value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Low Instrument Range (</I>Property ID: <I>105): </I>if the node in the OPC UA Server references an <I>InstrumentRange</I> <I>property</I> node, then the <I>&lsquo;</I><I>Low</I><I>&rsquo;</I> value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Contact Close Label (</I>Property ID: 106<I>): </I>if the node in the OPC UA Server references a <I>FalseState</I> <I>property</I> node, then the value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Contact Open Label (</I>Property ID: 107<I>): </I>if the node in the OPC UA Server references a <I>TrueState</I> <I>property</I> node, then the value of the property node is assigned to this property<I>. </I></DD
+><DD 
+
+>&#61623; <I>Item Time Zone (</I>Property ID: 108<I>): </I>if the node in the OPC UA Server references a <I>TimeZone</I> <I>property</I> node, then the &lsquo;Offset&rsquo; value of the property node is assigned to this property<I>. </I></DD
+></DL
+><P 
+
+><B>New Properties:   </P
+><DL 
+
+><DD 
+
+></B>&#61623; <I>UA BuiltIn Type</I> (Property ID: 610): The identifier value of the <I>DataType </I>node associated with the DataType attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>UA Data Type Id</I> (Property ID: 611): The complete NodeId value (namespace and identifier) of the <I>DataType </I>node associated with the DataType attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>UA Value Rank</I> (Property ID: 612): The value of the <I>ValueRank</I> attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>UA Browse Name</I> (Property ID: 613): The value of the <I>BrowseName</I> attribute of the node in the OPC UA Server is assigned to this property. </DD
+><DD 
+
+>&#61623; <I>UA Description</I> (Property ID: 614): The value of the <I>Description</I> attribute of the node in the OPC UA Server is assigned to this property. </DD
+></DL
+><P 
+
+><I> </I></P
+><H4 
+ ID="LinkTarget_5785"
+><B>A.4.2.4 Namespace Indices </H4
+><P 
+
+></B>For generating ItemIDs, the Proxy uses Namespace Indices. To assure that Clients can persist these ItemIDs, the Namespace Indices must never change. To accomplish this the Proxy has to persist its Namespace Table and only append entries but never change existing ones. </P
+><P 
+
+>The Proxy also has to provide a translation from the current Namespace Table in the Server to the persisted Namespace Table. </P
+><P 
+
+>If you move or copy the Proxy to another machine, the Namespace Table has to be copied to this machine as well. </P
+><P 
+
+><I> </I></P
+><H3 
+ ID="LinkTarget_5791"
+><B>A.4.3 Data and error mapping  </H3
+><H4 
+ ID="LinkTarget_5792"
+>A.4.3.1 General </H4
+><P 
+
+></B>In an OPC UA Server, Automation Data is represented as a Data Value and and status, in addition additional error data can be provided via Diagnostic Info for a tag  </P
+><P 
+
+>The COM UA Proxy maps the Data Value structure into VQT data and error code. </P
+><P 
+
+>For successful operations(StatusCode of Good and Uncertain), the COM UA Proxy maps the Status Code of the DataValue to the OPC DA Quality But in case of error(StatusCode of Bad), the Status Code is mapped to the OPC DA Error code.  </P
+><P 
+
+>The StatusCode in the Diagnostic Info returned by the OPC UA Server are mapped to OPC DA Error codes. <A href="#LinkTarget_5808" href="#">
+Figure A.5</A>
+ illustrates this mapping.  </P
+><P 
+
+>  <DIV class="Sect" 
+ Alt=""
+>DataValueValueStatusCodeSource Time StampServer Time StampSeveritySubcodeLimit BitsOPC UA InformationOPC DA InformationOPCDataValue(OPCITEMSTATE)ValueQualityQQSSSSLLTimeStampVendor QualityError Code (HRESULT){}</DIV
+></P
+><P 
+
+><B>Figure A.5 - OPC UA to OPC DA data &amp; error mapping </P
+><H4 
+ ID="LinkTarget_5809"
+>A.4.3.2 Value </H4
+><P 
+
+></B>The COM UA Proxy converts the OPC UA Data Value to the corresponding OPC DA Variant type. The mapping is shown in <A href="#LinkTarget_5819" href="#">
+Table A.6</A>
+.  For DataTypes that are subtypes of an existing base DataType the conversion for the Base DataType is used. </P
+><P 
+
+><B>Table A.6 &ndash; DataTypes and Mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+><FONT size="+1">OPC UA  </P
+><P 
+
+>Data type (Bin UA Server) </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Variant Data  </P
+><P 
+
+>Type (In DA server) </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+></B>Int16 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_I2 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Int32 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_I4 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Float </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_R4  </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Double </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_R8 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>DecimalString </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_Decimal </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>String </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Boolean </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BOOL </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Byte </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_UI1 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>SByte </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_I1 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>UInt16 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_UI2 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>UInt32 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_UI4 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Int64 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_I8 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>UInt64 </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_UI8 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Guid </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>DateTime </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_DATE </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>NodeId </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>XmlElement </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>ExpandedNodeId </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>QualifiedName </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>LocalizedText </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_BSTR </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>StatusCode </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>VT_UI4 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>ExtensionObject </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Array of VT_UI1 </P
+></TH
+></TR
+><TR  
+
+><TH 
+ valign="top"
+><P 
+
+>Array of above OPC UA types </P
+></TH
+><TH 
+ valign="top"
+><P 
+
+>Array of corresponding Variant type  </P
+></TH
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_5970"
+><B>A.4.3.3 Quality </H4
+><P 
+
+></B>The Quality of a Data Value in the OPC UA Server is represented as a StatusCode. </P
+><P 
+
+>The COM UA Proxy maps the Severity, Subcode and the limit bits of the OPC UA Status code to the lower 8 bits of the OPC DA Quality structure (of the form QQSSSSLL).  </P
+><P 
+
+> </P
+><P 
+
+><B>Figure A.6 &ndash; OPC UA Status Code to OPC DA quality mapping </P
+><P 
+
+></B>The Severity field of the Status code is mapped to the primary quality. The SubCode is mapped to the Sub Status and the Limit Bits are mapped to the Limit field. </P
+><P 
+
+><A href="#LinkTarget_5986" href="#">
+Table A.7</A>
+ shows a mapping of the OPC UA status code to OPC DA primary quality  </P
+><P 
+
+><B>Table A.7 - Quality mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC UA Status Code  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC DA Primary Quality (Quality &amp; Sub status QQSSSS) </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Good                             </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>GOOD </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Good_LocalOverride </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LOCAL_OVERRIDE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>UNCERTAIN </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SubNormal </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>SUB_NORMAL </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_SensorNotAccurate </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>SENSOR_CAL </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_EngineeringUnitsExceeded </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>EGU_EXCEEDED </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Uncertain_LastUsableValue </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>LAST_USABLE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>BAD </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_ConfigurationError </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>CONFIG_ERROR </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotConnected </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>NOT_CONNECTED </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NoCommunication </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>COMM_FAILURE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfService </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OUT_OF_SERVICE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_DeviceFailure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>DEVICE_FAILURE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_SensorFailure </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>SENSOR_FAILURE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_WaitingForInitialData </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>WAITING_FOR_INITIAL_DATA </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H4 
+ ID="LinkTarget_6085"
+><B>A.4.3.4 Timestamp </H4
+><P 
+
+></B>If available, the SourceTimestamp of the DataValue in the OPC UA Server is assigned to the Timestamp for the value in the COM UA Proxy. If SourceTimestamp is not available, then the ServerTimestamp is used. </P
+><H3 
+ ID="LinkTarget_6087"
+><B>A.4.4 Read data </H3
+><P 
+
+></B>The COM UA Proxy converts all the ItemIds in the Read into valid NodeIds by replacing the &lsquo;-&rsquo; with &lsquo;=&rsquo; and calls the OPC UA Read Service for the Value Attribute. </P
+><P 
+
+>If the Read Service call is successful then DataValue for each node is mapped to the VQT for each item as shown in <A href="#LinkTarget_5808" href="#">
+Figure A.5</A>
+.  </P
+><P 
+
+>If the Read Service call fails or If there are errors for some of the Nodes, then the StatusCodes of these Nodes are mapped to the error code by the COM UA Proxy. </P
+><P 
+
+>The mapping of the OPC UA Status code to OPC DA Read Error code (in the COM UA Proxy) is shown in <A href="#LinkTarget_6104" href="#">
+Table A.8</A>
+: </P
+><P 
+
+><B>Table A.8 - OPC UA Read error mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC UA Status Code  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC DA Error ID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Bad_OutOfMemory </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_OUTOFMEMORY </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdInvalid </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_UNKNOWNITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotReadable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_BADRIGHTS </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_UserAccessDenied  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_ACCESSDENIED </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_AttributeIdInvalid </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_UnexpectedError </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_FAIL </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_InternalError </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_FAIL </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_SessionClosed </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_FAIL </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_TypeMismatch </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_BADTYPE </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1">  </P
+><H3 
+ ID="LinkTarget_6174"
+><B>A.4.5 Write data </H3
+><P 
+
+></B>The COM UA Proxy converts all the ItemIds in the Write into valid NodeIds by replacing the &lsquo;-&rsquo; with &lsquo;=&rsquo;. It converts the Value, Quality and Timestamp (VQT) to a DataValue structure as per the mapping in <A href="#LinkTarget_5808" href="#">
+Figure A.5</A>
+. and calls the OPC UA Write Service for the Value Attribute. </P
+><P 
+
+>If the Write Service call fails or if there are errors for some of the Nodes, then the StatusCodes of these Nodes are mapped to the error code by the COM UA Proxy. </P
+><P 
+
+>The mapping of the OPC UA Status code to OPC DA Write Error code (in the COM UA Proxy) is shown in <A href="#LinkTarget_6190" href="#">
+Table A.9</A>
+: </P
+><P 
+
+><B>Table A.9 - OPC UA Write error code mapping </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1">OPC UA Status Code  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC DA Error ID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+></B>Bad_TypeMismatch </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_BADTYPE </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfMemory </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_OUTOFMEMORY </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdInvalid </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_INVALIDITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NodeIdUnknown </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_UNKNOWNITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_NotWritable </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_BADRIGHTS </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_UserAccessDenied </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_ACCESSDENIED </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_AttributeIdInvalid </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_UNKNOWNITEMID </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_WriteNotSupported  </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_NOTSUPPORTED </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Bad_OutOfRange </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>E_RANGE </P
+></TD
+></TR
+></TABLE
+><P 
+
+><FONT size="+1"> </P
+><H3 
+ ID="LinkTarget_6254"
+><B>A.4.6 Subscriptions </H3
+><P 
+
+></B>The COM UA Proxy creates a Subscription in the OPC UA Server when a Group is created. The Name, Active flag, UpdateRate parameters of the Group are used while creating the subscription.  </P
+><P 
+
+>The COM UA Proxy Creates Monitored Items in the OPC UA Server when items are added to the Group. </P
+><P 
+
+>Following parameters and filters are used for creating the monitored items: </P
+><DL 
+
+><DD 
+
+>&#61623; The <I>ItemIds</I> are converted to valid NodeIds by replacing the &lsquo;-&rsquo; with &lsquo;=&rsquo;. </DD
+><DD 
+
+>&#61623; Data Change Filter is used for Items with EU type as Analog: </DD
+><DD 
+
+>&#61623; Trigger = STATUS_VALUE_1 </DD
+><DD 
+
+>&#61623; If DeadBand value is specified for the <I>Group, the;</I> </DD
+><DD 
+
+>o DeadbandType = Percent_2 </DD
+></DL
+><DL 
+
+><DD 
+
+>o DeadbandValue = deadband specified for the group. </DD
+></DL
+><P 
+
+>The COM UA Proxy calls the Publish Service of the OPC UA Server periodically and sends any data changes to the client. </P
+><P 
+
+> </P
+><P 
+
+>______________ </P
+></BODY>
+</HTML>

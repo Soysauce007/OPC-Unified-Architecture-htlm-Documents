@@ -1,0 +1,2736 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping table version: 28-February-2003 -->
+<HTML>
+<HEAD>
+<META
+ name="dc.creator"
+ content="Jim Luth" >
+<META
+ name="dc.description"
+ content="Industrial Communications" >
+<META
+ name="dc.title"
+ content="OPC Unified Architecture" >
+<META
+ name="dc.date"
+ content="2015-10-10T06:53:42-04:00" >
+<META
+ name="dc.date.modified"
+ content="2015-10-10T06:53:42-04:00" >
+<META
+ name="generator"
+ content="Adobe Acrobat Exchange-Pro 8.0" >
+</HEAD>
+<BODY bgcolor=white text=black link=blue vlink=purple alink=fushia >
+<HR>
+<UL>
+<LI>
+<A href="#LinkTarget_1123">1 Scope</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1125">2 Reference documents</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1152">3 Terms, definitions, and abbreviations</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1154">3.1 Document conventions</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1159">3.2 Terms and definitions</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1486">3.3 Abbreviations</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1506">4 Structure of the OPC UA series</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1508">4.1 Specification organization</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1536">4.2 Core specification parts</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1576">4.3 Access Type specification parts</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1601">4.4 Utility specification parts</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1630">5 Overview</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1631">5.1 UA scope</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1642">5.2 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1646">5.3 Design goals</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1689">5.4 Integrated models and services</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1690">5.4.1 Security model</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1691">5.4.1.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1703">5.4.1.2 Discovery and Session establishment</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1729">5.4.1.3 Auditing</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1740">5.4.1.4 Transport security</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1748">5.4.2 Integrated AddressSpace model</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1770">5.4.3 Integrated object model</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1780">5.4.4 Integrated services</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1799">5.5 Sessions</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1802">6 Systems concepts</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1803">6.1 Overview</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1820">6.2 OPC UA Clients</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1843">6.3 OPC UA Servers</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1844">6.3.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1856">6.3.2 Real objects</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1858">6.3.3 OPC UA Server application</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1860">6.3.4 OPC UA AddressSpace</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1861">6.3.4.1 AddressSpace Nodes</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1863">6.3.4.2 AddressSpace organization</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1874">6.3.4.3 AddressSpace Views</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1877">6.3.4.4 Support for information models</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1890">6.3.5 Publisher/subscriber entities</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1891">6.3.5.1 MonitoredItems</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1893">6.3.5.2 Subscriptions</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1895">6.3.6 OPC UA Service Interface</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1896">6.3.6.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1907">6.3.6.2 Request/response Services</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1909">6.3.6.3 Publisher Services</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1911">6.3.7 Server to Server interactions</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1948">6.4 Redundancy</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#LinkTarget_1977">7 Service Sets</A>
+<UL>
+<LI>
+<A href="#LinkTarget_1979">7.1 General</A>
+</LI>
+<LI>
+<A href="#LinkTarget_1990">7.2 Discovery Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2021">7.3 SecureChannel Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2051">7.4 Session Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2053">7.5 NodeManagement Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2055">7.6 View Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2058">7.7 Query Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2062">7.8 Attribute Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2064">7.9 Method Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2074">7.10 MonitoredItem Service Set</A>
+</LI>
+<LI>
+<A href="#LinkTarget_2089">7.11 Subscription Service Set</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</HR>
+<DIV class="Part" 
+
+><P 
+
+><FONT size="+1" color="#000000"></B> </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>  F  O  U  N  D  A  T  I  O  N &reg; </DIV
+></P
+><P 
+
+><FONT size="+3"><B> OPC Unified Architecture  </P
+><P 
+
+>Specification </P
+><P 
+
+>Part 1:  Overview and Concepts </P
+><P 
+
+>Release  1.03 </P
+><P 
+
+>October 10, 2015 </P
+><P 
+
+>  </P
+><P 
+
+> </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><FONT size="+1"></B>Specification Type: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Industry Standard Specification </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Comments: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Report or view errata: http://www.opcfoundation.org/errata </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Title: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Unified Architecture  Part 1 :Overview and Concepts </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Date: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>October 10, 2015 </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Version: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release 1.03 </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Software: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>MS-Word </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Source: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC UA Part 1 - Overview and Concepts 1.03 Specification.docx </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+>Author: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>OPC Foundation </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Status: </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Release </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+> </P
+></TD
+></TR
+></TABLE
+><H1 
+
+> <FONT size="+1"> </H1
+><P 
+
+> </P
+><P 
+
+> </P
+><P 
+
+><B>CONTENTS </P
+><P 
+
+><FONT size="+1"></B>Page </P
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+>FOREWORD .......................................................................................................................... <A>
+v</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">AGREEMENT OF USE ........................................................................................................... <A>
+v</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Revision 1.03 Highlights ........................................................................................................ <A>
+vii</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">1<FONT size="+1"> <FONT size="+1">Scope .............................................................................................................................. <A>
+1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">2<FONT size="+1"> <FONT size="+1">Reference documents ...................................................................................................... <A>
+1</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3<FONT size="+1"> <FONT size="+1">Terms, definitions, and abbreviations ............................................................................... <A>
+2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.1<FONT size="+1"> <FONT size="+1">Document conventions ............................................................................................ <A>
+2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.2<FONT size="+1"> <FONT size="+1">Terms and definitions ............................................................................................. <A>
+2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.2.2 <A>
+2</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">3.3<FONT size="+1"> <FONT size="+1">Abbreviations .......................................................................................................... <A>
+5</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4<FONT size="+1"> <FONT size="+1">Structure of the OPC UA series ....................................................................................... <A>
+6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.1<FONT size="+1"> <FONT size="+1">Specification organization ....................................................................................... <A>
+6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.2<FONT size="+1"> <FONT size="+1">Core specification parts .......................................................................................... <A>
+6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.3<FONT size="+1"> <FONT size="+1">Access Type specification parts .............................................................................. <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">4.4<FONT size="+1"> <FONT size="+1">Utility specification parts ......................................................................................... <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5<FONT size="+1"> <FONT size="+1">Overview ......................................................................................................................... <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.1<FONT size="+1"> <FONT size="+1">UA scope ................................................................................................................ <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.2<FONT size="+1"> <FONT size="+1">General .................................................................................................................. <A>
+7</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.3<FONT size="+1"> <FONT size="+1">Design goals ........................................................................................................... <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.4<FONT size="+1"> <FONT size="+1">Integrated models and services .............................................................................. <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.4.1<FONT size="+1"> <FONT size="+1">Security model ............................................................................................ <A>
+9</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.4.2<FONT size="+1"> <FONT size="+1">Integrated <I>AddressSpace</I> model ............................................................... <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.4.3<FONT size="+1"> <FONT size="+1">Integrated object model ............................................................................ <A>
+10</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.4.4<FONT size="+1"> <FONT size="+1">Integrated services ................................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">5.5<FONT size="+1"> <FONT size="+1"><I>Sessions</I> ............................................................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6<FONT size="+1"> <FONT size="+1">Systems concepts .......................................................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.1<FONT size="+1"> <FONT size="+1">Overview .............................................................................................................. <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.2<FONT size="+1"> <FONT size="+1">OPC UA <I>Clients</I> .................................................................................................... <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3<FONT size="+1"> <FONT size="+1">OPC UA <I>Servers</I> ................................................................................................... <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.1<FONT size="+1"> <FONT size="+1">General ..................................................................................................... <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.2<FONT size="+1"> <FONT size="+1">Real objects .............................................................................................. <A>
+13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.3<FONT size="+1"> <FONT size="+1">OPC UA <I>Server</I> application ....................................................................... <A>
+13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.4<FONT size="+1"> <FONT size="+1">OPC UA <I>AddressSpace</I> ............................................................................ <A>
+13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.5<FONT size="+1"> <FONT size="+1">Publisher/subscriber entities ..................................................................... <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.6<FONT size="+1"> <FONT size="+1">OPC UA <I>Service</I> Interface ......................................................................... <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.3.7<FONT size="+1"> <FONT size="+1"><I>Server</I> to <I>Server</I> interactions ..................................................................... <A>
+14</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">6.4<FONT size="+1"> <FONT size="+1">Redundancy ......................................................................................................... <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7<FONT size="+1"> <FONT size="+1">Service Sets .................................................................................................................. <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.1<FONT size="+1"> <FONT size="+1">General ................................................................................................................ <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.2<FONT size="+1"> <FONT size="+1">Discovery Service Set ........................................................................................... <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.3<FONT size="+1"> <FONT size="+1"><I>SecureChannel</I> Service Set .................................................................................. <A>
+16</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.4<FONT size="+1"> <FONT size="+1"><I>Session</I> <I>Se</I><I>rvice Set</I> .............................................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.5<FONT size="+1"> <FONT size="+1"><I>NodeManagement</I> <I>Service Set</I> .............................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+></DIV
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><FONT size="+1">7.6<FONT size="+1"> <FONT size="+1"><I>View Service Set</I> .................................................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.7<FONT size="+1"> <FONT size="+1"><I>Query Service Set</I> ................................................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.8<FONT size="+1"> <FONT size="+1"><I>Attribute Service Set</I> ............................................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.9<FONT size="+1"> <FONT size="+1"><I>Method Service Set</I> .............................................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.10<FONT size="+1"> <FONT size="+1"><I>MonitoredItem</I> <I>Service Set</I> .................................................................................... <A>
+18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">7.11<FONT size="+1"> <FONT size="+1"><I>Subscription</I> <I>Service Set</I> ....................................................................................... <A>
+18</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+></DIV
+><P 
+
+> </P
+><P 
+
+><B>FIGURES </P
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+> </DIV
+><DIV class="TOCI" 
+
+></B>Figure 1 &ndash; OPC UA Specification Organization ....................................................................... <A>
+6</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 2 &ndash; OPC UA Target applications .................................................................................. <A>
+8</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 3 &ndash; OPC UA System architecture ............................................................................... <A>
+11</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 4 &ndash; OPC UA <I>Client</I> architecture ................................................................................. <A>
+12</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 5 &ndash; OPC UA Server architecture ................................................................................ <A>
+13</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 6 &ndash; Peer-to-peer interactions between <I>Servers</I> .......................................................... <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 7 &ndash; Chained <I>Server</I> example ..................................................................................... <A>
+15</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1">Figure 8 &ndash; <I>SecureChannel</I> and <I>Session</I> <I>Services</I> ................................................................. <A>
+17</A>
+<FONT size="+1"> </DIV
+><DIV class="TOCI" 
+
+><FONT size="+1"> </DIV
+></DIV
+><P 
+
+> </P
+><DIV class="TOC" 
+
+><DIV class="TOCI" 
+
+><B>TABLES </DIV
+><DIV class="TOCI" 
+
+></B>No table of figures entries found.<B> </DIV
+></DIV
+><P 
+
+><FONT size="+1">OPC FOUNDATION </P
+><P 
+
+><FONT size="+1"></B>____________ </P
+><P 
+
+><FONT size="+1"><B> </P
+><P 
+
+>UNIFIED ARCHITECTURE &ndash;  </P
+><P 
+
+><FONT size="+1">FOREWORD </P
+><P 
+
+><FONT size="+1"></B>This specification is the specification for developers of OPC UA applications. The specification is a result of an analysis and design process to develop a standard interface to facilitate the development of applications by multiple vendors that shall inter-operate seamlessly together.  </P
+><P 
+
+><B>Copyright &copy; 2006-2015, OPC Foundation, Inc. </P
+><P 
+
+><FONT size="+1">AGREEMENT OF USE </P
+><P 
+
+><FONT size="+1"></B>COPYRIGHT RESTRICTIONS </P
+><P 
+
+>Any unauthorized use of this specification may violate copyright laws, trademark laws, and communications regulations and statutes. This document contains information which is protected by copyright. All Rights Reserved. No part of this work covered by copyright herein may be reproduced or used in any form or by any means--graphic, electronic, or mechanical, including photocopying, recording, taping, or information storage and retrieval systems--without permission of the copyright owner. </P
+><P 
+
+>OPC Foundation members and non-members are prohibited from copying and redistributing this specification. All copies must be obtained on an individual basis, directly from the OPC Foundation Web site <FONT size="+1">H<A href="http://www.opcfoundation.org/">
+TU<FONT size="+1">http://www.opcfoundation.org<FONT size="+1">UT</A>
+H<FONT size="+1">. </P
+><P 
+
+>PATENTS </P
+><P 
+
+>The attention of adopters is directed to the possibility that compliance with or adoption of OPC specifications may require use of an invention covered by patent rights. OPC shall not be responsible for identifying patents for which a license may be required by any OPC specification, or for conducting legal inquiries into the legal validity or scope of those patents that are brought to its attention. OPC specifications are prospective and advisory only. Prospective users are responsible for protecting themselves against liability for infringement of patents. </P
+><P 
+
+>WARRANTY AND LIABILITY DISCLAIMERS </P
+><P 
+
+>WHILE THIS PUBLICATION IS BELIEVED TO BE ACCURATE, IT IS PROVIDED &quot;AS IS&quot; AND MAY CONTAIN ERRORS OR MISPRINTS. THE OPC FOUDATION MAKES NO WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, WITH REGARD TO THIS PUBLICATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF TITLE OR OWNERSHIP, IMPLIED WARRANTY OF MERCHANTABILITY OR WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR USE. IN NO EVENT SHALL THE OPC FOUNDATION BE LIABLE FOR ERRORS CONTAINED HEREIN OR FOR DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, RELIANCE OR COVER DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA OR USE, INCURRED BY ANY USER OR ANY THIRD PARTY IN CONNECTION WITH THE FURNISHING, PERFORMANCE, OR USE OF THIS MATERIAL, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. </P
+><P 
+
+>The entire risk as to the quality and performance of software developed using this specification is borne by you.  </P
+><P 
+
+>RESTRICTED RIGHTS LEGEND </P
+><P 
+
+>This Specification is provided with Restricted Rights. Use, duplication or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation,. 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830 </P
+><P 
+
+>COMPLIANCE </P
+><P 
+
+>The OPC Foundation shall at all times be the sole entity that may authorize developers, suppliers and sellers of hardware and software to use certification marks, trademarks or other special designations to indicate compliance with these materials. Products developed using this specification may claim compliance or conformance with this specification if and only if the software satisfactorily meets the certification requirements set by the OPC Foundation. Products that do not meet these requirements may claim only that the product was based on this specification and must not claim compliance or conformance with this specification.  </P
+><P 
+
+>TRADEMARKS </P
+><P 
+
+>Most computer and software brand names have trademarks or registered trademarks. The individual trademarks have not been listed here. </P
+><P 
+
+>GENERAL PROVISIONS </P
+><P 
+
+>Should any provision of this Agreement be held to be void, invalid, unenforceable or illegal by a court, the validity and enforceability of the other provisions shall not be affected thereby.  </P
+><P 
+
+>This Agreement shall be governed by and construed under the laws of the State of Minnesota, excluding its choice or law rules. </P
+><P 
+
+>This Agreement embodies the entire understanding between the parties with respect to, and supersedes any prior understanding or agreement (oral or written) relating to, this specification.  </P
+><P 
+
+>ISSUE REPORTING </P
+><P 
+
+>The OPC Foundation strives to maintain the highest quality standards for its published specifications, hence they undergo constant review and refinement. Readers are encouraged to report any issues and view any existing errata here: <FONT size="+1">H<A href="http://www.opcfoundation.org/errata">
+TU<FONT size="+1">http://www.opcfoundation.org/errata<FONT size="+1">UT</A>
+H </P
+><P 
+
+><FONT size="+1"> </P
+><P 
+
+><FONT size="+1"><B>Revision 1.03 Highlights </P
+><P 
+
+></B>The following table includes the Mantis issues resolved with this revision.  </P
+><TABLE 
+ border=0 cellspacing=0 cellpadding=2
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><B>Mantis ID </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Summary </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Resolution </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2971">
+<FONT color="#0000FF"></B>2971</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Add introduction for Redundancy. </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added 6.4 Redundancy. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2781">
+<FONT color="#0000FF">2781</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Clarify Underlying System. </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Added definition for Underlying System. </P
+></TD
+></TR
+><TR  
+
+><TD  
+ valign="top"
+><P 
+
+><A href="https://opcfoundation-onlineapplications.org/mantis/view.php?id=2370">
+<FONT color="#0000FF">2370</A>
+<FONT color="#000000"> </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Definition of Aggregates should be in Part 1. </P
+></TD
+><TD  
+ valign="top"
+><P 
+
+>Moved Aggregates definition from Part 13 to Part 1. </P
+></TD
+></TR
+></TABLE
+><P 
+
+> </P
+><P 
+
+> </P
+><P 
+
+><FONT size="+1"><B>OPC Unified Architecture Specification </P
+><P 
+
+> </P
+><P 
+
+>Part 1: Overview and Concepts </P
+><P 
+
+> </P
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_1123"
+><FONT size="+1">1 Scope </H1
+><P 
+
+><FONT size="+1"></B>Part 1 presents the concepts and overview of the OPC Unified Architecture (OPC UA). Reading this document is helpful to understand the remaining parts of this multi-part document set. Each of the other parts is briefly explained along with a suggested reading order. This Part is non-normative. </P
+><H1 
+ ID="LinkTarget_1125"
+><FONT size="+1"><B>2 Reference documents </H1
+><P 
+
+><FONT size="+1"></B>The following documents, in whole or in part, are normatively referenced in this document and are indispensable for its application. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies. </P
+><P 
+
+>Part 2: OPC UA Specification: Part 2 &ndash; Security Model </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part2/ </P
+><P 
+
+>Part 3: OPC UA Specification: Part 3 &ndash; Address Space Model </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part3/ </P
+><P 
+
+>Part 4: OPC UA Specification: Part 4 &ndash; Services </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part4/ </P
+><P 
+
+>Part 5: OPC UA Specification: Part 5 &ndash; Information Model </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part5/ </P
+><P 
+
+>Part 6: OPC UA Specification: Part 6 &ndash; Mappings </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part6/ </P
+><P 
+
+>Part 7: OPC UA Specification: Part 7 &ndash; Profiles </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part7/ </P
+><P 
+
+>Part 8: OPC UA Specification: Part 8 &ndash; Data Access </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part8/ </P
+><P 
+
+>Part 9: OPC UA Specification: Part 9 &ndash; Alarms and Conditions </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part9/ </P
+><P 
+
+>Part 10: OPC UA Specification: Part 10 &ndash; Programs </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part10/ </P
+><P 
+
+>Part 11: OPC UA Specification: Part 11 &ndash; Historical Access, Version 1.01 or later </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part11/ </P
+><P 
+
+>Part 12: OPC UA Specification: Part 12 &ndash; Discovery </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part12/ </P
+><P 
+
+>Part 13: OPC UA Specification: Part 13 - Aggregates </P
+><P 
+
+>http://www.opcfoundation.org/UA/Part13/ </P
+><P 
+
+> </P
+><H1 
+ ID="LinkTarget_1152"
+><FONT size="+1"><B>3 Terms, definitions, and abbreviations </H1
+><H2 
+ ID="LinkTarget_1154"
+><FONT size="+1">3.1 Document conventions </H2
+><P 
+
+></B>Throughout this document and the referenced other Parts of the series, certain document conventions are used. </P
+><P 
+
+>Italics are used to denote a defined term or definition that appears in the &ldquo;Terms and definition&rdquo; clause in one of the Parts of the series. </P
+><P 
+
+>Italics are also used to denote the name of a service input or output parameter or the name of a structure or element of a structure that are usually defined in tables. </P
+><P 
+
+>The italicized terms and names are also often written in camel-case (the practice of writing compound words or phrases in which the elements are joined without spaces, with each element's initial letter capitalized within the compound). For example the defined term is AddressSpace instead of Address Space. This makes it easier to understand that there is a single definition for AddressSpace, not separate definitions for Address and Space. </P
+><H2 
+ ID="LinkTarget_1159"
+><B>3.2 Terms and definitions </H2
+><P 
+
+></B>For the purposes of this document, the following terms apply. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.1  </DD
+></DL
+></DL
+></DL
+><P 
+
+>AddressSpace </P
+><P 
+
+></B>collection of information that an OPC UA <I>Server</I> makes visible to its <I>Clients</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: See <A href="#LinkTarget_1129" href="#">
+Part 3</A>
+ for a description of the contents and structure of the <I>Server</I> <I>AddressSpace</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.2  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Aggregate </P
+><P 
+
+></B>a function that calculates derived values from <I>Raw data</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Raw data may be from a historian or buffered real time data. Common Aggregates include averages over a given time range, minimum over a time range and maximum over a time range. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.3  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Alarm </P
+><P 
+
+></B>type of <I>Event</I> associated with a state condition that typically requires acknowledgement </P
+><P 
+
+><FONT size="+1">Note 1 to entry: See <A href="#LinkTarget_1141" href="#">
+Part 9</A>
+ for a description of <I>Alarms</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.4  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Attribute </P
+><P 
+
+></B>primitive characteristic of a <I>Node</I><I> </I></P
+><P 
+
+><FONT size="+1">Note 1 to entry: All <I>Attributes</I> are defined by OPC UA, and may not be defined by <I>Clients</I> or <I>Servers</I>. <I>Attributes</I> are the only elements in the <I>AddressSpace</I> permitted to have data values. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.5  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Certificate </P
+><P 
+
+></B>digitally signed data structure that describes capabilities of a <I>Client</I> or <I>Server</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.6  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Client </P
+><P 
+
+></B>software application that sends <I>Messages</I> to OPC UA<I> Servers</I> conforming to the <I>Services</I> specified in this set of specifications </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.7  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Condition </P
+><P 
+
+></B>generic term that is an extension to an <I>Event</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: A <I>Condition</I> represents the conditions of a system or one of its components and always exists in some state. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.8  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Communication Stack </P
+><P 
+
+></B>layered set of software modules between the application and the hardware that provides various functions to encode, encrypt and format a <I>Message</I> for sending, and to decode, decrypt and unpack a <I>Message</I> that was received </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.9  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Complex Data </P
+><P 
+
+></B>data that is composed of elements of more than one primitive data type, such as a structure </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.10  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Discovery </P
+><P 
+
+></B>process by which OPC UA Client obtains information about OPC UA Servers, including endpoint and security information </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.11  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Event </P
+><P 
+
+></B>generic term used to describe an occurrence of some significance within a system or system component </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.12  </DD
+></DL
+></DL
+></DL
+><P 
+
+>EventNotifier </P
+><P 
+
+></B>special <I>Attribute</I> of a <I>Node</I> that signifies that a <I>Client</I> may subscribe to that particular <I>Node</I> to receive <I>Notifications</I> of <I>Event</I> occurrences </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.13  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Information Model </P
+><P 
+
+></B>organizational framework that defines, characterizes and relates information resources of a given system or set of systems. </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The core address space model supports the representation of <I>Information Models</I> in the <I>AddressSpace</I>. See <A href="#LinkTarget_1133" href="#">
+Part 5</A>
+ for a description of the base OPC UA <I>Information Model</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.14  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Message </P
+><P 
+
+></B>data unit conveyed between <I>Client</I> and <I>Server</I> that represents a specific <I>Service</I> request or response </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.15  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Method </P
+><P 
+
+></B>callable software function that is a component of an <I>Object</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.16  </DD
+></DL
+></DL
+></DL
+><P 
+
+>MonitoredItem </P
+><P 
+
+></B><I>Client</I>-defined entity in the <I>Server</I> used to monitor <I>Attributes</I> or <I>EventNotifiers</I> for new values or <I>Event</I> occurrences and that generates <I>Notifications</I> for them </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.17  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Node </P
+><P 
+
+></B>fundamental component of an <I>AddressSpace</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.18  </DD
+></DL
+></DL
+></DL
+><P 
+
+>NodeClass </P
+><P 
+
+></B>class of a <I>Node</I> in an <I>AddressSpace</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: <I>NodeClasses</I> define the metadata for the components of the OPC UA Object Model. They also define constructs, such as <I>Views,</I> that are used to organize the <I>AddressSpace</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.19  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Notification </P
+><P 
+
+></B>generic term for data that announces the detection of an <I>Event</I> or of a changed <I>Attribute</I> value; <I>Notifications</I> are sent in <I>NotificationMessages</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.20  </DD
+></DL
+></DL
+></DL
+><P 
+
+>NotificationMessage </P
+><P 
+
+></B><I>Message</I> published from a <I>Subscription</I> that contains one or more <I>Notifications</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.21  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Object </P
+><P 
+
+></B><I>Node</I> that represents a physical or abstract element of a system </P
+><P 
+
+><FONT size="+1">Note 1 to entry: <I>Objects</I> are modelled using the OPC UA Object Model. Systems, subsystems and devices are examples of <I>Objects</I>. An <I>Object</I> may be defined as an instance of an <I>ObjectType</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.22  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Object Instance </P
+><P 
+
+></B>synonym for <I>Object</I><I> </I></P
+><P 
+
+><FONT size="+1">Note 1 to entry: Not all <I>Objects</I> are defined by <I>ObjectTypes</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.23  </DD
+></DL
+></DL
+></DL
+><P 
+
+>ObjectType </P
+><P 
+
+></B><I>Node</I> that represents the type definition for an <I>Object</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.24  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Profile </P
+><P 
+
+></B>specific set of capabilities to which a <I>Server</I> may claim conformance. </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Each <I>Server</I> may claim conformance to more than one <I>Profile </I> </P
+><P 
+
+>Note 2 to entry: The set of capabilities are defined in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+ </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.25  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Program </P
+><P 
+
+></B>executable <I>Object</I> that, when invoked, immediately returns a response to indicate that execution has started, and then returns intermediate and final results through <I>Subscriptions</I> identified by the <I>Client</I> during invocation </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.26  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Reference </P
+><P 
+
+></B>explicit relationship (a named pointer) from one <I>Node</I> to another </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The <I>Node</I> that contains the <I>Reference</I> is the source <I>Node</I>, and the referenced <I>Node</I> is the target <I>Node</I>. All <I>References</I> are defined by <I>ReferenceTypes</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.27  </DD
+></DL
+></DL
+></DL
+><P 
+
+>ReferenceType </P
+><P 
+
+></B><I>Node</I> that represents the type definition of a <I>Reference</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The <I>ReferenceType</I> specifies the semantics of a <I>Reference</I>. The name of a <I>ReferenceType</I> identifies how source <I>Nodes</I> are related to target <I>Nodes</I> and generally reflects an operation between the two, such as &ldquo;A <I>Contains</I> B&rdquo;. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.28  </DD
+></DL
+></DL
+></DL
+><P 
+
+>RootNode </P
+><P 
+
+></B>beginning or top <I>Node</I> of a hierarchy </P
+><P 
+
+><FONT size="+1">Note 1 to entry: The <I>RootNode</I> of the OPC UA <I>AddressSpace</I> is defined in <A href="#LinkTarget_1133" href="#">
+Part 5</A>
+. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.29  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Server </P
+><P 
+
+></B>software application that implements and exposes the <I>Services</I> specified in this set of specifications </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.30  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Service </P
+><P 
+
+></B><I>Client</I>-callable operation in an OPC UA <I>Server</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: <I>Services</I> are defined in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+. A <I>Service</I> is similar to a method call in a programming language or an operation in a Web services WSDL contract. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.31  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Service Set </P
+><P 
+
+></B>group of related <I>Services</I> </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.32  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Session </P
+><P 
+
+></B>logical long-running connection between a <I>Client</I> and a <I>Server. </I></P
+><P 
+
+><FONT size="+1">Note 1 to entry: A<I> Session</I> maintains state information between <I>Service</I> calls from the <I>Client</I> to the <I>Server</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.33  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Subscription </P
+><P 
+
+></B><I>Client</I>-defined endpoint in the <I>Server,</I> used to return <I>Notifications</I> to the <I>Client</I> </P
+><P 
+
+><FONT size="+1">Note 1 to entry: &rdquo;Subscription&rdquo; is a generic term that describes a set of <I>Nodes</I> selected by the <I>Client</I> (1) that the <I>Server</I> periodically monitors for the existence of some condition, and (2) for which the <I>Server</I> sends <I>Notifications</I> to the <I>Client</I> when the condition is detected. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.34  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Underlying System </P
+><P 
+
+></B>Hardware or software platforms that exist as an independent entity. <I>UA Applications</I> are dependent on an entity&rsquo;s existence in order to perform UA services. However, the entity is not dependent on <I>UA Applications</I>. </P
+><P 
+
+><FONT size="+1">Note 1 to entry: Hardware and software platforms include physical hardware, firmware, operating system, networking, non-UA applications, as well as other <I>UA Applications</I>. A Distributed Control System, PLC/Device, and UA Server are examples of an <I>Underlying System</I>. </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><FONT size="+1"><B>3.2.35  </DD
+></DL
+></DL
+></DL
+><P 
+
+>Variable </P
+><P 
+
+></B><I>Node</I> that contains a value </P
+><DL 
+
+><DL 
+
+><DL 
+
+><DD 
+
+><B>3.2.36  </DD
+></DL
+></DL
+></DL
+><P 
+
+>View </P
+><P 
+
+></B>specific subset of the <I>AddressSpace</I> that is of interest to the <I>Client</I>. </P
+><H2 
+ ID="LinkTarget_1486"
+><B>3.3 Abbreviations </H2
+><P 
+
+></B>A&amp;E Alarms and Events </P
+><P 
+
+>API Application Programming Interface </P
+><P 
+
+>COM Component Object Model </P
+><P 
+
+>DA Data Access </P
+><P 
+
+>DCS Distributed Control System </P
+><P 
+
+>DX Data Exchange </P
+><P 
+
+>HDA Historical Data Access </P
+><P 
+
+>HMI Human-Machine Interface </P
+><P 
+
+>LDAP Lightweight Directory Access Protocol </P
+><P 
+
+>MES Manufacturing Execution System </P
+><P 
+
+>OPC OPC Foundation (a non-profit industry association)    formerly an acronym for &ldquo;OLE for Process Control&rdquo;. No longer used. </P
+><P 
+
+>PLC  Programmable Logic Controller </P
+><P 
+
+>SCADA Supervisory Control And Data Acquisition </P
+><P 
+
+>SOAP Simple Object Access Protocol </P
+><P 
+
+>UA  Unified Architecture </P
+><P 
+
+>UDDI Universal Description, Discovery and Integration </P
+><P 
+
+>UML  Unified Modelling Language </P
+><P 
+
+>WSDL Web Services Definition Language </P
+><P 
+
+>XML Extensible Markup Language </P
+><H1 
+ ID="LinkTarget_1506"
+><FONT size="+1"><B>4 Structure of the OPC UA series </H1
+><H2 
+ ID="LinkTarget_1508"
+><FONT size="+1">4.1 Specification organization </H2
+><P 
+
+></B>This specification is organized as a multi-part specification, as illustrated in <A href="#LinkTarget_1517" href="#">
+Figure 1</A>
+. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>Part 7 &ndash;Profiles Part 1 &ndash;Overview &amp; Concepts Part 2 &ndash;Security Model Part 3 &ndash;Address Space Model Part 4 &ndash;Services Part 5 &ndash;Information ModelPart 6 &ndash;Service Mappings Core Specification Parts Part 8 &ndash;Data Access Part 9 &ndash;Alarms &amp; Conditions Part 10 &ndash;Programs Part 11 &ndash;Historical Access Access Type Specification Parts Part 12 &ndash;Discovery Part 13 &ndash;Aggregates Utility Specification Parts OPC UA Multi-Part Specification </DIV
+></P
+><P 
+
+><B>Figure 1 &ndash; OPC UA Specification Organization </P
+><P 
+
+></B>The first seven parts specify the core capabilities of OPC UA. These core capabilities define the structure of the OPC <I>AddressSpace</I> and the <I>Services</I> that operate on it. Parts 8 through 11 apply these core capabilities to specific types of access previously addressed by separate OPC COM specifications, such as Data Access (DA), Alarms and Events (A&amp;E) and Historical Data Access (HDA). <A href="#LinkTarget_1147" href="#">
+Part 12</A>
+ describes <I>Discovery</I> mechanisms for OPC UA and <A href="#LinkTarget_1149" href="#">
+Part 13</A>
+ describes ways of aggregating data. </P
+><P 
+
+>Readers are encouraged to read Parts 1 through 5 of the core specifications before reading Parts 8 through 13. For example, a reader interested in UA Data Access should read Parts 1 through 5 and 8. References in <A href="#LinkTarget_1139" href="#">
+Part 8</A>
+ may direct the reader to other parts of this specification.  </P
+><H2 
+ ID="LinkTarget_1536"
+><B>4.2 Core specification parts  </H2
+><P 
+
+>Part 1 &ndash; Overview and Concepts </P
+><P 
+
+></B>Part 1 (this part) presents the concepts and overview of OPC UA.  </P
+><P 
+
+><B>Part 2 &ndash; Security Model </P
+><P 
+
+><A href="#LinkTarget_1127" href="#">
+</B>Part 2</A>
+ describes the model for securing interactions between OPC UA <I>Clients</I> and OPC UA <I>Servers</I>. </P
+><P 
+
+><B>Part 3 &ndash; Address Space Model </P
+><P 
+
+><A href="#LinkTarget_1129" href="#">
+</B>Part 3</A>
+ describes the contents and structure of the <I>Server&rsquo;s</I> <I>AddressSpace</I>. </P
+><P 
+
+><B>Part 4 &ndash; Services </P
+><P 
+
+><A href="#LinkTarget_1131" href="#">
+</B>Part 4</A>
+ specifies the <I>Services</I> provided by OPC UA <I>Servers</I>.  </P
+><P 
+
+><B>Part 5 &ndash; Information Model </P
+><P 
+
+><A href="#LinkTarget_1133" href="#">
+</B>Part 5</A>
+ specifies the types and their relationships defined for OPC UA <I>Servers</I>. </P
+><P 
+
+><B>Part 6 &ndash; Mappings </P
+><P 
+
+><A href="#LinkTarget_1135" href="#">
+</B>Part 6</A>
+ specifies the mappings to transport protocols and data encodings supported by OPC UA. </P
+><P 
+
+><B>Part 7 &ndash; Profiles </P
+><P 
+
+><A href="#LinkTarget_1137" href="#">
+</B>Part 7</A>
+ specifies the <I>Profiles</I> that are available for OPC <I>Clients</I> and <I>Servers</I>. These <I>Profiles</I> provide groups of <I>Services</I> or functionality that can be used for conformance level certification. <I>Servers</I> and <I>Clients</I> will be tested against the <I>Profiles</I>.  </P
+><H2 
+ ID="LinkTarget_1576"
+><B>4.3 Access Type specification parts  </H2
+><P 
+
+>Part 8 &ndash; Data Access </P
+><P 
+
+><A href="#LinkTarget_1139" href="#">
+</B>Part 8</A>
+ specifies the use of OPC UA for data access.  </P
+><P 
+
+><B>Part 9 &ndash; Alarms and Conditions </P
+><P 
+
+><A href="#LinkTarget_1141" href="#">
+</B>Part 9</A>
+ specifies use of OPC UA support for access to <I>Alarms</I> and <I>Conditions</I>. The base system includes support for simple <I>Events</I>; this specification extends that support to include support for <I>Alarms</I> and <I>Conditions</I>.  </P
+><P 
+
+><B>Part 10 &ndash; Programs </P
+><P 
+
+><A href="#LinkTarget_1143" href="#">
+</B>Part 10</A>
+ specifies OPC UA support for access to <I>Programs</I>. </P
+><P 
+
+><B>Part 11 &ndash; Historical Access </P
+><P 
+
+><A href="#LinkTarget_1145" href="#">
+</B>Part 11</A>
+ specifies use of OPC UA for historical access. This access includes both historical data and historical <I>Events</I>. </P
+><H2 
+ ID="LinkTarget_1601"
+><B>4.4 Utility specification parts </H2
+><P 
+
+>Part 12 &ndash; Discovery </P
+><P 
+
+><A href="#LinkTarget_1147" href="#">
+</B>Part 12</A>
+ specifies how <I>Discovery</I> <I>Servers</I> operate in different scenarios and describes how UA <I>Clients</I> and <I>Servers</I> should interact with them. It also defines how UA related information should be accessed using common directory service protocols such as UDDI and LDAP. </P
+><P 
+
+><B>Part 13 &ndash; Aggregates </P
+><P 
+
+><A href="#LinkTarget_1149" href="#">
+</B>Part 13</A>
+ specifies how to compute and return aggregates like minimum, maximum, average etc. <I>Aggregates</I> can be used with current and historical data. . </P
+><H1 
+ ID="LinkTarget_1630"
+><FONT size="+1"><B>5 Overview </H1
+><H2 
+ ID="LinkTarget_1631"
+><FONT size="+1">5.1 UA scope </H2
+><P 
+
+></B>OPC UA is applicable to manufacturing software in application areas such as Field Devices, Control Systems, Manufacturing Execution Systems and Enterprise Resource Planning Systems. These systems are intended to exchange information and to use command and control for industrial processes. OPC UA defines a common infrastructure model to facilitate this information exchange OPC UA specifies the following: </P
+><DL 
+
+><DD 
+
+>&#61623; The information model to represent structure, behaviour and semantics. </DD
+><DD 
+
+>&#61623; The message model to interact between applications.  </DD
+><DD 
+
+>&#61623; The communication model to transfer the data between end-points. </DD
+><DD 
+
+>&#61623; The conformance model to guarantee interoperability between systems. </DD
+></DL
+><H2 
+ ID="LinkTarget_1642"
+><B>5.2 General </H2
+><P 
+
+></B>OPC UA is a platform-independent standard through which various kinds of systems and devices can communicate by sending <I>Messages</I> between <I>Clients</I> and <I>Servers</I> over various types of networks. It </P
+><P 
+
+>supports robust, secure communication that assures the identity of <I>Clients</I> and <I>Servers</I> and resists attacks. OPC UA defines sets of <I>Services</I> that <I>Servers</I> may provide, and individual <I>Servers</I> specify to <I>Clients</I> what <I>Service</I> sets they support. Information is conveyed using OPC UA-defined and vendor-defined data types, and <I>Servers</I> define object models that <I>Clients</I> can dynamically discover. <I>Servers</I> can provide access to both current and historical data, as well as <I>Alarms</I> and <I>Events</I> to notify <I>Clients</I> of important changes. OPC UA can be mapped onto a variety of communication protocols and data can be encoded in various ways to trade off portability and efficiency. </P
+><H2 
+ ID="LinkTarget_1646"
+><B>5.3 Design goals </H2
+><P 
+
+></B>OPC UA provides a consistent, integrated <I>AddressSpace</I> and service model. This allows a single OPC UA <I>Server</I> to integrate data, <I>Alarms</I> and <I>Events</I>, and history into its <I>AddressSpace</I>, and to provide access to them using an integrated set of <I>Services</I>. These <I>Services</I> also include an integrated security model. </P
+><P 
+
+>OPC UA also allows <I>Servers</I> to provide <I>Clients</I> with type definitions for the <I>Objects</I> accessed from the <I>AddressSpace</I>. This allows information models to be used to describe the contents of the <I>AddressSpace</I>. OPC UA allows data to be exposed in many different formats, including binary structures and XML documents. The format of the data may be defined by OPC, other standard organizations or vendors. Through the <I>AddressSpace</I>, <I>Clients</I> can query the <I>Server</I> for the metadata that describes the format for the data. In many cases, <I>Clients</I> with no pre-programmed knowledge of the data formats will be able to determine the formats at runtime and properly utilize the data. </P
+><P 
+
+>OPC UA adds support for many relationships between <I>Nodes</I> instead of being limited to just a single hierarchy. In this way, an OPC UA <I>Server</I> may present data in a variety of hierarchies tailored to the way a set of <I>Clients</I> would typically like to view the data. This flexibility, combined with support for type definitions, makes OPC UA applicable to a wide array of problem domains. As illustrated in <A href="#LinkTarget_1658" href="#">
+Figure 2</A>
+, OPC UA is not targeted at just the SCADA, PLC and DCS interface, but also as a way to provide greater interoperability between higher level functions. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>BatchBatchOPC UA  OPC UA  Manufacturing, Production and MaintenanceManufacturing, Production and MaintenanceOPC UAOPC UAAdv.Adv.ControlControlOPC UAOPC UAHMIHMISCADASCADAControlControlMESMESOPC UAOPC UAOPC UAOPC UAIndustrial NetworksIndustrial NetworksDataAcquisitionDataAcquisitionPLCDCSPLCDCS??.......????.......??Corporate EnterpriseCorporate EnterpriseOPC UA OPC UA </DIV
+></P
+><P 
+
+><B>Figure 2 &ndash; OPC UA Target applications </P
+><P 
+
+></B>OPC UA is designed to provide robustness of published data. A major feature of all OPC servers is the ability to publish data and <I>Event</I> <I>Notifications</I>. OPC UA provides mechanisms for <I>Clients</I> to quickly detect and recover from communication failures associated with these transfers without having to wait for long timeouts provided by the underlying protocols. </P
+><P 
+
+>OPC UA is designed to support a wide range of <I>Servers</I>, from plant floor PLCs to enterprise <I>Servers</I>. These <I>Servers</I> are characterized by a broad scope of size, performance, execution platforms and </P
+><P 
+
+>functional capabilities. Therefore, OPC UA defines a comprehensive set of capabilities, and <I>Servers</I> may implement a subset of these capabilities. To promote interoperability, OPC UA defines subsets, referred to as <I>Profiles</I>, to which <I>Servers</I> may claim conformance. <I>Clients</I> can then discover the <I>Profiles</I> of a <I>Server</I>, and tailor their interactions with that <I>Server</I> based on the <I>Profiles</I>. <I>Profiles</I> are defined in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+. </P
+><P 
+
+>The OPC UA specifications are layered to isolate the core design from the underlying computing technology and network transport. This allows OPC UA to be mapped to future technologies as necessary, without negating the basic design. Mappings and data encodings are described in <A href="#LinkTarget_1135" href="#">
+Part 6</A>
+. Two data encodings are defined: </P
+><DL 
+
+><DD 
+
+>&#61623; XML/text </DD
+><DD 
+
+>&#61623; UA Binary </DD
+></DL
+><P 
+
+>In addition, three transport protocols are defined: </P
+><DL 
+
+><DD 
+
+>&#61623; OPC UA TCP </DD
+><DD 
+
+>&#61623; SOAP/HTTP </DD
+><DD 
+
+>&#61623; HTTPS </DD
+></DL
+><P 
+
+><I>Clients</I> and <I>Servers</I> that support multiple transports and encodings will allow the end users to make decisions about tradeoffs between performance and XML Web service compatibility at the time of deployment, rather than having these tradeoffs determined by the OPC vendor at the time of product definition. </P
+><P 
+
+>OPC UA is designed as the migration path for OPC clients and servers that are based on Microsoft COM technology. Care has been taken in the design of OPC UA so that existing data exposed by OPC COM servers (DA, HDA and A&amp;E) can easily be mapped and exposed via OPC UA. Vendors may choose migrating their products natively to OPC UA or use external wrappers to convert from OPC COM to OPC UA and vice-versa. Each of the previous OPC specifications defined its own address space model and its own set of <I>Services</I>. OPC UA unifies the previous models into a single integrated address space with a single set of <I>Services</I>. </P
+><H2 
+ ID="LinkTarget_1689"
+><B>5.4 Integrated models and services </H2
+><H3 
+ ID="LinkTarget_1690"
+>5.4.1 Security model </H3
+><H4 
+ ID="LinkTarget_1691"
+>5.4.1.1 General </H4
+><P 
+
+></B>OPC UA security is concerned with the authentication of <I>Clients</I> and <I>Servers</I>, the authentication of users, the integrity and confidentiality of their communications, and the verifiability of claims of functionality. It does not specify the circumstances under which various security mechanisms are required. That specification is crucial, but it is made by the designers of the system at a given site and may be specified by other standards.  </P
+><P 
+
+>Rather, OPC UA provides a security model, described in <A href="#LinkTarget_1127" href="#">
+Part 2</A>
+, in which security measures can be selected and configured to meet the security needs of a given installation. This model includes security mechanisms and parameters. In some cases, the mechanism for exchanging security parameters is defined, but the way that applications use these parameters is not. This framework also defines a minimum set of security <I>Profiles</I> that all UA <I>Servers</I> support, even though they may not be used in all installations. Security <I>Profiles</I> are defined in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+. </P
+><H4 
+ ID="LinkTarget_1703"
+><B>5.4.1.2 <I>Discovery</I> and<I> Session</I> establishment </H4
+><P 
+
+></B>Application level security relies on a secure communication channel that is active for the duration of the application <I>Session</I> and ensures the integrity of all <I>Messages</I> that are exchanged. This means users need to be authenticated only once, when the application <I>Session</I> is established. The mechanisms for discovering OPC UA Servers and establishing secure communication channels and application <I>Sessions</I> are described in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+ and <A href="#LinkTarget_1135" href="#">
+Part 6</A>
+. Additional information about the <I>Discovery</I> process is described in <A href="#LinkTarget_1147" href="#">
+Part 12</A>
+. </P
+><P 
+
+>When a <I>Session</I> is established, the <I>Client</I> and <I>Server</I> applications negotiate a secure communications channel. Digital (X.509) <I>Certificates</I> are utilized to identify the <I>Client</I> and <I>Server</I> and the capabilities that they provide. Authority-generated software <I>Certificates</I> indicate the OPC UA </P
+><P 
+
+><I>Profiles</I> that the applications implement and the OPC UA certification level reached for each <I>Profile</I><FONT size="+1"><I>1</I><FONT size="+1">. The details of each <I>Profile</I> and the <I>Certificates</I> are specified in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+. <I>Certificates</I> issued by other organizations may also be exchanged during <I>Session</I> establishment. </P
+><DIV class="Note" 
+
+><P 
+
+><FONT size="+1">1 The OPC Foundation is an OPC UA Certificate authority. </P
+></DIV
+><P 
+
+><FONT size="+1">The <I>Server</I> further authenticates the user and authorizes subsequent requests to access <I>Objects</I> in the <I>Server</I>. Authorization mechanisms, such as access control lists, are not specified by the OPC UA specification. They are application or system-specific.  </P
+><H4 
+ ID="LinkTarget_1729"
+><B>5.4.1.3 Auditing </H4
+><P 
+
+></B>OPC UA includes support for security audit trails with traceability between <I>Client</I> and <I>Server</I> audit logs. If a security-related problem is detected at the <I>Server</I>, the associated <I>Client</I> audit log entry can be located and examined. OPC UA also provides the capability for <I>Servers</I> to generate <I>Event</I> <I>Notifications</I> that report auditable <I>Events</I> to <I>Clients</I> capable of processing and logging them. OPC UA defines security audit parameters that can be included in audit log entries and in audit <I>Event Notifications</I>. <A href="#LinkTarget_1133" href="#">
+Part 5</A>
+ defines the data types for these parameters. Not all <I>Servers</I> and <I>Clients</I> provide all of the auditing features. <I>Profiles,</I> found in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+, indicate which features are supported. </P
+><H4 
+ ID="LinkTarget_1740"
+><B>5.4.1.4 Transport security </H4
+><P 
+
+></B>OPC UA security complements the security infrastructure provided by most web service capable platforms. </P
+><P 
+
+>Transport level security can be used to encrypt and sign <I>Messages</I>. Encryption and signatures protect against disclosure of information and protect the integrity of <I>Messages</I>. Encryption capabilities are provided by the underlying communications technology used to exchange <I>Messages</I> between OPC UA applications. <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+ defines the encryption and signature algorithms to be used for a given <I>Profile</I>. </P
+><H3 
+ ID="LinkTarget_1748"
+><B>5.4.2 Integrated <I>AddressSpace</I> model </H3
+><P 
+
+></B>The set of <I>Objects</I> and related information that the OPC UA <I>Server</I> makes available to <I>Clients</I> is referred to as its <I>AddressSpace</I>. The OPC UA <I>AddressSpace</I> represents its contents as a set of <I>Node</I>s connected by <I>References</I>.  </P
+><P 
+
+>Primitive characteristics of <I>Node</I>s are described by OPC-defined <I>Attributes</I>. <I>Attributes</I> are the only elements of a <I>Server</I> that have data values. Data types that define attribute values may be simple or complex.  </P
+><P 
+
+><I>Node</I>s in the <I>AddressSpace</I> are typed according to their use and their meaning. <I>NodeClasses</I> define the metadata for the OPC UA <I>AddressSpace</I>. <A href="#LinkTarget_1129" href="#">
+Part 3</A>
+ defines the OPC UA <I>NodeClasses</I>.  </P
+><P 
+
+>The <I>Base NodeClass</I> defines <I>Attributes</I> common to all <I>Node</I>s, allowing identification, classification and naming. Each <I>NodeClass</I> inherits these <I>Attributes</I> and may additionally define its own <I>Attributes</I>.  </P
+><P 
+
+>To promote interoperability of <I>Clients</I> and <I>Servers</I>, the OPC UA <I>AddressSpace</I> is structured hierarchically with the top levels the same for all <I>Servers</I>. Although <I>Node</I>s in the <I>AddressSpace</I> are typically accessible via the hierarchy, they may have <I>References</I> to each other, allowing the <I>AddressSpace</I> to represent an interrelated network of <I>Node</I>s. The model of the <I>AddressSpace</I> is defined in <A href="#LinkTarget_1129" href="#">
+Part 3</A>
+. </P
+><P 
+
+>OPC UA <I>Servers</I> may subset the <I>AddressSpace</I> into <I>Views</I> to simplify <I>Client</I> access. Subclause <A href="#LinkTarget_1874" href="#">
+6.3.4.3</A>
+ describes <I>AddressSpace</I> <I>Views</I> in more detail.  </P
+><H3 
+ ID="LinkTarget_1770"
+><B>5.4.3 Integrated object model </H3
+><P 
+
+></B>The OPC UA Object Model provides a consistent, integrated set of <I>NodeClasses</I> for representing <I>Objects</I> in the <I>AddressSpace</I>. This model represents <I>Objects</I> in terms of their <I>Variables,</I> <I>Events</I> and <I>Methods</I>, and their relationships with other <I>Objects</I>. <A href="#LinkTarget_1129" href="#">
+Part 3</A>
+ describes this model.  </P
+><P 
+
+>The OPC UA object model allows <I>Servers</I> to provide type definitions for <I>Objects</I> and their components. Type definitions may be subclassed. They also may be common or they may be system-specific. <I>ObjectTypes</I> may be defined by standards organizations, vendors or end-users.  </P
+><P 
+
+>This model allows data, <I>Alarms</I> and <I>Events</I>, and their history to be integrated into a single OPC UA <I>Server</I>. For example, OPC UA <I>Servers</I> are able to represent a temperature transmitter as an <I>Object</I> that is composed of a temperature value, a set of alarm parameters, and a corresponding set of alarm limits.  </P
+><H3 
+ ID="LinkTarget_1780"
+><B>5.4.4 Integrated services  </H3
+><P 
+
+></B>The interface between OPC UA <I>Clients</I> and <I>Servers</I> is defined as a set of <I>Services.</I> These <I>Services</I> are organized into logical groupings called <I>Service Sets</I>. <I>Service Sets</I> are discussed in Clause <A href="#LinkTarget_1948" href="#">
+6.4</A>
+ and specified in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+. </P
+><P 
+
+>OPC UA <I>Services</I> provide two capabilities to <I>Clients</I>. They allow <I>Clients</I> to issue requests to <I>Servers</I> and receive responses from them. They also allow <I>Clients</I> to subscribe to <I>Servers</I> for <I>Notifications</I>. <I>Notifications</I> are used by the <I>Server</I> to report occurrences such as <I>Alarms</I>, data value changes, <I>Events</I>, and <I>Program</I> execution results.  </P
+><P 
+
+>OPC UA <I>Messages</I> may be encoded as XML text or in binary format for efficiency purposes. They may be transferred using multiple underlying transports, for example TCP or web services over HTTP. <I>Servers</I> may provide different encodings and transports as defined by <A href="#LinkTarget_1135" href="#">
+Part 6</A>
+.  </P
+><H2 
+ ID="LinkTarget_1799"
+><B>5.5 <I>Sessions </I></H2
+><P 
+
+></B>OPC UA requires a stateful model. The state information is maintained inside an application <I>Session</I>. Examples of state-information are <I>Subscriptions</I>, user credentials and continuation points for operations that span multiple requests. </P
+><P 
+
+><I>Sessions</I> are defined as logical connections between <I>Clients</I> and <I>Servers</I>. <I>Servers</I> may limit the number of concurrent <I>Sessions</I> based on resource availability, licensing restrictions, or other constraints. Each <I>Session</I> is independent of the underlying communications protocols. Failures of these protocols do not automatically cause the <I>Session</I> to terminate. <I>Sessions</I> terminate based on <I>Client</I> or <I>Server</I> request, or based on inactivity of the <I>Client</I>. The inactivity time interval is negotiated during <I>Session</I> establishment.  </P
+><H1 
+ ID="LinkTarget_1802"
+><FONT size="+1"><B>6 Systems concepts  </H1
+><H2 
+ ID="LinkTarget_1803"
+><FONT size="+1">6.1 Overview </H2
+><P 
+
+></B>The OPC UA systems architecture models OPC UA <I>Clients</I> and <I>Servers</I> as interacting partners. Each system may contain multiple <I>Clients</I> and <I>Servers</I>. Each <I>Client</I> may interact concurrently with one or more <I>Servers</I>, and each <I>Server</I> may interact concurrently with one or more <I>Clients</I>. An application may combine <I>Server</I> and <I>Client</I> components to allow interaction with other <I>Servers</I> and <I>Clients</I> as described in <A href="#LinkTarget_1911" href="#">
+6.3.7</A>
+.  </P
+><P 
+
+>OPC UA <I>Clients</I> and <I>Servers</I> are described in the clauses that follow. <A href="#LinkTarget_1817" href="#">
+Figure 3</A>
+ illustrates the architecture that includes a combined <I>Server</I> and <I>Client</I>.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+>   CombinedOPC UA  server  and client  Published  notifications Client requests Server responses Published  notifications Client requests Server responses    OPC  UA  client      OPC  UA  server   </DIV
+></P
+><P 
+
+><B>Figure 3 &ndash; OPC UA System architecture </P
+><H2 
+ ID="LinkTarget_1820"
+>6.2 OPC UA <I>Clients</I>  </H2
+><P 
+
+></B>The OPC UA <I>Client</I> architecture models the <I>Client</I> endpoint of client/server interactions. <A href="#LinkTarget_1829" href="#">
+Figure 4</A>
+ illustrates the major elements of a typical OPC UA <I>Client</I> and how they relate to each other.  </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC UA Client Client-Application Requests to send service requests  Delivery of received service responses Delivery of received notifications OPC UA  Communication Stack OPC UA Client API To OPC UA server  From  OPC UA  server  From  OPC UA  server  Req Msg  Rsp Msg  Publ Msg  Notif Msg  Requests to send publishing requests  To  OPC UA server </DIV
+></P
+><P 
+
+><B>Figure 4 &ndash; OPC UA <I>Client</I> architecture </P
+><P 
+
+></B>The <I>Client</I> Application is the code that implements the function of the <I>Client</I>. It uses the OPC UA <I>Client</I> API to send and receive OPC UA <I>Service</I> requests and responses to the OPC UA <I>Server</I>. The <I>Services</I> defined for OPC UA are described in Clause <A href="#LinkTarget_1948" href="#">
+6.4</A>
+, and specified in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+.  </P
+><P 
+
+>Note that the &ldquo;OPC UA <I>Client</I> API&rdquo; is an internal interface that isolates the <I>Client</I> application code from an OPC UA Communication Stack. The OPC UA Communication Stack converts OPC UA <I>Client</I> API calls into <I>Messages</I> and sends them through the underlying communications entity to the <I>Server</I> at the request of the <I>Client</I> application. The OPC UA Communication Stack also receives response and <I>NotificationMessages</I> from the underlying communications entity and delivers them to the <I>Client</I> application through the OPC UA <I>Client</I> API.  </P
+><H2 
+ ID="LinkTarget_1843"
+><B>6.3 OPC UA <I>Servers</I>  </H2
+><H3 
+ ID="LinkTarget_1844"
+>6.3.1 General </H3
+><P 
+
+></B>The OPC UA <I>Server</I> architecture models the <I>Server</I> endpoint of client/server interactions. <A href="#LinkTarget_1852" href="#">
+Figure 5</A>
+ illustrates the major elements of the OPC UA <I>Server</I> and how they relate to each other. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC UA Server OPC UA Server Application OPC UA Server API OPC UA  Communication Stack   Real Objects OPC UA AddressSpace Node Node Node Node Node Node Node Node Node To  OPC UA  client View  From OPC UA client  To  OPC UA  client  Req Msg  Rsp Msg  Publ Msg  Notif Msg  From  OPC UA client Subscription Subscription Subscription   Monitored Item </DIV
+></P
+><P 
+
+><B>Figure 5 &ndash; OPC UA Server architecture </P
+><H3 
+ ID="LinkTarget_1856"
+>6.3.2 Real objects </H3
+><P 
+
+></B>Real objects are physical or software objects that are accessible by the OPC UA <I>Server</I> application or that it maintains internally. Examples include physical devices and diagnostics counters.  </P
+><H3 
+ ID="LinkTarget_1858"
+><B>6.3.3 OPC UA <I>Server</I> application </H3
+><P 
+
+></B>The OPC UA <I>Server</I> application is the code that implements the function of the <I>Server</I>. It uses the OPC UA <I>Server</I> API to send and receive OPC UA <I>Messages</I> from OPC UA <I>Clients</I>. Note that the &ldquo;OPC UA <I>Server</I> API&rdquo; is an internal interface that isolates the <I>Server</I> application code from an OPC UA Communication Stack.  </P
+><H3 
+ ID="LinkTarget_1860"
+><B>6.3.4 OPC UA <I>AddressSpace</I>  </H3
+><H4 
+ ID="LinkTarget_1861"
+>6.3.4.1 <I>AddressSpace</I> <I>Node</I>s </H4
+><P 
+
+></B>The <I>AddressSpace</I> is modelled as a set of <I>Node</I>s accessible by <I>Clients</I> using OPC UA <I>Services</I> (interfaces and methods). <I>Node</I>s in the <I>AddressSpace</I> are used to represent real objects, their definitions and their <I>References</I> to each other.  </P
+><H4 
+ ID="LinkTarget_1863"
+><B>6.3.4.2 <I>AddressSpace</I> organization </H4
+><P 
+
+><A href="#LinkTarget_1129" href="#">
+</B>Part 3</A>
+ contains the details of the meta model &ldquo;building blocks&rdquo; used to create an <I>AddressSpace</I> out of interconnected <I>Nodes</I> in a consistent manner. <I>Servers</I> are free to organize their <I>Node</I>s within the <I>AddressSpace</I> as they choose. The use of <I>References</I> between <I>Node</I>s permits <I>Servers</I> to organize the <I>AddressSpace</I> into hierarchies, a full mesh network of <I>Node</I>s, or any possible mix.  </P
+><P 
+
+><A href="#LinkTarget_1133" href="#">
+Part 5</A>
+ defines OPC UA <I>Nodes</I> and <I>References</I> and their expected organization in the <I>AddressSpace</I>. Some <I>Profiles</I> will not require that all of the UA <I>Nodes</I> be implemented. </P
+><H4 
+ ID="LinkTarget_1874"
+><B>6.3.4.3 <I>AddressSpace</I> <I>Views</I>  </H4
+><P 
+
+></B>A <I>View</I> is a subset of the <I>AddressSpace</I>. <I>Views</I> are used to restrict the <I>Node</I>s that the <I>Server</I> makes visible to the <I>Client</I>, thus restricting the size of the <I>AddressSpace</I> for the <I>Service</I> requests submitted by the <I>Client</I>. The default <I>View</I> is the entire <I>AddressSpace</I>. <I>Servers</I> may optionally define other <I>Views</I>.<I> Views</I> hide some of the <I>Node</I>s or <I>References</I> in the <I>AddressSpace</I>. <I>Views</I> are visible via the <I>AddressSpace</I> and <I>Clients</I> are able to browse <I>Views</I> to determine their structure. <I>Views</I> are often hierarchies, which are easier for <I>Clients</I> to navigate and represent in a tree. </P
+><H4 
+ ID="LinkTarget_1877"
+><B>6.3.4.4 Support for information models </H4
+><P 
+
+></B>The OPC UA <I>AddressSpace</I> supports information models. This support is provided through:   </P
+><DL 
+
+><DD 
+
+>a) <I>Node</I> <I>References</I> that allow <I>Objects</I> in the <I>AddressSpace</I> to be related to each other.  </DD
+><DD 
+
+>b) <I>ObjectType</I> <I>Node</I>s that provide semantic information for real <I>Objects</I> (type definitions).  </DD
+><DD 
+
+>c) <I>ObjectType</I> <I>Node</I>s to support subclassing of type definitions. </DD
+><DD 
+
+>d) Data type definitions exposed in the <I>AddressSpace</I> that allow industry specific data types to be used. </DD
+><DD 
+
+>e) OPC UA companion standards that permit industry groups to define how their specific information models are to be represented in OPC UA <I>Server</I> <I>AddressSpace</I>.  </DD
+></DL
+><H3 
+ ID="LinkTarget_1890"
+><B>6.3.5 Publisher/subscriber entities  </H3
+><H4 
+ ID="LinkTarget_1891"
+>6.3.5.1 MonitoredItems </H4
+><P 
+
+></B><I>MonitoredItems</I> are entities in the <I>Server</I> created by the <I>Client</I> that monitor <I>AddressSpace</I> <I>Node</I>s and their real-world counterparts. When they detect a data change or an event/alarm occurrence, they generate a <I>Notification</I> that is transferred to the <I>Client</I> by a <I>Subscription</I>.  </P
+><H4 
+ ID="LinkTarget_1893"
+><B><I>6.3.5.2 Subscriptions </I></H4
+><P 
+
+></B>A <I>Subscription</I> is an endpoint in the <I>Server</I> that publishes <I>Notifications</I> to <I>Clients</I>. <I>Clients</I> control the rate at which publishing occurs by sending Publish <I>Messages</I>.  </P
+><H3 
+ ID="LinkTarget_1895"
+><B>6.3.6 OPC UA <I>Service</I> Interface  </H3
+><H4 
+ ID="LinkTarget_1896"
+>6.3.6.1 General </H4
+><P 
+
+></B>The <I>Services</I> defined for OPC UA are described in Clause <A href="#LinkTarget_1948" href="#">
+6.4</A>
+, and specified in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+.  </P
+><H4 
+ ID="LinkTarget_1907"
+><B>6.3.6.2 Request/response <I>Services</I>  </H4
+><P 
+
+></B>Request/response <I>Services</I> are <I>Services</I> invoked by the <I>Client</I> through the OPC UA <I>Service</I> Interface to perform a specific task on one or more <I>Node</I>s in the <I>AddressSpace</I> and to return a response.  </P
+><H4 
+ ID="LinkTarget_1909"
+><B>6.3.6.3 Publisher <I>Services</I>  </H4
+><P 
+
+></B>Publisher <I>Services</I> are <I>Services</I> invoked through the OPC UA <I>Service</I> Interface for the purpose of periodically sending <I>Notifications</I> to <I>Clients</I>. Notifications include <I>Events</I>, <I>Alarms</I>, data changes and <I>Program</I> outputs.  </P
+><H3 
+ ID="LinkTarget_1911"
+><B>6.3.7 <I>Server</I> to <I>Server</I> interactions </H3
+><P 
+
+></B><I>Server</I> to <I>Server</I> interactions are interactions in which one <I>Server</I> acts as a <I>Client</I> of another <I>Server</I>. <I>Server</I> to <I>Server</I> interactions allow for the development of servers that: </P
+><DL 
+
+><DD 
+
+>f) exchange information with each other on a peer-to-peer basis, this could include redundancy or remote <I>Servers</I> that are used for maintaining system wide type definitions(see <A href="#LinkTarget_1935" href="#">
+Figure 6</A>
+),  </DD
+><DD 
+
+>g) are chained in a layered architecture of <I>Servers</I> to provide: </DD
+><DD 
+
+>1) aggregation of data from lower-layer <I>Servers</I>,  </DD
+><DD 
+
+>2) higher-layer data constructs to <I>Clients</I>, and </DD
+><DD 
+
+>3) concentrator interfaces to <I>Clients</I> for single points of access to multiple underlying <I>Servers</I>. </DD
+></DL
+><P 
+
+><A href="#LinkTarget_1935" href="#">
+Figure 6</A>
+ illustrates interactions between <I>Servers</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> Network Interactions between servers OPC Server client interface server interface OPC Server server interface client interface </DIV
+></P
+><P 
+
+><B>Figure 6 &ndash; Peer-to-peer interactions between <I>Servers</I>  </P
+><P 
+
+><A href="#LinkTarget_1945" href="#">
+</B>Figure 7</A>
+ extends the previous example and illustrates the chaining of OPC UA <I>Servers</I> together for vertical access to data in an enterprise. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC Client OPC Client Enterprise Semantic Layer Enterprise Network OPC Client OPC  Server  OPC Client  Process Semantic Layer Operations Network OPC Server OPC Server OPC Client OPC Server  OPC Client Device Semantic Layer Plant Floor Network OPC Server </DIV
+></P
+><P 
+
+><B>Figure 7 &ndash; Chained <I>Server</I> example </P
+><H2 
+ ID="LinkTarget_1948"
+>6.4 Redundancy </H2
+><P 
+
+></B>OPC UA provides the data structures and Services by which <I>Redundancy</I> may be achieved in a standardized manner.  Redundancy may be used for high availability, fault tolerance and load balancing. <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+ formally defines <I>Client</I>, <I>Server</I> and <I>Network Redundancy</I>. Only some <I>Profiles</I> <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+ will require redundancy support, but not the base <I>Profile</I>. </P
+><P 
+
+> </P
+><P 
+
+>Required client and server behaviours are associated with two distinct modes of <I>Server Redundancy</I>, transparent and non-transparent. The client and server responsibilities when using either transparent or non-transparent redundancy are defined in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+. </P
+><P 
+
+> </P
+><P 
+
+>Servers that support non-transparent redundancy can also support client controlled load balancing. The health of a server including its ability to service requests is collectively defined as <I>ServiceLevel</I>. See <A href="#LinkTarget_1133" href="#">
+Part 5</A>
+ for a formal definition of <I>ServiceLevel</I>. <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+ defines four distinct <I>ServiceLevel</I> sub-ranges and example usage. </P
+><H1 
+ ID="LinkTarget_1977"
+><FONT size="+1"><B>7 Service Sets  </H1
+><H2 
+ ID="LinkTarget_1979"
+><FONT size="+1">7.1 General </H2
+><P 
+
+></B>OPC UA <I>Services</I> are divided into <I>Service Sets</I>, each defining a logical grouping of <I>Services</I> used to access a particular aspect of the <I>Server</I>. The <I>Service Sets</I> are described below. The <I>Service Sets</I> and their <I>Services</I> are specified in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+. Whether or not a <I>Server</I> supports a <I>Service Set</I>, or a specific <I>Service</I> within a <I>Service</I> <I>Set,</I> is defined by its <I>Profile</I>. <I>Profiles</I> are described in <A href="#LinkTarget_1137" href="#">
+Part 7</A>
+. </P
+><H2 
+ ID="LinkTarget_1990"
+><B>7.2 Discovery Service Set </H2
+><P 
+
+></B>This <I>Service</I> <I>Set</I> defines <I>Services</I> used to discover OPC UA <I>Servers</I> that are available in a system. It also provides a manner in which clients can read the security configuration required for connection to the <I>Server</I>. The <I>Discovery</I> <I>Services</I> are implemented by individual <I>Servers</I> and by dedicated <I>Discovery</I> <I>Servers</I>.  Well known dedicated <I>Discovery</I> <I>Servers</I> provide a way for clients to discover all registered OPC UA <I>Servers</I>. <A href="#LinkTarget_1147" href="#">
+Part 12</A>
+ describes how to use the <I>Discovery</I> <I>Services </I>with dedicated<I> Discovery</I> <I>Servers.</I> </P
+><H2 
+ ID="LinkTarget_2021"
+><B>7.3 <I>SecureChannel</I> Service Set </H2
+><P 
+
+></B>This <I>Service</I> <I>Set</I> defines <I>Services</I> used to open a communication channel that ensures the confidentiality and integrity of all <I>Messages</I> exchanged with the <I>Server</I>. The base concepts for UA security are defined in <A href="#LinkTarget_1127" href="#">
+Part 2</A>
+. </P
+><P 
+
+>The <I>SecureChannel</I> <I>Services</I> are unlike other <I>Services</I> because they are typically not implemented by the <I>UA application</I> directly. Instead, they are provided by the communication stack that the <I>UA application</I> is built on. For example, a UA <I>Server</I> may be built on a SOAP stack that allows applications to establish a <I>SecureChannel</I> using the WS-SecureConversation specification. In these cases, the <I>UA application</I> simply needs to verify that a WS-SecureConversation is active whenever it receives a <I>Message</I>. <A href="#LinkTarget_1135" href="#">
+Part 6</A>
+ describes how the <I>SecureChannel</I> <I>Services</I> are implemented with different types of communication stacks. </P
+><P 
+
+>A <I>SecureChannel</I> is a long-running logical connection between a single <I>Client</I> and a single <I>Server</I>. This channel maintains a set of keys that are known only to the <I>Client</I> and <I>Server</I> and that are used to authenticate and encrypt <I>Messages</I> sent across the network. The <I>SecureChannel</I> <I>Services</I> allow the <I>Client</I> and <I>Server</I> to securely negotiate the keys to use. </P
+><P 
+
+>The exact algorithms used to authenticate and encrypt <I>Messages</I> are described in the security policies for a <I>Server</I>. These policies are exposed via the <I>Discovery</I> <I>Service Set</I>. A <I>Client</I> selects the appropriate endpoint that supports the desired security policy by the <I>Server</I> when it creates a <I>SecureChannel</I>.  </P
+><P 
+
+>When a <I>Client</I> and <I>Server</I> are communicating via a <I>SecureChannel</I> they verify that all incoming <I>Messages</I> have been signed and/or encrypted according to the security policy. A UA application is expected to ignore any <I>Message</I> that does not conform to the security policy for the channel. </P
+><P 
+
+>A <I>SecureChannel</I> is separate from the <I>UA Application Session</I>; however, a single <I>UA Application</I> <I>Session</I> may only be accessed via a single <I>SecureChannel</I>. This implies that the <I>UA application</I> is able to determine what <I>SecureChannel</I> is associated with each <I>Message</I>. A communication stack that provides a <I>SecureChannel</I> mechanism but that does not allow the application to know what <I>SecureChannel</I> was used for a given <I>Message</I> cannot be used to implement the <I>SecureChannel Service Set</I>. </P
+><P 
+
+>The relationship between the <I>UA Application</I> <I>Session</I> and the <I>SecureChannel</I> is illustrated in <A href="#LinkTarget_2047" href="#">
+Figure 8</A>
+. The UA applications use the communication stack to exchange <I>Messages</I>. First, the <I>SecureChannel</I> <I>Services</I> are used to establish a <I>SecureChannel</I> between the two communication stacks, allowing them to exchange <I>Messages</I> in a secure way. Second, the UA applications use the <I>Session</I> <I>Service Set</I> to establish a <I>UA application</I> <I>Session</I>. </P
+><P 
+
+> <DIV class="Sect" 
+ Alt=""
+> OPC UA Client  OPC UA Server    UA application   UA application   Communication Stack   Communication Stack Session SecureChannel </DIV
+></P
+><P 
+
+><B>Figure 8 &ndash; <I>SecureChannel</I> and <I>Session</I> <I>Services</I> </P
+><H2 
+ ID="LinkTarget_2051"
+>7.4 <I>Session</I> <I>Service Set</I> </H2
+><P 
+
+></B>This <I>Service Set</I> defines <I>Services</I> used to establish an application-layer connection in the context of a <I>Session </I>on behalf of a specific user. </P
+><H2 
+ ID="LinkTarget_2053"
+><B>7.5 <I>NodeManagement</I> <I>Service Set</I> </H2
+><P 
+
+></B>The <I>NodeManagement</I> <I>Service</I> <I>Set</I> allows <I>Clients</I> to add, modify, and delete <I>Node</I>s in the <I>AddressSpace</I>. These <I>Services</I> provide an interface for the configuration of <I>Servers</I>.   </P
+><H2 
+ ID="LinkTarget_2055"
+><B>7.6 <I>View Service Set </I></H2
+><P 
+
+></B><I>Views</I> are publicly defined, <I>Server</I>-created subsets of the <I>AddressSpace</I>. The entire <I>AddressSpace</I> is the default <I>View</I>, and therefore, the <I>View Services</I> are capable of operating on the entire <I>AddressSpace</I>. Future versions of this specification may also define <I>Services</I> to create <I>Client</I> defined <I>Views</I>. </P
+><P 
+
+>The <I>View</I> <I>Service Set</I> allows <I>Clients</I> to discover <I>Node</I>s in a <I>View</I> by browsing. Browsing allows <I>Clients</I> to navigate up and down the hierarchy, or to follow <I>References</I> between <I>Node</I>s contained in the <I>View</I>. In this manner, browsing also allows <I>Clients</I> to discover the structure of the <I>View</I>.  </P
+><H2 
+ ID="LinkTarget_2058"
+><B>7.7 <I>Query Service Set </I></H2
+><P 
+
+></B>The Query Service Set allows users to access the address space without browsing and without knowledge of the logical schema used for internal storage of the data. </P
+><P 
+
+>Querying allows <I>Clients</I> to select a subset of the <I>Node</I>s in a <I>View</I> based on some <I>Client</I>-provided filter criteria. The <I>Node</I>s selected from the <I>View </I>by the query statement are called a result set.   </P
+><P 
+
+><I>Servers</I> may find it difficult to process queries that require access to runtime data, such as device data, that involves resource intensive operations or significant delays. In these cases, the <I>Server</I> may find it necessary to reject the query. </P
+><H2 
+ ID="LinkTarget_2062"
+><B>7.8 <I>Attribute Service Set </I></H2
+><P 
+
+></B>The <I>Attribute</I> <I>Service Set</I> is used to read and write <I>Attribute</I> values. <I>Attributes</I> are primitive characteristics of <I>Node</I>s that are defined by OPC UA. They may not be defined by <I>Clients</I> or <I>Servers</I>. <I>Attributes</I> are the only elements in the <I>AddressSpace</I> permitted to have data values. A special <I>Attribute</I>, the <I>Value</I> <I>Attribute</I> is used to define the value of <I>Variables</I>. </P
+><H2 
+ ID="LinkTarget_2064"
+><B>7.9 <I>Method Service Set </I></H2
+><P 
+
+></B><I>Methods</I> represent the function calls of <I>Objects</I>. They are defined in <A href="#LinkTarget_1129" href="#">
+Part 3</A>
+. <I>Methods</I> are invoked and return after completion, whether successful or unsuccessful. Execution times for <I>Methods</I> may vary, depending on the function they are performing. </P
+><P 
+
+>The <I>Method</I> <I>Service Set</I> defines the means to invoke <I>Methods</I>. A <I>Method</I> is always a<I> </I>component of an <I>Object</I>. Discovery is provided through the browse and query <I>Services</I>. <I>Clients</I> discover the <I>Methods</I> supported by a <I>Server</I> by browsing for the owning <I>Objects </I>that identify their supported <I>Methods</I>. </P
+><P 
+
+>Because <I>Methods</I> may control some aspect of plant operations, method invocation may depend on environmental or other conditions. This may be especially true when attempting to re-invoke a <I>Method</I> immediately after it has completed execution. Conditions that are required to invoke the <I>Method</I> may not yet have returned to the state that permits the <I>Method</I> to start again. In addition, some <I>Methods</I> may be capable of supporting concurrent invocations, while others may have a single invocation executing at a given time.  </P
+><H2 
+ ID="LinkTarget_2074"
+><B>7.10 <I>MonitoredItem</I> <I>Service Set</I> </H2
+><P 
+
+></B>The <I>MonitoredItem</I> <I>Service Set</I> is used by the <I>Client</I> to create and maintain <I>MonitoredItems</I>. <I>MonitoredItems</I> monitor <I>Variables</I>, <I>Attributes</I> and <I>EventNotifiers</I>. They generate <I>Notifications</I> when they detect certain conditions. They monitor <I>Variables</I> for a change in value or status; <I>Attributes</I> for a change in value; and <I>EventNotifiers</I> for newly generated <I>Alarm</I> and <I>Event</I> reports.  </P
+><P 
+
+>Each <I>MonitoredItem</I> identifies the item to monitor and the <I>Subscription</I> to use to periodically publish <I>Notifications</I> to the <I>Client</I> (see <A href="#LinkTarget_2089" href="#">
+7.11</A>
+). Each <I>MonitoredItem</I> also specifies the rate at which the item is to be monitored (sampled) and, for <I>Variables</I> and <I>EventNotifiers</I>, the filter criteria used to determine when a <I>Notification</I> is to be generated. Filter criteria for <I>Attributes</I> are specified by their <I>Attribute</I> definitions in <A href="#LinkTarget_1131" href="#">
+Part 4</A>
+.  </P
+><P 
+
+>The sample rate defined for a <I>MonitoredItem</I> may be faster than the publishing rate of the <I>Subscription</I>. For this reason, the <I>MonitoredItem</I> may be configured to either queue all <I>Notifications</I> or to queue only the latest <I>Notification</I> for transfer by the <I>Subscription</I>. In this latter case, the queue size is one.  </P
+><P 
+
+><I>MonitoredItem</I> <I>Services</I> also define a monitoring mode. The monitoring mode is configured to disable sampling and reporting, to enable sampling only, or to enable both sampling and reporting. When sampling is enabled, the <I>Server</I> samples the item. In addition, each sample is evaluated to determine if a <I>Notification</I> should be generated. If so, the <I>Notification</I> is queued. If reporting is enabled, the queue is made available to the <I>Subscription</I> for transfer.  </P
+><P 
+
+>Finally, <I>MonitoredItems</I> can be configured to trigger the reporting of other <I>MonitoredItems</I>. In this case, the monitoring mode of the items to report is typically set to sampling only, and when the triggering item generates a <I>Notification</I>, any queued <I>Notifications</I> of the items to report are made available to the <I>Subscription</I> for transfer.  </P
+><H2 
+ ID="LinkTarget_2089"
+><B>7.11 <I>Subscription</I> <I>Service Set</I> </H2
+><P 
+
+></B>The <I>Subscription</I> <I>Service Set</I> is used by the <I>Client</I> to create and maintain <I>Subscriptions</I>. <I>Subscriptions</I> are entities that periodically publish <I>NotificationMessages</I> for the <I>MonitoredItem</I> assigned to them (see <A href="#LinkTarget_2064" href="#">
+7.9</A>
+). The <I>NotificationMessage</I> contains a common header followed by a series of <I>Notifications</I>. The format of <I>Notifications</I> is specific to the type of item being monitored (i.e. <I>Variables</I>, <I>Attributes</I>, and <I>EventNotifiers</I>).  </P
+><P 
+
+>Once created, the existence of a <I>Subscription</I> is independent of the <I>Client&rsquo;s</I> <I>Session</I> with the <I>Server</I>. This allows one <I>Client</I> to create a <I>Subscription</I>, and a second, possibly a redundant <I>Client</I>, to receive <I>NotificationMessages</I> from it.  </P
+><P 
+
+>To protect against non-use by <I>Clients</I>, <I>Subscriptions</I> have a configured lifetime that <I>Clients</I> periodically renew. If any <I>Client</I> fails to renew the lifetime, the lifetime expires and the S<I>ubscription</I> is closed by the <I>Server</I>. When a <I>Subscription</I> is closed, all <I>MonitoredItems</I> assigned to the <I>Subscription</I> are deleted.  </P
+><P 
+
+><I>Subscriptions</I> include features that support detection and recovery of lost <I>Messages</I>. Each <I>NotificationMessage</I> contains a sequence number that allows <I>Clients</I> to detect missed <I>Messages</I>. When there are no <I>Notifications</I> to send within the keep-alive time interval, the <I>Server</I> sends a keep-alive <I>Message</I> that contains the sequence number of the next <I>NotificationMessage</I> sent. If a <I>Client</I> fails to receive a <I>Message</I> after the keep-alive interval has expired, or if it determines that it has missed a <I>Message</I>, it can request the <I>Server</I> to resend one or more <I>Messages</I>.  </P
+><P 
+
+>___________ </P
+></DIV
+></BODY>
+</HTML>
